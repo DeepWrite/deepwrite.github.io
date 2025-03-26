@@ -6,7 +6,7 @@ nav_order: 1
 permalink: /
 ---
 
-![logo]({{site.baseurl}}/assets/images/IMG_0750.jpg)
+![logo]({{site.baseurl}}/assets/images/logo.png)
 
 # PUZZLE SOLVING
 

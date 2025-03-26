@@ -3,8 +3,8 @@ description: 손제연의 논증적 글쓰기 공식 강의자료 공유 및 학
 theme: just-the-docs
 
 url: https://DeepWrite.github.io/
-
-logo: "/assets/images/logo(bg_white).png"
+logo: "/assets/images/logo.png"
+favicon_ico: "/assets/images/favicon.ico"
 
 aux_links:
   Jeyoun's Personal Homepage: https://jeyounson.github.io/
