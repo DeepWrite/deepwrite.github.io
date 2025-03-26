@@ -4,5 +4,7 @@ theme: just-the-docs
 
 url: https://DeepWrite.github.io/
 
+logo: "/assets/images/logo(bg_white).png"
+
 aux_links:
   Jeyoun's Personal Homepage: https://jeyounson.github.io/
