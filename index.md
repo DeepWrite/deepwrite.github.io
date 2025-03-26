@@ -6,7 +6,7 @@ nav_order: 1
 permalink: /
 ---
 
-![logo]({{site.baseurl}}/assets/images/logo.png)
+<img src="/assets/images/logo.png" alt="Site Logo" width="80" height="auto">
 
 # PUZZLE SOLVING
 
