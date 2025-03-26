@@ -6,6 +6,8 @@ nav_order: 1
 permalink: /
 ---
 
+![logo]({{site.baseurl}}/assets/images/IMG_0750.jpg)
+
 # PUZZLE SOLVING
 
 > *논증적 글쓰기는 단순한 주장과 근거들의 나열이 아닌, 난제를 해결하는 과정, 즉 퍼즐을 푸는 것과 같은 지적인 도전입니다.*
