@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: DeepWrite
+description: 손제연의 논증적 글쓰기 공식 강의자료 공유 및 학습 지원 사이트
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://DeepWrite.github.io/
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Jeyoun's Personal Homepage: https://jeyounson.github.io/
