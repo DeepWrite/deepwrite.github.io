@@ -6,8 +6,6 @@ nav_order: 1
 permalink: /
 ---
 
-<img src="/assets/images/logo.png" alt="Site Logo" width="80" height="auto">
-
 # PUZZLE SOLVING
 
 > *논증적 글쓰기는 단순한 주장과 근거들의 나열이 아닌, 난제를 해결하는 과정, 즉 퍼즐을 푸는 것과 같은 지적인 도전입니다.*
@@ -30,3 +28,5 @@ permalink: /
 2025년 3월  
 
 **손제연** 강의부교수(서울대학교 학부대학)
+
+<img src="/assets/images/logo.png" alt="Site Logo" width="80" height="auto">
