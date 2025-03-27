@@ -3,7 +3,7 @@ title: 3. 논제와 논증
 layout: home
 nav_order: 3
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week02-03-01/
+permalink: /lectures/03-theses-argument/
 ---
 
 # 📝 3. 논제와 논증

@@ -3,7 +3,7 @@ title: 4. 문헌독해 연습
 layout: home
 nav_order: 4
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week02-03-02/
+permalink: /lectures/04-summary/
 ---
 
 # 📝 4. 문헌 독해 연습 (45분)

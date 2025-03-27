@@ -3,7 +3,7 @@ title: 보강설명 - 리차드 도킨스 예시 - 논제 진술과 이유, 증�
 layout: home
 nav_order: 2
 parent: 8. OREO 단문 연습
-permalink: /lectures/week03-06/lecture-02
+permalink: /lectures/08-oreo/lecture-02
 ---
 
 # 리차드 도킨스 예시를 통한, 논제 진술과 이유, 증거의 긴밀한 연결에 대한 이해

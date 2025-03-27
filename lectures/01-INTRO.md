@@ -3,7 +3,7 @@ title: 1. 논증적 글쓰기란?
 layout: home
 nav_order: 1
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week01-02/
+permalink: /lectures/01-intro/
 ---
 
 # 📝 논증적 글쓰기란?

@@ -3,7 +3,7 @@ title: 2. 좋은 논증문, 쟁점, 그리고 딜레마
 layout: home
 nav_order: 2
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week04-07/
+permalink: /lectures/02-dilemma/
 ---
 
 # 📝 2. 좋은 논증문, 쟁점, 그리고 딜레마 

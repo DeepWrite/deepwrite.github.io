@@ -3,7 +3,7 @@ title: 9. 쟁점과 딜레마 발견하기
 layout: home
 nav_order: 9
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week04-08/
+permalink: /lectures/09-dilemma-report/
 ---
 
 # 📝 9. 쟁점과 딜레마 발견하기

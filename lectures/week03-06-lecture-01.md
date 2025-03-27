@@ -3,7 +3,7 @@ title: 보강설명 - OREO 단문 연습(강의 녹취)
 layout: home
 nav_order: 1
 parent: 8. OREO 단문 연습
-permalink: /lectures/week03-06/lecture-01
+permalink: /lectures/08-oreo/lecture-01
 ---
 
 # O-R-E-O 오레오 강좌 실강 내용 정리

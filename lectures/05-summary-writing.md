@@ -3,7 +3,7 @@ title: 5. 요약문의 이해와 작성
 layout: home
 nav_order: 5
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week02-04/
+permalink: /lectures/05-summary-writing/
 ---
 
 # 📝 5. 요약문의 이해와 작성

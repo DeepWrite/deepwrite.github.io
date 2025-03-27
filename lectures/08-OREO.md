@@ -3,7 +3,7 @@ title: 8. OREO 단문 연습
 layout: home
 nav_order: 8
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week03-06/
+permalink: /lectures/08-oreo/
 ---
 
 # 📝 8. 단문 연습: O-R-E-O 오레오 ?!

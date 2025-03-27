@@ -3,7 +3,7 @@ title: 7. 요약본 수정
 layout: home
 nav_order: 7
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week03-05-02/
+permalink: /lectures/07-summary-revision/
 ---
 
 # 📝 7. 요약본 수정

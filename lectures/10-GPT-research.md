@@ -3,7 +3,7 @@ title: 10. ChatGPT등 대규모 언어모델을 리서치 도구로 이용하는
 layout: home
 nav_order: 10
 parent: 논증적 글쓰기 강의
-permalink: /lectures/gpt-research/
+permalink: /lectures/10-gpt-research/
 ---
 
 2. ChatGPT등 대규모 언어모델을 리서치 도구로 이용하는 방법 (40분)

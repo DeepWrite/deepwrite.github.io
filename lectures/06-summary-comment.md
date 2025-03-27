@@ -3,7 +3,7 @@ title: 6. 요약본 코멘트
 layout: home
 nav_order: 6
 parent: 논증적 글쓰기 강의
-permalink: /lectures/week03-05-01/
+permalink: /lectures/06-summary-comment/
 ---
 
 # 📝 6. 요약본 상호 코멘트
