@@ -1,8 +1,8 @@
 ---
-title: 보강설명 - 3주차 (6차시) OREO 단문 연습(강의 녹취)
+title: 보강설명 - OREO 단문 연습(강의 녹취)
 layout: home
 nav_order: 1
-parent: 3주차 (6차시) OREO 단문 연습
+parent: 8. OREO 단문 연습
 permalink: /lectures/week03-06/lecture-01
 ---
 
