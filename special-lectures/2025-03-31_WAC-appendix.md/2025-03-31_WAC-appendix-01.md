@@ -1,8 +1,8 @@
 ---
-title: 참고자료: 민법의 법리와 법의 지배원칙들을 경제학으로 바라보는 눈(법경제학)
+title: 참고자료 - 민법의 법리와 법의 지배원칙들을 경제학으로 바라보는 눈(법경제학)
 layout: home
 nav_order: 2
-parent: 법과 글쓰기_2025. 3. 31. WAC 현대사회와 법 강좌 특강
+parent: 법과 글쓰기_현대사회와 법 강좌 WAC 특강(2025.3.31)
 permalink: /special-lectures/2025-03-31/appendix-01
 ---
 
