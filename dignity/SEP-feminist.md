@@ -6,7 +6,7 @@ parent: 돌봄윤리와 인간존엄(임시)
 permalink: /care-dignity/SEP-Feminist
 ---
 
-[Kathryn Norlock, "Feminist Ethics", Edward N. Zalta (ed.), *The Stanford Encyclopedia of Philosophy* (Summer 2019 Edition) 중에서](https://plato.stanford.edu/archives/sum2019/entries/feminism-ethics/)
+[Kathryn Norlock, "Feminist Ethics", Edward N. Zalta (ed.), *The Stanford Encyclopedia of Philosophy* (Summer 2019 Edition) 중에서](https://plato.stanford.edu/archives/sum2019/entries/feminism-ethics/#EthiCareFemiGendApprMora)
 
 ### 2.2 여성적 또는 젠더화된 도덕 접근으로서의 돌봄 윤리
 
