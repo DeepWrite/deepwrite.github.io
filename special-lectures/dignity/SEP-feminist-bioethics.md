@@ -2,8 +2,8 @@
 title: SEP-Feminist Bioethics
 layout: home
 nav_order: 4
-parent: 돌봄윤리와 인간존엄(임시)
-permalink: /care-dignity/SEP-Feminist-Bioethics
+parent: 돌봄윤리와 인간존엄(2025.6.21)
+permalink: /special-lectures/care-dignity/SEP-Feminist-Bioethics
 ---
 
 [Jackie Scully, "Feminist Bioethics", Edward N. Zalta (ed.), *The Stanford Encyclopedia of Philosophy* (Fall 2023 Edition) 중에서](https://plato.stanford.edu/archives/sum2019/entries/feminist-bioethics/#CarEth)

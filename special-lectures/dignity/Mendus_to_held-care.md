@@ -2,8 +2,8 @@
 title: 멘더스의 비판 - 버지니아 헬드의 논문에 대하여
 layout: home
 nav_order: 3
-parent: 돌봄윤리와 인간존엄(임시)
-permalink: /care-dignity/Mendus_to_Held
+parent: 돌봄윤리와 인간존엄(2025.6.21)
+permalink: /special-lectures/care-dignity/Mendus_to_Held
 ---
 
 # 돌봄과 인권(Care and Human Rights): 버지니아 헬드(Virginia Held)에 대한 응답
