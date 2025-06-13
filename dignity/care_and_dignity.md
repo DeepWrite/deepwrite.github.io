@@ -56,7 +56,7 @@ Care 윤리는 자원 배분의 구체적 기준(예: 질병 중증도, 생존 �
 
 - [5.4 Virtue Ethics and Ethics of Care – Introduction to Philosophy](https://pimaopen.pressbooks.pub/introphilosophy/chapter/5-4-normative-theories-virtue-ethics/?utm_source=chatgpt.com)
 
-- [Care Ethics | Internet Encyclopedia of Philosophy](https://iep.utm.edu/care-ethics/?utm_source=chatgpt.com) 
+- [Care Ethics - Internet Encyclopedia of Philosophy](https://iep.utm.edu/care-ethics/?utm_source=chatgpt.com) 
 
 - [Jackie Scully, "Feminist Bioethics", Edward N. Zalta (ed.), *The Stanford Encyclopedia of Philosophy* (Fall 2023 Edition) 중에서](https://plato.stanford.edu/archives/sum2019/entries/feminist-bioethics/#CarEth)
 
