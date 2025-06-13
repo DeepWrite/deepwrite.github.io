@@ -1,7 +1,7 @@
 ---
 title: 돌봄과 인간존엄 - 버지니아 헬드의 논문
 layout: home
-nav_order: 1
+nav_order: 2
 parent: 돌봄윤리와 인간존엄(임시)
 permalink: /care-dignity/Held_Care
 ---
