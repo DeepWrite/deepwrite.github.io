@@ -1,5 +1,5 @@
 ---
-title: 돌봄과 인간존엄 - 버지니아 헬드의 논문
+title: Held, "Care and Human Rights"
 layout: home
 nav_order: 2
 parent: 돌봄윤리와 인간존엄(2025.6.21)

@@ -1,5 +1,5 @@
 ---
-title: 멘더스의 비판 - 버지니아 헬드의 논문에 대하여
+title: Mendus, "Care and Human Rights: A Reply to Virginia Held"
 layout: home
 nav_order: 3
 parent: 돌봄윤리와 인간존엄(2025.6.21)
