@@ -1,9 +1,9 @@
 ---
 title: SEP-Feminist Ethics
 layout: home
-nav_order: 4
+nav_order: 5
 parent: 돌봄윤리와 인간존엄(임시)
-permalink: /care-dignity/SEP-Feminist
+permalink: /care-dignity/SEP-Feminist-Ethics
 ---
 
 [Kathryn Norlock, "Feminist Ethics", Edward N. Zalta (ed.), *The Stanford Encyclopedia of Philosophy* (Summer 2019 Edition) 중에서](https://plato.stanford.edu/archives/sum2019/entries/feminism-ethics/#EthiCareFemiGendApprMora)
