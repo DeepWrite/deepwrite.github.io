@@ -52,7 +52,7 @@ Care 윤리는 자원 배분의 구체적 기준(예: 질병 중증도, 생존 �
 
 ---
 
-# 참고문헌
+# 온라인 참고자료
 
 - [5.4 Virtue Ethics and Ethics of Care – Introduction to Philosophy](https://pimaopen.pressbooks.pub/introphilosophy/chapter/5-4-normative-theories-virtue-ethics/?utm_source=chatgpt.com)
 
