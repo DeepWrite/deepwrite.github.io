@@ -6,11 +6,11 @@ parent: 소논문 강독 특강(2025.7.18)
 permalink: /special-lectures/paper-reading/translation
 ---
 
-The Core of the Case against Judicial Review 
-Author(s): Jeremy Waldron 
-Source: The Yale Law Journal , Apr., 2006, Vol. 115, No. 6 (Apr., 2006), pp. 1346-1406 
-Published by: The Yale Law Journal Company, Inc. 
-Stable URL: <https://www.jstor.org/stable/20455656>
+The Core of the Case against Judicial Review  
+Author(s): Jeremy Waldron  
+Source: The Yale Law Journal , Apr., 2006, Vol. 115, No. 6 (Apr., 2006), pp. 1346-1406  
+Published by: The Yale Law Journal Company, Inc.  
+Stable URL: <https://www.jstor.org/stable/20455656>  
 
 ### 제레미 월드런 (JEREMY WALDRON)
 
