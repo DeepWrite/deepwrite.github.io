@@ -6,6 +6,52 @@ parent: 돌봄윤리와 인간존엄(2025.6.21)
 permalink: /special-lectures/care-dignity/Care_and_Dignity
 ---
 
+# **Dignity‑Conserving Care**
+
+---
+
+## 📚 1. Carlo Leget 외 – *“Analyzing dignity: a perspective from the ethics of care”*
+
+* 이 논문은 **care ethics(돌봄 윤리)** 관점을 기반으로 “dignity‑conserving care”를 재해석합니다.
+* 존엄을 역사적·실천적·경험적 측면으로 구분하고, 환자 돌봄 현장에 윤리학적 명료성을 제공하며 임상 적용의 한계를 논의합니다 ([uwethicsofcare.gws.wisc.edu][1], [en.wikipedia.org][2]).
+
+## 📖 2. Linda Barclay – *“A philosophical account of the meaning of dignity in health care”*
+
+* 의료 현장에서 환자가 자신의 가치와 기준에 따라 살아갈 수 있는 조건을 **존엄**으로 정의하며, 이를 Chochinov 등의 질적 연구와 연결해 철학 기반 분석을 제시합니다 ([sciencedirect.com][3]).
+
+## 🧠 3. Integrative Review (2014, J Clin Nurs)
+
+* 제목과 본문에서 “dignity‑conserving care”를 직접 언급하며, 말기 돌봄 현장의 **근거 기반 실천**을 철학적 및 윤리적 논의와 엮어 종합 평가합니다 ([onlinelibrary.wiley.com][4]).
+
+## 🌍 4. BMC Palliat Care (2019) – *“How to conserve dignity in palliative care”*
+
+* 간호사의 관점에서 **존엄보존 돌봄**을 돌봄 윤리·존중·의사소통이라는 윤리학적 틀로 풀어내며, Chochinov 모델의 윤리적 뼈대를 실제 사례와 함께 논증합니다 ([sciencedirect.com][3]).
+
+---
+
+### ✅ 요약 비교표
+
+| 논문 (연도)                    | 철학·윤리 관점     | 주요 기여                             |
+| -------------------------- | ------------ | --------------------------------- |
+| Leget 외 (≈2012)            | **돌봄 윤리**    | 존엄의 다면성 분석, 임상 적용에서의 명료성 제시       |
+| Barclay (≈2016)            | **의료 철학**    | 환자 가치 기준 중심의 존엄 정의 및 실천 연결        |
+| Integrative Review (≈2014) | **실천 윤리·임상** | 실제 돌봄 근거 분석, 철학적 평가               |
+| BMC Pall Care (2019)       | **간호 윤리**    | 돌봄 현장의 상세 윤리요소 + Chochinov 모델 정교화 |
+
+---
+
+이 논문들은 전통적 의학·임상 연구를 넘어, **존엄보존 돌봄을 윤리학, 특히 돌봄 윤리와 의료 철학 관점에서 해석**하여 개념적 명확성을 더하고 실천 원칙과 적응 방안을 제시하고 있습니다.
+
+> 특정 윤리학 이론(예: 칸트주의, 덕윤리)이나 철학자의 해석을 중심으로 더 깊이 보고 싶으시면, 예컨대 Kant·Nussbaum·Held 관점에서의 확장 연구도 찾아드릴 수 있어요!
+
+[1]: https://uwethicsofcare.gws.wisc.edu/wp-content/uploads/2020/03/Leget2013_Article_AnalyzingDignityAPerspectiveFr.pdf?utm_source=chatgpt.com "[PDF] Analyzing dignity: a perspective from the ethics of care"
+[2]: https://en.wikipedia.org/wiki/Ethics_of_care?utm_source=chatgpt.com "Ethics of care"
+[3]: https://www.sciencedirect.com/science/article/abs/pii/S0020748916300803?utm_source=chatgpt.com "A philosophical account of the meaning of dignity in health care"
+[4]: https://onlinelibrary.wiley.com/doi/abs/10.1111/jocn.12791?utm_source=chatgpt.com "Dignity‐conserving care in palliative care settings: An integrative ..."
+
+---
+
+
 # 01. 개요
 
 ## §3. 인간 존엄의 윤리와 돌봄의 실천
