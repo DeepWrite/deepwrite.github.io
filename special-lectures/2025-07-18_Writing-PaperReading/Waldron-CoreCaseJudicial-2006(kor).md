@@ -22,32 +22,32 @@ Stable URL: <https://www.jstor.org/stable/20455656>
 
 **저자 소개(AUTHOR).** 컬럼비아 대학교 로스쿨 석좌교수. (2006년 7월부터 뉴욕대학교(NYU) 로스쿨 교수로 재직.) 이 에세이의 초기 버전은 런던대학교 유니버시티칼리지(UCL)의 법철학 콜로키움, 예루살렘 히브리대학교의 법학 워크숍, 그리고 하버드 로스쿨에서 열린 헌법학 컨퍼런스에서 발표되었다. 이 자리에서 형식적인 논평을 제공해 준 로널드 드워킨, 루스 가비슨, 시어나 쉬프린에게 특별히 감사를 전한다. 또한 제임스 앨런, 아하론 바라크, 리처드 벨라미, 아일린 캐버너, 아서 차스칼슨, 마이클 도르프, 리처드 팰런, 찰스 프라이드, 앤드루 게디스, 스티븐 게스트, 이언 헤이니-로페즈, 알론 하렐, 데이비드 헤이드, 샘 이샤로프, 엘레나 케이건, 케네스 키스, 마이클 클라만, 존 매닝, 안드레이 마르모르, 프랭크 미첼먼, 헨리 모나한, 베로니크 무뇨스-다르데, 존 몰리, 매튜 팔머, 리처드 필데스, 조셉 라즈, 캐롤 생어, 데이비드 위긴스, 조 울프 등 여러 학자들의 제안과 비판에 감사한다. 이 문제에 대해 수년에 걸쳐 나와 논쟁해 온 수백 명의 이들에게도, 이 글을 우정과 감사를 담아 바친다.
 
-## ESSAY CONTENTS
+## 목차
 
-| INTRODUCTION 1348                                          |  |
-|------------------------------------------------------------|--|
-| I. DEFINITION OF JUDICIAL REVIEW 1353                      |  |
-|                                                            |  |
-| II. FOUR ASSUMPTIONS 1359                                  |  |
-| A. Democratic Institutions 1361                            |  |
-| B. Judicial Institutions 1363                              |  |
-| C. A Commitment to Rights 1364                             |  |
-| D. Disagreement About Rights 1366                          |  |
-|                                                            |  |
-| III. THE FORM OF THE ARGUMENT 1369                         |  |
-|                                                            |  |
-| IV. OUTCOME-RELATED REASONS 1376                           |  |
-| A. Orientation to Particular Cases 1379                    |  |
-| B. Orientation to the Text of a Bill of Rights 1380        |  |
-| C. Stating Reasons 1382                                    |  |
-|                                                            |  |
-| V. PROCESS-RELATED REASONS 1386                            |  |
-|                                                            |  |
-| VI. THE TYRANNY OF THE MAJORITY 1395                       |  |
-|                                                            |  |
-| VII.NON-CORE CASES 1401                                    |  |  
-|                                                            |  |   
-| CONCLUSION 1406                                            |  |
+- 서론 (1348)
+
+I. 사법심사의 정의 (1353)
+
+II. 네 가지 전제 (1359)  
+  - A. 민주적 제도들 (1361)  
+  - B. 사법적 제도들 (1363)  
+  - C. 권리에 대한 헌신 (1364)  
+  - D. 권리에 관한 의견불일치 (1366)  
+
+III. 논증의 형식 (1369)
+
+IV. 결과 관련 이유들 (1376)  
+  - A. 구체적 사건에 대한 지향 (1379)  
+  - B. 권리장전의 문구에 대한 지향 (1380)  
+  - C. 이유의 제시 (1382)  
+
+V. 절차 관련 이유들 (1386)
+
+VI. 다수의 폭정 (1395)
+
+VII. 비핵심 사례들 (1401)
+
+- 결론 (1406)
 
 ## 서론 (INTRODUCTION)
 
