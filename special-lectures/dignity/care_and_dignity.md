@@ -1,3 +1,4 @@
+
 ---
 title: 인간 존엄의 윤리와 돌봄
 layout: home
