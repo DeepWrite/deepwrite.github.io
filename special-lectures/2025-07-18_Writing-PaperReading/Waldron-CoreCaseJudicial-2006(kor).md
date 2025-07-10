@@ -1,7 +1,7 @@
 ---
 title: (번역)사법심사에 반대하는 핵심 논거
 layout: home
-nav_order: 1
+nav_order: 10
 parent: 소논문 강독 특강(2025.7.18)
 permalink: /special-lectures/paper-reading/translation
 ---
