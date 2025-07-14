@@ -1,0 +1,2830 @@
+\documentclass[a4paper,12pt,oneside]{article}  % 13pt는 직접 설정함
+\special{papersize=210mm,297mm}
+
+% --- Language and Font Settings ---
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{kotex}  % Korean typesetting
+
+% --- Font Configuration (Main + Korean) ---
+\usepackage{libertinus}
+\setmainhangulfont[
+  Path = ./,
+  UprightFont = *Batang Light.ttf,
+  BoldFont    = *Batang Medium.ttf
+]{KoPubWorld}
+
+% --- Page Geometry: A4 with wide margins for print readability ---
+\usepackage[A4paper, margin=1in]{geometry}
+
+% --- Line Spacing ---
+\usepackage{setspace}
+\setstretch{1.45}
+
+% --- Section Formatting: Disable numbering ---
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{3}
+
+\usepackage{chngcntr}
+\counterwithin*{footnote}{section}
+
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries}
+  {}{0pt}{\Huge}\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {}{0pt}{\Large}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {}{0pt}{\large}
+
+\usepackage{etoolbox}
+\pretocmd{\section}{\clearpage}{}{}
+
+% --- Math and Tables ---
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tabularx, booktabs}
+\usepackage{footmisc}
+
+% --- Quotes, Hyperlink, Header/Footer ---
+\usepackage{csquotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+
+% --- Bibliography (biblatex) ---
+\usepackage[style=verbose-note, backend=biber, maxbibnames=99]{biblatex}
+\addbibresource{references.bib}
+\AtEveryBibitem{\clearfield{pages}}
+
+% --- Title Info ---
+\title{\Huge\textsc{사법심사에 반대하는 핵심 논거} \\[2ex] \Large The Core of the Case Against Judicial Review}
+\author{\Large JEREMY WALDRON}
+\date{}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+  {\Huge\textsc{사법심사에 반대하는 핵심 논거}}\\[1.5ex]
+  {\textsc{제레미 월드런 (JEREMY WALDRON)}\\[6ex]
+  {\small 2025 소논문 특강 강의용 한국어판\\
+  강좌 외의 사용을 불허함}
+  \vfill
+\end{titlepage}
+
+% ==========================
+% 📚 본문 시작
+% ==========================
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\mainmatter
+\cleardoublepage
+\markboth{}{}
+
+\textbf{초록(ABSTRACT).} 이 에세이는 입법에 대한 사법심사(judicial
+review of legislation)에 반대하는 일반적인 논거를 명확히 제시하며, 특정
+판결이나 헌법 제도 내에서의 역사적 기원에 대한 논의로 복잡하게 얽히지
+않도록 구성되어 있다. 본문은 두 가지 주요 이유를 들어 사법심사를
+비판한다. 첫째, 사법심사가 민주적으로 구성된 입법부보다 권리를 더 잘
+보호한다고 가정할 이유가 없다는 점을 논증한다. 둘째, 그 결과와는
+무관하게, 사법심사는 민주적으로 정당하지 않다는 점을 논증한다. 두 번째
+논증은 비교적 익숙한 반면, 첫 번째 논증은 덜 알려져 있다.
+
+그러나 사법심사에 대한 반대는 절대적이거나 무조건적인 것이 아니다. 이
+글에서 제시되는 주장은 몇 가지 조건들을 전제로 한다. 예컨대, 해당 사회가
+잘 작동하는 민주적 제도를 갖추고 있으며, 대다수 시민들이 권리를 진지하게
+받아들이고 있다는 전제이다(비록 자신들이 어떤 권리를 갖고 있는지에
+대해서는 의견이 다를 수 있더라도). 이 글은 이러한 조건들이 충족되지 않을
+경우 어떤 결과가 따를 수 있는지를 고찰하며 마무리된다.
+
+\textbf{저자 소개(AUTHOR).} 컬럼비아 대학교 로스쿨 석좌교수. (2006년
+7월부터 뉴욕대학교(NYU) 로스쿨 교수로 재직.) 이 에세이의 초기 버전은
+런던대학교 유니버시티칼리지(UCL)의 법철학 콜로키움, 예루살렘
+히브리대학교의 법학 워크숍, 그리고 하버드 로스쿨에서 열린 헌법학
+컨퍼런스에서 발표되었다. 이 자리에서 형식적인 논평을 제공해 준 로널드
+드워킨, 루스 가비슨, 시어나 쉬프린에게 특별히 감사를 전한다. 또한 제임스
+앨런, 아하론 바라크, 리처드 벨라미, 아일린 캐버너, 아서 차스칼슨, 마이클
+도르프, 리처드 팰런, 찰스 프라이드, 앤드루 게디스, 스티븐 게스트, 이언
+헤이니-로페즈, 알론 하렐, 데이비드 헤이드, 샘 이샤로프, 엘레나 케이건,
+케네스 키스, 마이클 클라만, 존 매닝, 안드레이 마르모르, 프랭크 미첼먼,
+헨리 모나한, 베로니크 무뇨스-다르데, 존 몰리, 매튜 팔머, 리처드 필데스,
+조셉 라즈, 캐롤 생어, 데이비드 위긴스, 조 울프 등 여러 학자들의 제안과
+비판에 감사한다. 이 문제에 대해 수년에 걸쳐 나와 논쟁해 온 수백 명의
+이들에게도, 이 글을 우정과 감사를 담아 바친다.
+
+\tableofcontents
+\clearpage
+
+\newpage
+
+\subsection{서론 (INTRODUCTION)}\label{uxc11cuxb860-introduction}
+
+\textbf{(p.~1348)} 판사는, 특정 법률이 개인의 권리(individual rights)를
+침해한다고 확신할 경우, 그 법률을 무효화(strike down)할 권한을 가져야
+하는가? 많은 나라에서 판사는 그러한 권한을 갖고 있다. 가장 잘 알려진
+사례는 미국이다. 2003년 11월, 매사추세츠주 대법원(Supreme Judicial Court
+of Massachusetts)은 해당 주의 혼인 허가법(marriage licensing laws)이
+실질적으로 혼인을 남성과 여성 간의 결합으로 한정함으로써, 절차적
+적법성(due process)과 평등 보호(equal protection)에 대한 주(州) 헌법상
+권리를 침해하였다고 판결하였다.\footnote{Goodridge v. Dep't of Pub.
+  Health, 798 N.E.2d 941 (Mass. 2003).} 이 결정은, 자신들의 권리가
+법적으로 인정받지 못했고, 동성애자(gay men and women)로서 기존의 혼인법
+하에서 이등 시민(second-class citizens)처럼 취급받아 왔다고 느끼던 많은
+사람들에게 용기를 주었다.\footnote{See \emph{Landmark Ruling: The
+  Victors}, \emph{Boston Herald}, Nov.~19, 2003, at 5.} 비록 이 결정이
+훗날 주 헌법 개정을 통해 번복되더라도, 원고(plaintiffs)와 그 지지자들은
+적어도 이제 권리에 관한 문제가 직접적으로 논의되고 있다는 점에서 위안을
+받을 수 있다. 합리적인 판단(good decision)과 권리 청구(claims of
+rights)가 지속적이고 진지하게 고려되는 절차(process)는\footnote{이
+  표현은 Ronald Dworkin의 표현을 변형한 것이다. 참조: \emph{Ronald
+  Dworkin, A Matter of Principle} 9--32 (1985).}---많은 사람들에게
+있어---사법심사(judicial review)라는 제도를 소중히 여기는 이유가 된다.
+이들은 사법심사가 때때로 잘못된 판단, 예컨대 로크너 시대(Lochner era)
+동안 주 및 연방 법원이 170건의 노동 관련 법률을 무효화한
+것처럼,\footnote{\emph{Lochner v. New York}, 198 U.S. 45 (1905).
+  1880--1935년 사이에 노동 관계 및 노동 조건에 관한 주 및 연방 법률이
+  위헌으로 판결된 전체 사례 수는 다음 문헌에 수록된 목록을 기반으로
+  계산되었다: \emph{William E. Forbath, Law and the Shaping of the
+  American Labor Movement} apps. A, C, at 177--92, 199--203 (1991).}
+부정적 결과로 이어질 수 있음을 인정한다. 또한 이 제도가 어떤 형태로든
+민주적 결손(democratic deficit)을 겪고 있다는 점도 인정한다. 그러나
+이들은 그러한 비용(costs)이 종종 과장되거나 잘못 묘사된다고 주장한다.
+민주적 절차(democratic process) 역시 결코 완벽하지 않으며, 어차피
+사법심사에 대한 민주주의적 반대 역시 다수의 전제(tyranny of the
+majority)가 문제될 때에는 의문시될 수 있다. 이들은 논증하기를, 우리는
+때때로 발생하는 부정적 결과를 감수할 수 있는데, 왜냐하면 이 제도는
+로렌스(Lawrence), 로 대 웨이드(Roe), 브라운 대 교육위원회(Brown) 같은
+판결들을 통해,\footnote{\emph{Lawrence v. Texas}, 539 U.S. 558 (2003);
+  \emph{Roe v. Wade}, 410 U.S. 113 (1973); \emph{Brown v. Bd. of Educ.},
+  347 U.S. 483 (1954).} 편견에 사로잡힌 다수 대중에 맞서 우리 사회가
+개인의 권리(individual rights)에 전념하고 있다는 점을 확인시켜 주었기
+때문이라는 것이다.
+
+이것이 내가 사법심사(judicial review)에 대해 긍정적으로 말할 수 있는
+거의 마지막 말이 될 것이다. (나는 이 제도가 남긴 많은 판례의 가치와,
+관련된 절차적 쟁점들이 얼마나 복잡한지를 먼저 인정하고 싶었다.) 이
+에세이가 논증하려는 바는, 입법에 대한 사법심사는 자유롭고 민주적인
+사회에서 최종적인 결정 방식(mode of final decisionmaking)으로서 적절하지
+않다는 것이다.
+
+\textbf{(p.~1349)} 이와 같은 결과를 도출하는 논변들은 과거에도 자주
+제기되어 왔으며, 이와 같은 제도적 실천을 논할 때 자연스럽게 떠오를
+수밖에 없다. 자유주의 정치이론(liberal political theory)에서
+입법우위(legislative supremacy)는 흔히 국민 자치(popular
+self-government)와 연관된다.\footnote{이 개념의 고전적 정립은 다음에
+  있다: \emph{John Locke, The Second Treatise of Government}, in
+  \emph{Two Treatises of Government} 265, 366--67 (Peter Laslett ed.,
+  Cambridge Univ. Press 1988) (1690).} 그리고 민주주의적 이상(democratic
+ideals)은, 선출되지 않은 판사들이 선출된 입법부의 권한을 승인 여부에
+따라 제한할 수 있다고 주장하는 어떤 실천과도 본질적으로 긴장 관계에
+놓인다. 알렉산더 비클(Alexander Bickel)은 이 쟁점을 다음과 같은 유명한
+표현으로 요약했다: ``반(反)다수결의 어려움''(the counter-majoritarian
+difficulty).\footnote{\emph{Alexander M. Bickel, The Least Dangerous
+  Branch} 16--17 (2d ed.~1986). → ``사법심사는 우리의 체계 내에서
+  다수결에 반하는(counter-majoritarian) 힘이다. \ldots{} 대법원이 입법
+  행위를 위헌이라고 선언할 때, 그것은 현재 여기에 존재하는 실제 인민의
+  대표들의 의지를 좌절시키는 것이다.''} 비클은 이 어려움을 완화할 수
+있는 방법으로, 기존의 입법 절차가 대중 혹은 다수 의지를 완전하게
+대표하지 못한다는 점을 보여주는 전략을 제안했다. 그러나 그는 다음과 같이
+덧붙였다:
+
+\begin{quote}
+현대 정치학(modern political science)이 놀라울 정도로 정교하고 열정적인
+노력으로 탐구해낸 제도적 복잡성과 난점들---그리고 그 일부는 단순한
+발견의 열의를 넘어서는 풍부함으로 오히려 복잡성을 증폭시키는 경향을
+띠기도 하지만---그 어떤 복잡성도 미국 민주주의(American democracy)에서
+사법심사(judicial review)가 일탈적 제도(deviant institution)라는 본질적
+현실을 바꿀 수는 없다.\footnote{Id. at 17--18.}
+\end{quote}
+
+사법심사(judicial review)를 통해 입법이 무효화될 수 없는 국가들에서는,
+낙태(abortion), 소수집단 우대정책(affirmative action), 학교 바우처
+제도(school vouchers), 동성혼(gay marriage)과 같은 사안에 대해 국민
+스스로가 통상의 입법 절차(ordinary legislative procedures)를 통해
+최종적으로 결정할 수 있다. 또한, 공공장소에서의 인종적 증오 표현(racial
+hatred)의 처벌이나 선거에서 후보자 지출 제한과 같은 문제들에 대해서도
+국민이 스스로 결정할 수 있다. 만일 이러한 문제들에 대해 국민 사이에 의견
+차이가 있다면, 그들은 대표자(representatives)를 선출하여 의회에서
+토론(deliberation)과 표결(voting)을 통해 해당 쟁점을 해결할 수 있다.
+예컨대 1960년대 영국에서는 낙태법의 자유화, 동의에 의한 성인 간 동성애
+행위의 비범죄화, 사형제도의 폐지를 둘러싼 논의가 의회에서 진행되었고,
+이는 모두 이러한 방식으로 처리되었다.\footnote{\emph{Abortion Act,
+  1967}, c.~87; \emph{Sexual Offences Act, 1967}, c.~60; \emph{Murder
+  (Abolition of Death Penalty) Act, 1965}, c.~71.} 각각의 사안에서,
+폭넓은 공적 논의(public deliberation)가 하원(House of Commons) 내에서의
+진지한 토론으로 반영되었다. 이러한 토론의 질은 (캐나다, 호주, 뉴질랜드
+및 기타 국가에서도 유사한 토론이 이루어졌으며), 입법자들이 이러한
+사안들을 책임감 있게 다루지 못한다는 주장을 무의미하게 만들며, 이와 같은
+입법 결과들의 \textbf{(p.~1350)} 자유주의적 성격(libera outcomes)은 다수
+대중(popular majorities)이 소수자(minorities)의 권리(rights)를 지지하지
+않을 것이라는 익숙한 명제에 의문을 제기한다.
+
+반면, 미국에서는 주 및 연방 차원의 입법부(state and federal
+legislatures)에서 국민 또는 그 대표자들이 위의 쟁점들에 대해 논의할 수는
+있지만, 그 결정이 유지될 것이라는 보장이 없다. 어떤 입법적 결론에
+동의하지 않는 사람이 그것을 법정에 제소하기로 결정하면, 최종적으로
+승리하는 견해는 판사(judges)들의 견해가 된다. 사법심사의 옹호자인 로널드
+드워킨(Ronald Dworkin)의 표현을 빌리자면, ``수 세기 동안 철학자, 정치가,
+시민들이 논의해온 난해하고, 논쟁적이며, 심오한 정치적 도덕성(political
+morality)의 문제들''에 대해, 국민과 그 대표자들은 단지 ``대법관 다수의
+판단(deliverances of a majority of the justices)을 받아들여야만'' 하며,
+그들의 통찰력이 이와 같은 중대한 문제들에 대해 특별히 탁월하다고 할 수는
+없다.\footnote{\emph{Ronald Dworkin, Freedom's Law: The Moral Reading of
+  the American Constitution} 74 (1996).}
+
+최근 수년간 미국 내에서는 사법심사를 비판하는 책들이 다수
+출간되었다.\footnote{예: \emph{Larry D. Kramer, The People Themselves:
+  Popular Constitutionalism and Judicial Review} (2004); \emph{Mark
+  Tushnet, Taking the Constitution Away from the Courts} (1999).}
+오랫동안 이 제도에 대한 지지는 자유주의자(liberals)들로부터 나왔고,
+반대는 자유주의 법원이 옹호한 권리(rights)에 반대하는
+보수주의자(conservatives)들로부터 나왔다. 그러나 최근에는
+렌퀴스트(Rehnquist) 대법원이 자유주의 입법정책의 주요 성과들 중 일부를
+무효화함에 따라, 사법심사에 대한 자유주의 진영의 반대(liberal
+opposition)도 증가해 왔다.\footnote{예: \emph{United States v.
+  Morrison}, 529 U.S. 598 (2000) (여성폭력방지법의 일부 조항을 위헌으로
+  판시); \emph{United States v. Lopez}, 514 U.S. 549 (1995) (의회가 학교
+  주변 총기 소지를 금지할 권한이 없다고 판시). 또한 참조: \emph{Mark
+  Tushnet, Alarmism Versus Moderation in Responding to the Rehnquist
+  Court}, 78 \emph{Ind. L.J.} 47 (2003).} 물론 이 제도를 열정적으로
+옹호하는 방어(defenses)도 있었다.\footnote{예: \emph{Dworkin}, supra
+  note 10; \emph{Christopher L. Eisgruber, Constitutional Self
+  Government} (2001); \emph{Lawrence G. Sager, Justice in Plainclothes:
+  A Theory of American Constitutional Practice} (2004).} Marbury v.
+Madison 판결 200주년은 이 제도의 기원과 원초적 정당성(original
+legitimacy)을 둘러싼 논의들을 촉발시켰으며, Brown v. Board of Education
+판결 50주년은 20세기 중반, 인종분리(segregation)와 인종차별적 법률에
+맞선 투쟁을 주도했던 미국 법원(courts)의 역할을 되새기게 했다.
+
+이처럼 논쟁의 전선은 형성되었고, 양 진영의 전략은 익숙하며, 입장 역시
+널리 이해되고 있다. 그렇다면 필자가 이 글에서 개입(intervention)을
+시도하는 \textbf{(p.~1351)} 이유는 무엇인가? 나 자신도 이 문제에 관해
+이미 상당히 많이 글을 써 왔다.\footnote{예: \emph{Jeremy Waldron, Law
+  and Disagreement} 10--17, 211--312 (1999); \emph{Jeremy Waldron,
+  Deliberation, Disagreement, and Voting}, in \emph{Deliberative
+  Democracy and Human Rights} 210 (Harold Hongju Koh \& Ronald C. Slye
+  eds., 1999) {[}이하 ``Waldron, Deliberation, Disagreement, and
+  Voting''{]}; \emph{Jeremy Waldron, Judicial Power and Popular
+  Sovereignty}, in \emph{Marbury Versus Madison: Documents and
+  Commentary} 181 (Mark A. Graber \& Michael Perhac eds., 2002) {[}이하
+  ``Waldron, Judicial Power and Popular Sovereignty''{]}; \emph{Jeremy
+  Waldron, A Right-Based Critique of Constitutional Rights}, 13
+  \emph{Oxford J. Legal Stud.} 18 (1993) {[}이하 ``Waldron, A
+  Right-Based Critique''{]}.} 사법심사를 비판하는 또 하나의 글을 굳이
+쓰는 이유는 무엇인가?
+
+내가 하고자 하는 바는, 사법심사에 반대하는 핵심 논거(a core argument
+against judicial review)를 식별하는 것이다. 이 논거는 사법심사의 역사적
+형태(historical manifestations)나 그 구체적 효과(particular
+effects)---즉, 그것이 낳은 좋은 판결과 나쁜 판결, 그로 인해 발생한
+고통과 긍정 등---에 종속되지 않는 것이다. 나는 판사들이 권한을 어떻게
+행사하는지, 그리고 그들이 법률을 심사할 때 어떤 태도(신중함 또는
+적극성)로 접근하는지와는 무관하게, 사법심사 자체에 대한 반대 논거에
+집중하고자 한다. Mark Tushnet과 Larry Kramer의 최근 저작들은 이 제도에
+대한 이론적 비판을 사법심사의 역사적 기원과 미국 헌법이 보다
+비사법화된(less judicialized) 방식으로 구성될 경우 어떤 모습일지를
+설명하는 논의와 뒤섞고 있다.\footnote{\emph{Kramer}, supra note 11;
+  \emph{Tushnet}, supra note 11.} 이것은 Tushnet과 Kramer에 대한 비판이
+아니다. 그들의 저작은, 이론적 논쟁에 풍부한 역사성과 색채를 부여한다는
+점에서 가치가 있다. Frank Michelman이 《The People Themselves》의 책
+뒷면 추천문에서 말하듯이, ``Kramer의 역사 서술은 사법심사와 대중
+헌법주의(popular constitutionalism)를 둘러싼 논쟁에 생명을
+불어넣는다.''\footnote{Frank Michelman, 위 Kramer 저서에 대한 책 커버
+  발언.} 그리고 실제로 그렇다. 하지만 나는 그 ``살(flesh)''을 일부
+걷어내고, 규범적 논거(normative argument)를 그 ``뼈대(bare
+bones)''로까지 끌어내려, 사법심사(judicial review)가 실제로 어떤
+전제(premise)에 기초하고 있는지를 바로 들여다보고자 한다.
+
+찰스 블랙(Charles Black)은 한때, 실제 현실에서 사법심사(judicial
+review)에 대한 반대는 대체로 ``간헐적인 반응(a sometime thing)''에
+그친다고 지적한 바 있다. 사람들은 자신이 소중히 여기는 몇몇
+판례---예컨대 \emph{Brown} 또는 \emph{Roe}---에 대해서는 사법심사를
+지지하고, 유감스러운 결과가 나왔을 때에만 이를 반대하는 경향이 있다는
+것이다.\footnote{\emph{Charles L. Black, Jr., A New Birth of Freedom:
+  Human Rights, Named and Unnamed} 109 (1997).} 정치 영역에서는
+사법심사에 대한 지지가 특정 판결에 대한 지지와 강하게 얽히는 경우가
+많다. 이는 특히 낙태권(abortion rights)을 둘러싼 논쟁에서 두드러지는데,
+pro-choice 진영에서는 사법심사에 대한 비판을 고려하는 것조차 두려워하는
+경향이 있다. 그 이유는 그러한 비판이 \emph{Roe v. Wade} 판결을 보수적
+입법자들의 권리를 침해한 정당하지 못한 간섭(unwarranted intrusion)으로
+간주하는 이들에게 위안을 주고 힘을 실어줄 것이라는 우려 때문이다. 나는
+사법심사의 개별적 결과로부터 추상화된 방식으로 그 핵심적인 비판
+논거(core case against judicial review)를 제시함으로써,
+\textbf{(p.~1352)} 이러한 공황상태(panic)의 일부를 극복하는 데 기여할 수
+있기를 바란다. 물론 일부 국가에서는 성(sex), 인종(race),
+종교(religion)와 관련된 입법의 병리적 현상(legislative
+pathologies)으로부터 방어하기 위한 보호 수단(protective measure)으로서
+사법심사가 필요할 수도 있다. 그러나 그렇다 하더라도, 그와 같은 옹호가
+사법심사 자체의 본질적인 정당성에 해당하는지, 아니면 예외적인 상황에서
+일반적으로 설득력 있는 규범적 논거(normative argument)에 반하여
+적용되어야 하는 특수한 사정에 불과한 것인지 검토할 필요가 있다.
+
+이론적 비판(theoretical critique)의 ``살(flesh)''을 걷어내고
+``뼈대(bones)''만 남기려는 또 하나의 이유는, 사법심사가 미국 이외의 여러
+나라에서도 문제로 제기되고 있기 때문이다. 각국은 미국과는 전혀 다른
+역사, 사법 문화(judicial culture), 입법 제도에 대한 경험을 가지고 있다.
+예컨대 영국에서 판사들이 입법을 심사할 수 있는 권한이 상대적으로
+제한되어 있는 문제를 두고 논쟁할 때, 사람들은 1805년
+공화주의자(Republicans)들이 연방주의자(Federalists)에게 어떤 주장을
+했는지, 혹은 \emph{Brown v. Board of Education}의 유산(legacy)에 대해
+별다른 관심을 갖지 않는다. 이처럼 문화적, 역사적, 정치적
+선입견(preoccupations)으로 오염되지 않은 보다 일반적인 이해(general
+understanding)가 필요하다.\footnote{다시 말하자면, 보다 구체적인 설명을
+  무시하려는 것은 아니다. 이 논문이 의도하는 바는 이론적 논거를 명확히
+  하여, 이를 영국, 미국, 캐나다, 남아프리카공화국 등에서의 실제 논의와
+  나란히 놓고 비교하는 것이다.}
+
+나 자신의 저술은 대체로 다소 추상적이었다. 하지만 나는 사법심사를
+법철학(jurisprudence)과 정치철학(political philosophy)의 다른 쟁점들과
+얽힌 방식으로 논의해 왔다.\footnote{나는 다음 논문에서 개인의
+  \emph{권리(right)}라는 개념이 사법심사를 요구하는지를 물었다:
+  \emph{Waldron, A Right-Based Critique}, supra note 14. 또한 다음
+  문헌들에서 시민공화주의적 사상과의 관계를 고찰하였다: \emph{Jeremy
+  Waldron, Judicial Review and Republican Government}, in \emph{That
+  Eminent Tribunal: Judicial Supremacy and the Constitution} 159
+  (Christopher Wolfe ed., 2004); 벤담주의적 민주주의 개념과 루소주의적
+  개념의 차이와 관련해서는 \emph{Jeremy Waldron, Rights and Majorities:
+  Rousseau Revisited}, in \emph{Nomos XXXII: Majorities and Minorities}
+  44 (John W. Chapman \& Alan Wertheimer eds., 1990) {[}이하 ``Waldron,
+  Rights and Majorities''{]}; 대륙 유럽의 인민주권 이론과의 관계는
+  \emph{Waldron, Judicial Power and Popular Sovereignty}, supra note 14.
+  나는 또한 사법심사 논쟁이 메타윤리학에서의 실재론(realism)과 가치의
+  객관성(objectivity)에 관한 논쟁과 어떤 관련을 가지는지 검토하였다:
+  \emph{Jeremy Waldron, The Irrelevance of Moral Objectivity}, in
+  \emph{Natural Law Theory} 158 (Robert P. George ed., 1992) {[}이하
+  ``Waldron, The Irrelevance of Moral Objectivity''{]}; \emph{Jeremy
+  Waldron, Moral Truth and Judicial Review}, 43 \emph{Am. J. Juris.} 75
+  (1998) {[}이하 ``Waldron, Moral Truth and Judicial Review''{]}. 또한
+  여러 형태의 사법심사 옹호론에 대해 비판하였다. 예:
+  선결약정(precommitment)에 대한 논의는 \emph{Jeremy Waldron,
+  Precommitment and Disagreement}, in \emph{Constitutionalism:
+  Philosophical Foundations} 271 (Larry Alexander ed., 1998) {[}이하
+  ``Waldron, Precommitment and Disagreement''{]}; Ronald Dworkin이
+  \emph{Freedom's Law}에서 제시한 민주주의와의
+  \emph{양립가능성(compatibility)} 논증은 \emph{Jeremy Waldron, Judicial
+  Review and the Conditions of Democracy}, 6 \emph{J. Pol. Phil.} 335
+  (1998)에서 검토하였다.} 그럼에도 불구하고, 나는 아직까지 사법심사에
+대한 근본적 반론이 무엇인지 \textbf{(p.~1353)} 명확하고 간결하게
+제시하지 못했다고 느끼며, \emph{Law and Disagreement}나 그 외의
+저작들에서 내가 제시한 주장에 비판을 제기한 이들에 대해 만족스러운
+답변을 제공하지 못했다고 생각한다.
+
+이 에세이에서 나는 사법심사가 두 가지 차원에서 비판에 취약하다는 점을
+논증할 것이다. 첫째, 종종 주장되는 바와는 달리, 사법심사는 시민들이
+권리에 관해 의견이 다를 때 핵심 쟁점(real issues at stake)에 명확히
+집중할 수 있는 수단을 제공하지 않는다. 오히려 그것은 판례(precedent),
+법률 문언(texts), 해석(interpretation) 등 부차적인 쟁점(side-issues)들로
+시민들의 관심을 분산시킨다. 둘째, 사법심사는 민주주의적 가치(democratic
+values)의 관점에서 정치적으로 정당하지 않다(politically illegitimate).
+소수의, 선출되지 않았고 책임성(accountability)도 없는 판사들 사이의
+다수결(majority voting)에 특권을 부여함으로써, 일반 시민들의
+참정권(enfranchisement)을 박탈하고, 대의(representation)와 정치적
+평등(political equality)이라는 소중한 민주주의 원칙들을 권리 문제에 대한
+최종 판단 과정에서 배제한다.
+
+에세이의 전개는 다음과 같다. 제 I부에서는 내가 비판하고자 하는 대상인
+'강한 형태의 사법심사(strong judicial review of legislation)'를
+정의하고, 내가 비판의 대상으로 삼지 않는 다른 실천들과 구분할 것이다. 제
+II부에서는 내 주장의 전제가 되는 몇 가지 가정을 제시할 것이다. 이
+에세이의 주장은 무조건적인 것이 아니라, 현대 자유민주주의(modern liberal
+democracies)의 제도적·정치적 특징에 의존한다. 제 III부에서는 전체 주장의
+일반적 성격을 간단히 검토할 것이다. 이 주장은 결과(outcome)와
+절차(process) 두 측면의 이유 모두를 포함하며, 각각 제 IV부와 제 V부에서
+논의된다. 제 VI부에서는 대의제 기관(representative institutions)의
+결정을 허용하지 않으려는 가장 흔한 논거---즉 그러한 시스템이 필연적으로
+다수의 전제(tyranny of the majority)로 이어진다는 주장---의 오류를
+드러낼 것이다. 마지막으로 제 VII부에서는 핵심 논거(core argument)가
+의존하는 가정들에서 벗어나야 할 이유가 존재하는 비핵심 사례들(non-core
+cases)에 대해 간략히 논할 것이다.
+
+\subsection{I. 사법심사의 정의 (DEFINITION OF JUDICIAL
+REVIEW)}\label{i.-uxc0acuxbc95uxc2ecuxc0acuxc758-uxc815uxc758-definition-of-judicial-review}
+
+우선, 내가 '사법심사(judicial review)'라는 개념으로 무엇을 의미하는지를
+간략히 설명하고자 한다. 이 에세이는 입법에 대한 사법심사(judicial review
+of legislation)에 관한 것이며, 행정부의 행위나 행정적
+의사결정(administrative decisionmaking)에 대한 사법심사를 다루는 것이
+아니다.\footnote{유럽인권재판소가 수행하는 다수의 사법심사는 행정부의
+  행위에 대한 것이다. 그 중 일부는 입법행위에 대한 사법심사이고, 일부는
+  사법행위 자체에 대한 사법심사이다. 다음을 참조하라: \emph{Seth F.
+  Kreimer, Exploring the Dark Matter of Judicial Review: A
+  Constitutional Census of the ???os}, 5 \emph{Wm. \& Mary Bill Rts. J.}
+  427, 458--59 (1997). 이 글은 미국 연방대법원의 헌법 판례 다수가
+  입법부가 아니라 하급 행정부 관료의 행위를 다루고 있다고 주장한다.}
+내가 다루고자 하는 질문은 \textbf{(p.~1354)} 한 정치 공동체(polity)의
+선출된 입법부(elected legislature)가 제정한 \textbf{일차적 입법(primary
+legislation)}을 대상으로 한다. 이러한 논점 중 일부는 행정부(executive
+action)에 대해서도 동일하게 적용된다고 생각할 수도 있다. 왜냐하면 행정부
+또한 일정한 선출 정당성(elective credentials)을 지니고 있어서 판사들의
+결정에 반대할 수 있기 때문이다. 그러나 거의 모든 곳에서 행정부의 선출
+정당성은 법치(rule of law) 원칙에 종속된 것으로 받아들여지고 있으며, 그
+결과로 공직자들은 법률에 의거한 정당한 권한(legal authorization)에 따라
+행동해야 한다는 법원의 명령을 받을 수 있다.\footnote{Seana Shiffrin,
+  Richard Pildes, Frank Michelman 등은 다음과 같이 제안하였다: 본 논문이
+  입법에 대한 사법심사에 반대하는 논거가, 오래 전에 제정된 법률이나
+  해석을 요하는 법률에 따라 행해지는 행정부의 행위에 대한 사법심사에도
+  확대 적용될 수 있는지를 검토하라는 제안. 이에 대해서는 보다 많은
+  논의가 필요하다. 이 방향으로 논의를 전개하는 것이 이 논거에 대한
+  \emph{귀류법(reductio ad absurdum)}이 될 수도 있고, 혹은 유용한
+  응용으로 평가될 수도 있다.} 입법부에 대해서도 유사한 주장, 즉
+``사법심사란 곧 입법부를 법치에 종속시키는 것이다''라는 입장이 제기되어
+왔다. 그러나 입법부의 경우에는 이 주장이 논쟁의 여지가 없지 않다. 사실
+바로 이 점이 우리가 여기서 다루고자 하는 핵심 쟁점이다.
+
+입법에 대한 사법심사(judicial review of legislation)는 전 세계적으로
+다양한 방식으로 이루어지고 있으며, 이를 일반적인 범주 아래에 분류할 수
+있다. 이러한 실천들은 몇 가지 차원에서 구분될 수 있는데, 가장 중요한
+구분은 내가 \textbf{강한 사법심사(strong judicial review)}와
+\textbf{약한 사법심사(weak judicial review)}라고 부를 두 가지 유형 간의
+차이이다. 이 에세이에서 내가 비판하고자 하는 대상은 바로 \textbf{강한
+사법심사(strong judicial review)}이다.\footnote{강한 사법심사(strong
+  judicial review)와 약한 사법심사(weak judicial review)의 구분은,
+  사법우위(judicial supremacy)라는 개념과는 별개이다. 사법우위란 다음 세
+  가지 요소로 구성된다: (1) 법원이 정치 체제 전반의 중요한 쟁점을
+  결정하며, (2) 그 결정이 정치 체제 내의 다른 모든 행위자에게 절대적으로
+  구속력을 갖고, (3) 법원이 해당 쟁점에 관해 다른 정부 부서의 입장을
+  전혀 존중하지 않으며(과거 자의 판례조차 제한된 \emph{선례구속의
+  원칙(stare decisis)} 아래에서만 존중한다는 점에서), 독자적으로
+  판단하는 체제. 참조: \emph{Barry Friedman, The History of the
+  Countermajoritarian Difficulty, Part One: The Road to Judicial
+  Supremacy}, 73 \emph{N.Y.U. L. Rev.} 333, 352 \& n.63 (1998);
+  \emph{Jeremy Waldron, Judicial Power and Popular Sovereignty}, supra
+  note 14, at 191--98.}
+
+강한 사법심사의 체계에서 법원(courts)은 특정 사건에서 해당 법률이 명백히
+적용되는 경우에도 그 법률의 적용을 거부하거나, 법률이 명시적으로
+예상하지 않는 방식으로 그 적용 효과를 수정하여 개인의 권리(individual
+rights)에 부합하도록 만들 수 있는 권한을 가진다. 더 나아가, 이 체계의
+법원은 특정 법률이나 조항을 법적으로 적용 불가하다고 선언할 수 있으며,
+그 결과 판례구속력(stare decisis)과 쟁점 차단(issue preclusion)의 원칙에
+따라 해당 법률은 사실상 사문화(dead letter)된다. 심지어 더 강한 형태의
+사법심사라면, 법원이 해당 입법 조항을 법전(statute-book)에서 완전히
+제거할 수 있는 권한까지 갖는다. 일부 유럽 국가의 법원들은 이와 같은
+\textbf{(p.~1355)} 권한을 실제로 갖고 있다.\footnote{Mauro Cappelletti
+  \& John Clarke Adams, Comment, \emph{Judicial Review of Legislation:
+  European Antecedents and Adaptations}, 79 \emph{Harv. L. Rev.} 1207,
+  1222--23 (1966). 법률이 위헌으로 선언되었을 경우, 그 법률이 제정
+  당시부터 무효였다고 간주되는지 여부에 관해 추가적인 논의가 존재한다.}
+미국 법원은 그러한 형식적 권한을 가지지는 않지만,\footnote{이 문제는
+  명확하지 않다. 위헌으로 선언된 법률이 법전에서 삭제되지 않는다는
+  주장에 대한 근거로 다음 사례를 고려할 수 있다: \emph{Dickerson v.
+  United States}, 530 U.S. 428 (2000). 이 사건에서 연방대법원은 과반수
+  의견으로, 미란다 경고 없이 이루어진 자백도 자발적이면 증거로
+  인정된다고 한 연방법(18 U.S.C. § 3501)을 위헌이라고 판시하였다. 이에
+  대한 Scalia 대법관의 반대의견 마지막 부분은 위헌으로 판단된 입법이
+  여전히 법적 참조 대상으로 남아 있을 수 있음을 시사한다. 그는 다음과
+  같이 말했다: ``나는 오늘의 판결에 반대하며, § 3501 조항이 폐지되기
+  전까지는 피고인의 자백이 자발적이었다는 지속 가능한 판단이 내려진 모든
+  사건에서 이 조항을 계속 적용할 것이다.'' (\emph{Id.} at 464). 반대되는
+  인상을 주는 사례로는 \emph{McCorvey v. Hill}, 385 F.3d 846, 849 (5th
+  Cir. 2004)가 있다. 이 사건에서 제5순회항소법원은 \emph{Roe v.
+  Wade}에서 문제가 된 텍사스주의 낙태법은 암묵적으로 폐지된 것으로
+  간주되어야 한다고 판시하였다. 그러나 이 판례를 면밀히 검토하면, 암묵적
+  폐지는 \emph{Roe} 판결 자체가 아니라 그 이후 제정된 텍사스 낙태
+  규제법들에 의해 이루어진 것으로 보인다. (이 참고는 Carol Sanger에게
+  감사를 표한다.)} 실질적인 효과는 그와 크게 다르지 않다.\footnote{Richard
+  H. Fallon, Jr., Commentary, \emph{As-Applied and Facial Challenges and
+  Third-Party Standing}, 113 \emph{Harv. L. Rev.} 1321, 1339--40 (2000).}
+
+반면 \textbf{약한 사법심사(weak judicial review)} 체계에서는, 법원이
+입법이 개인의 권리와 합치하는지 여부를 검토할 수는 있지만, 단지 권리가
+침해된다는 이유만으로 그 법률의 적용을 거부하거나 그 적용을 완화할 수는
+없다.\footnote{Stephen Gardbaum, \emph{The New Commonwealth Model of
+  Constitutionalism}, 49 \emph{Am. J. Comp. L.} 707 (2001).} 그럼에도
+불구하고, 이러한 검토는 일정한 효과를 가진다. 예컨대 영국에서는 법원이
+어떤 조항이 유럽인권협약(European Convention on Human Rights)에서 보장된
+권리(Convention right)와 양립하지 않는다고 판단하는 경우 ``양립불가능성
+선언(declaration of incompatibility)''을 내릴 수 있다. 이러한 권리는
+인권법(Human Rights Act)을 통해 영국 국내법에 통합되어 있다. 이 법은
+그러한 선언이 ``해당 조항의 유효성(validity), 계속적인 효력(continuing
+operation) 또는 집행(enforcement)에 영향을 미치지 않으며, 해당 소송
+당사자들을 법적으로 구속하지 않는다''고 명시하고 있다.\footnote{\emph{Human
+  Rights Act}, 1998, c.~42, § 4(2), (6).} 그럼에도 불구하고, 이 선언은
+실제적인 효과를 낳는다. 예컨대 장관(minister)은 이러한 선언을 근거로
+신속입법절차(fast-track legislative procedure)를 개시할 수 있으며,
+이러한 절차는 바로 그 사법심사 절차 없이는 행사할 수 없는
+권한이다.\footnote{\emph{Id.} § 10.}
+
+\textbf{(p.~1356)} 더 약한 형태의 사법심사조차 인정하지 않는 경우도
+있다. 예컨대 영국의 경우와 유사하게, 뉴질랜드(New Zealand)의 법원도
+인권을 침해하는 법률을 적용하지 않는 결정을 내릴 수는 없다. (여기서의
+인권은 1990년 「권리장전법(Bill of Rights Act)」에 명시된 권리를
+의미한다.\footnote{\emph{New Zealand Bill of Rights Act 1990}, 1990
+  S.N.Z. No.~109, § 4. ``본 법안의 발효 전후를 불문하고 모든
+  입법은\ldots{} 본 권리장전(Bill of Rights)의 어떠한 조항과
+  불일치한다는 이유만으로, 암묵적으로 폐지 또는 무효화되었거나, 어떤
+  방식으로든 무효 또는 효력을 상실한 것으로 판단되어서는 아니 된다.''})
+그러나 법원은 그 침해를 회피할 수 있는 해석을 찾아내기 위해 상당히
+노력할 수 있다.\footnote{\emph{Id.} § 6. ``어떠한 입법이라도 본
+  권리장전에 명시된 권리 및 자유와 양립가능한 의미로 해석될 수 있는
+  경우, 그 의미가 다른 모든 의미에 우선한다.''} 뉴질랜드 법원은 경우에
+따라 자발적으로 양립불가능성 선언을 내릴 준비가 되어 있다고 밝힌 적도
+있지만, 그러한 선언은 입법 과정에 아무런 법적 효과를 미치지
+않는다.\footnote{\emph{Moonen v. Film \& Literature Bd. of Review},
+  {[}2000{]} 2 N.Z.L.R. 9, 22--23 (C.A.).}
+
+중간적 형태의 사례들도 존재한다. 예컨대 캐나다에서는 입법에 대한
+사법심사 제도가 존재하며, 미국 법원과 마찬가지로, 캐나다 법원은 어떤
+연방 또는 주 법률이 「권리와 자유에 관한 헌장(Charter of Rights and
+Freedoms)」의 규정을 위반한다고 판단할 경우 그 법률의 적용을 거부할 수
+있다. 그러나 캐나다의 입법은 형식상 그러한 검토로부터 벗어날 수 있도록
+구성될 수 있다. 즉, 캐나다 입법기관은 헌장의 권리 조항들에도 불구하고
+법률을 제정할 수 있는 \textbf{``불구조항(notwithstanding clause)''}을
+발동할 수 있다.\footnote{\emph{Canadian Charter of Rights and Freedoms},
+  \emph{Part I of the Constitution Act, 1982}, being \emph{Schedule B to
+  the Canada Act 1982}, ch.~11, § 33(1)--(2) (U.K.). (1) 의회나 주
+  의회는 해당 법률 또는 조항이 본 권리장전(Charter)의 제2조 또는
+  제7조\textasciitilde 제15조의 조항에도 불구하고 효력을 갖는다고
+  명시적으로 선언할 수 있다. (2) 이 조항에 따라 선언이 이루어진 법률
+  또는 조항은 해당 선언이 없다면 무효일 조항에도 불구하고 효력을 가진다.}
+그러나 실제로 이 불구조항은 거의 사용되지 않는다.\footnote{이 조항이
+  실제로 적용된 사례 대부분은 퀘벡 정치 맥락에서 이루어졌다. 참조: Tsvi
+  Kahana, \emph{The Notwithstanding Mechanism and Public Discussion:
+  Lessons from the Ignored Practice of Section 33 of the Charter}, 44
+  \emph{J. Inst. Pub. Admin. Can.} 255 (2001).} 따라서 이후 논의에서는
+캐나다의 제도를 \textbf{(p.~1357)} \textbf{강한 사법심사(strong judicial
+review)}의 한 형태로 간주하되, 형식상 존재하는 이 예외조항이 내 논거에
+미치는 영향은 미미하다고 보겠다.\footnote{Jeffrey Goldsworthy는
+  ``예외조항(notwithstanding provision)''이 강한 사법심사(strong
+  judicial review)의 민주주의적 정당성에 대해 우려하는 이들에게 충분한
+  답이 될 수 있다고 주장하였다. Jeffrey Goldsworthy, \emph{Judicial
+  Review, Legislative Override, and Democracy}, 38 \emph{Wake Forest L.
+  Rev.} 451, 454--59 (2003). 그는 이 조항이 자주 사용되지 않더라도
+  문제되지 않는다고 말한다: ``분명 그것은 유권자의 민주적 특권이며,
+  Waldron은 이를 존중해야 할 것이다. 유권자가 헌법적 권리의 외양적
+  객관성에 기만당하거나, 사법부의 신비성 또는 판사의 법적 전문성과
+  공정성에 대한 순진한 믿음에 현혹될 수 있다는 식으로 반박해서는 안
+  된다. 그런 반박은 헌법에 명시된 권리를 지지하는 이들과 똑같이,
+  유권자의 계몽된 자기통치 능력에 대한 불신을 드러내는 것이기
+  때문이다.'' (\emph{Id.} at 456--57). 그러나 나는 진짜 문제는 이 33
+  조항이 입법부로 하여금 권리에 관한 입장을 왜곡하도록 강요한다는 점에
+  있다고 본다. 헌장(Charter)을 무시하고 법을 제정한다는 것은, 해당
+  권리가 헌장이 부여한 중요성을 갖지 않는다고 말하는 것이나 다름없다.
+  그러나 사법부와 입법부 간의 전형적 대립은 헌장 권리를 중요하게 여기는
+  판사들과 그렇지 않은 입법자들 간의 충돌이 아니다. 그것은 보통, 모두
+  헌장 권리를 중요하게 여기지만 해당 권리를 어떻게 이해할지에 관해
+  \emph{의견불일치(disagreement)}하는 입법 다수, 소수와 사법 다수,
+  소수들 사이의 문제다. Goldsworthy도 이를 인정한다: ``사법부가\ldots{}
+  헌장 조항의 `진정한' 의미와 효과에 대해 입법부와 의견불일치할 것으로
+  예상될 때, 입법부는 헌장을 우회하는 것으로 보이지 않고는 자신의 입장을
+  관철시킬 수 없다. 그리고 그것은 입법부가 헌법적 권리를 노골적으로
+  전복하고 있다는 정치적으로 치명적인 비판에 노출된다.'' (\emph{Id.} at
+  467). 그러나 아마도 이 문제를 피할 수 있는 문구는 존재하지 않을
+  것이다. 실질적인 정치의 영역에서, 입법부는 항상 사법부가 발표하는
+  권리장전 해석의 영향력에 일정 부분 종속된다. (이 점에 대해 John
+  Morley에게 감사를 표한다.)}
+
+사법심사(judicial review)의 유형을 구분하는 두 번째 기준은, 특정 사회의
+헌법 체계(constitutional system) 내에서 \textbf{개별적 권리(individual
+rights)}가 차지하는 위상에 주목한다. 미국에서는 법률(statutes)이
+헌법(Constitution)에 명시된 개별적 권리에 부합하는지를 기준으로
+심사된다. 권리 지향적 사법심사(rights-oriented judicial review)는
+일반적인 헌법심사(constitutional review)의 필수적 요소(part and
+parcel)이며, 법원(courts)은 연방주의(federalism)나 권력분립
+원칙(separation of powers principles)의 침해를 이유로 법률을 무효화하는
+것과 동일한 정신(spirit)으로 권리 침해를 이유로 법률을
+무효화한다.\footnote{사법심사를 옹호한 가장 유명한 판례인 \emph{Marbury
+  v. Madison}은 개인의 권리와는 무관하였다. 그것은 하원의 평화 판사를
+  임명하고 해임하는 의회의 권한에 관한 것이었다.} 이로 인해 미국에서
+사법심사를 옹호하는 논변들은 독특한 색채를 띠게 된다. 철학적 옹호는 흔히
+\textbf{(p.~1358)} 사법부(judiciary)가 권리에 관한 명제들을 다루는 데에
+특히 능숙하다는 점에 초점을 맞추지만, 실제로는 이러한 논변조차도 헌법
+규범(constitutional rules)을 유지하기 위한 법원의 구조적 역할(structural
+role)을 방어하는 논변에 종속된다. 이 두 가지 방어 논리가 일치하는 경우도
+있지만, 서로 분리되기도 한다. 예컨대, \textbf{문언주의(textualism)}는
+구조적 사안에 대해 적절한 접근으로 여겨질 수 있지만, 권리 문제를
+사유하는 데 있어서는, 설령 그 권리가 권위 있는 문서에 담겨 있다고 해도,
+부적절한 기반으로 간주될 수 있다.\footnote{\emph{Dworkin}, supra note 3,
+  at 11--18; \emph{Andrei Marmor, Interpretation and Legal Theory}
+  156--57 (rev. 2d ed.~2005).} 다른 국가들에서는, 사법심사는 구조적
+헌법(constitution)의 일부로 특별히 지정되지 않은 권리장전(bill of
+rights)에 근거하여 이루어진다. 영국에서 \textbf{인권법(Human Rights
+Act)}에 따라 이루어지는 약한 사법심사(weak judicial review)는 이러한
+유형에 속한다. 강한 사법심사(strong judicial review)의 대부분은
+헌법심사(constitutional review)와 관련되어 있으므로, 이후 논의는 주로
+이들 사례에 초점을 맞출 것이다. 그러나 구조적 제약(structural
+constraints)에 중점을 두는 접근이 권리의 문제를 다루는 데 적절하지 않을
+수 있다는 점과, 권리 지향적 사법심사(rights-oriented judicial review)에
+대한 여러 비판이 다른 형태의 헌법심사에도 제기될 수 있다는 점은 기억할
+필요가 있다. 예컨대 최근 몇 년간, 미국 연방대법원(Supreme Court of the
+United States)은 연방주의에 대한 자신들의 해석과 충돌한다는 이유로 여러
+법률들을 무효화하였다.\footnote{예: supra note 12.} 누구나 동의하듯,
+현재의 주(state)와 연방(central government) 간의 관계는, 대부분의 헌법
+조문이 비준되었던 18세기 말이나, 연방 구조에 관한 조문이 실질적으로
+마지막으로 수정된 19세기 중엽과는 전혀 다른 방식으로 운영되고 있다.
+하지만 새로운 국가 구조(state/federal relations)의 기초가 무엇이어야
+하는지에 대해서는 의견이 분분하다. 헌법 조문 자체는 이 문제를 해결해주지
+않기 때문에, 결국 이 문제는 대법관들 사이의 표결(voting among
+Justices)에 의해 결정된다. 일부는 특정한 연방주의 개념을 지지하고 이를
+헌법 속에 ``읽어넣으며(read into the Constitution),'' 다른 이들은 또
+다른 개념을 지지하며, 다수 의견이 결국 판례를 형성한다. 그러나 이러한
+방식이 자유롭고 민주적인 인민 사이의 결사 조건(terms of association)을
+결정하는 데 적절한 기반이라고 보기는 어렵다.\footnote{주 및 연방 의회 간
+  권한 배분의 구조적 한계를 감독하는 사법심사의 필요성은 종종 권리 기반
+  입법 제한을 옹호하는 이들에 의해 (기회주의적으로) 인용된다. 그들은
+  말한다: ``입법부는 어차피 연방주의(federalism) 문제로 인해 사법심사의
+  대상이다. 그렇다면 그 관행을 권리 기반 사법심사로 확대해도 되지
+  않겠는가?'' 본 논문에서 제시된 권리 기반 사법심사의 바람직성에 대한
+  분석은 이러한 혼합형 또는 기회주의적 논증에도 적용될 수 있다.}
+
+세 번째 구분 기준은, 미국식의 사후적 사법심사(a posteriori review)와
+사전적 사법심사(ex ante review) 사이의 차이에 있다. 미국식 사후적
+사법심사는 특정 사건에 대한 법적 절차의 맥락 속에서 이루어지며, 법률이
+제정된 이후 상당한 \textbf{(p.~1359)} 시간이 지난 뒤에 이루어지기도
+한다. 이에 반해 사전적 사법심사는, 법률안의 제정 말미에서 그 법률안에
+대해 추상적 평가(abstract assessment)를 수행하도록 특별히 설계된
+헌법재판소(constitutional court)가 수행하는 방식이다.\footnote{1유형
+  제도들 중 일부는 제한된 상황에서 사전 자문 의견(ex ante advisory
+  opinions)을 제공할 수 있도록 규정하고 있다. 예컨대 매사추세츠 주
+  헌법은 다음과 같이 명시한다: ``입법부 각 지부는 물론, 주지사나
+  위원회는 중요한 법률 문제 및 중대한 사안에 대해 대법원 판사들의 의견을
+  요구할 수 있다.'' \emph{Mass. Const.}, pt.~II, ch.~III, art. II
+  (1964년 개정). 이 절차는 본 논문 서두에서 논의된 \emph{Goodridge} 판결
+  이후 몇 달간 실제 사용되었다. \emph{Opinions of the Justices to the
+  Senate}, 802 N.E.2d 565 (Mass. 2004) 사건에서, 매사추세츠 대법원은
+  동성 커플에 대해 시민 결합(civil union)을 허용하고 차별을 금지하는
+  입법이 헌법에 명시된 동성결혼 금지에 대한 반대 사유를 피하는 데
+  충분하지 않다고 판단하였다.} 사전적 사법심사는 그 성격을 어떻게 이해할
+것인지에 대해 논쟁이 있다. 예컨대, 해당 재판소가 다원적 입법
+절차(multicameral legislative process)의 마지막 단계에서 전통적인
+상원(senate)처럼 기능한다면, 이는 실제로는 사법심사라기보다는 또 다른
+입법기관의 역할에 가깝다(비록 선출되지 않은 기관에게 권한을 부여하는
+것에 대한 비판 논리는 유사할 수 있더라도).\footnote{Jeremy Waldron,
+  \emph{Eisgruber's House of Lords}, 37 \emph{U.S.F. L. Rev.} 89 (2002).}
+나는 이 문제에 대해 더 이상 논하지 않겠다. 일부 사법심사
+옹호론자들에게는, 특정 사건에 뿌리내린 사법심사의 사후적 성격(a
+posteriori character)---즉 구체적 사건에의 연결성(rootedness in
+particular cases)\footnote{infra Section IV.A 참조.} ---이 핵심적인
+의미를 지니며, 본 에세이에서도 그 측면에 초점을 맞출 것이다.
+
+네 번째 구분은 세 번째 구분과 연계되어 있다. 사법심사는 일반
+법원(ordinary courts)에 의해 수행될 수도 있고(앞서 언급한 매사추세츠
+사건처럼), 헌법문제만을 전담하는 전문 헌법재판소(specialized
+constitutional court)에 의해 수행될 수도 있다. 이 구분은 내가 후속
+장에서 전개할 논점과 관련될 수 있다. 즉, 일반 법원 체계 내의 판사들이
+권리에 관해 사유할 수 있는 능력은 과장되어 있으며, 판결 실무에 따르는
+여러 규범적 부담들로 인해 이들은 도덕적 논증(moral arguments)을
+직접적으로 다룰 여유를 갖지 못한다. 전문 헌법재판소는 보다 나은 기능을
+수행할 수 있을지도 모르지만, 경험에 따르면 이들 역시 자신들의 독자적
+이론(doctrines)과 판례(precedents)의 발전에 몰두하게 되고, 그로 인해
+권리 기반의 논증(rights-based reasoning)에 왜곡된 필터를 씌우게 되는
+경우가 많다.
+
+\subsection{II. 네 가지 전제 (FOUR
+ASSUMPTIONS)}\label{ii.-uxb124-uxac00uxc9c0-uxc804uxc81c-four-assumptions}
+
+나의 주장을 보다 분명히 하고, 사법심사(judicial review)에 대한 반론이
+가장 명확하게 적용되는 \textbf{핵심 사례(core case)}와, 특수한 병리적
+상황을 다루기 위한 예외적 장치(anomalous provision)로서 사법심사가
+적절하다고 여겨질 수 있는 \textbf{비핵심 사례(non-core cases)}를
+구분하기 위해, 나는 몇 가지 전제(assumptions)를 설정하고자
+한다.\footnote{이 가정들은 \emph{Jeremy Waldron, Some Models of Dialogue
+  Between Judges and Legislators}, 23 \emph{Sup. Ct. L. Rev.} 2d 7,
+  9--21 (2004)에 제시된 내용에서 변형된 것이다.}
+
+\textbf{(p.~1360)} 이 전제들 중 일부는 독자에 따라 \textbf{순환
+논법(question-begging)}처럼 보일 수도 있다. 그러나 여기서 나는 어떤 식의
+기만(subterfuge)도 의도하지 않는다. 이러한 전제에서 출발하는 이유는 글의
+흐름 속에서 자연스럽게 드러날 것이며, 이 전제들 중 하나 이상이 충족되지
+않는 경우를 \textbf{비핵심 사례(non-core cases)}로 이해하는 가능성 또한
+충분히 인정하며, 이는 제7부에서 논의될 것이다. 실질적으로, 내가 주장하는
+바는 다음과 같다: \textbf{사법심사에 대한 비판은 조건부 주장이다}. 이
+조건들 중 하나라도 성립하지 않는다면, 그 주장은 성립하지 않을 수
+있다.\footnote{infra note 136 및 본문 참조.} 덧붙이자면, 이 에세이에서
+내가 비판하고자 하는 것은 사법심사에 대한 \textbf{결론 중심(bottom-line
+mentality)} 사고방식의 일종이다.\footnote{정치철학에서의
+  '결과지상주의(bottom-line mentality)'에 대한 일반적인 비판은 다음에서
+  확인할 수 있다: \emph{Jeremy Waldron, What Plato Would Allow}, in
+  \emph{Nomos XXXVII: Theory and Practice} 138 (Ian Shapiro \& Judith
+  Wagner DeCew eds., 1995).} 일부 독자들은 이 전제들을 훑어보며,
+그것들이 자신이 이해하는 바의 미국 혹은 영국 사회에 적용되지 않는다는
+이유만으로 나의 핵심 논거를 무시할 수도 있다. 그들에게 중요한 것은,
+어떻게든 사법심사를 옹호하고 이에 대한 도전을 차단하는 것이다. 방법은
+중요하지 않다. 이것은 불행한 접근 방식이다. 보다 나은 방법은, 먼저
+사법심사에 대한 핵심 반론의 기반이 무엇인지 이해하고, 그것이 자체 기준에
+따라 타당한지 검토한 후, 그러한 논거의 적용이 문제가 되는 사례들을
+살펴보는 것이다.
+
+이제 내가 설정할 네 가지 전제를 요약해서 제시하겠다. 다음 조건들을 갖춘
+사회를 상정해 보자: (1) \textbf{민주적 제도(democratic institutions)}가
+비교적 잘 작동하고 있으며, 여기에는 보통선거(universal adult suffrage)를
+통해 구성된 대의 입법기관(representative legislature)이 포함된다; (2)
+\textbf{사법 제도(judicial institutions)} 역시 비교적 잘 작동하며,
+대표성 없는 방식(nonrepresentative basis)으로 설계되어, 개인 간의 소송을
+심리하고 분쟁을 해결하며 \textbf{법치(rule of law)}를 유지하는 기능을
+수행한다; (3) 사회 구성원의 다수와 그 공직자들 대부분이, \textbf{개인적
+권리(individual rights)} 및 \textbf{소수자 권리(minority rights)}의
+관념에 진지하게 전념하고 있다; (4) 권리에 대한 해석---즉, 권리에 대한
+전념이 실제로 무엇을 의미하며 어떤 함의를 갖는지를 둘러싼---사회 내의
+구성원들 사이에 \textbf{지속적이며 실질적이고 성실한 의견
+차이(disagreement in good faith)}가 존재한다.
+
+나는 이 네 가지 전제가 성립할 경우, 해당 사회는 \textbf{권리에 관한 의견
+차이}를 입법 제도(legislative institutions)를 통해 해결해야 한다는 점을
+논증할 것이다. 이러한 전제들이 성립한다면, 그러한 의견 차이를 최종적으로
+사법기관(judicial tribunals)에 위임해야 한다는 주장은 설득력이 약하며
+정당성을 갖기 어렵다. 입법부가 권리에 관해 내린 결정을 사법부가 재심하는
+것(second-guessing) 역시 필요하지 않다. 그리고 사법부가 이와 같은 사안에
+대해 입법부의 결정을 \textbf{무효화하거나 대체하는 방식으로 결정권을
+행사하는 것}은 정치적 정당성(political legitimacy)의 핵심 기준을
+충족하지 못한다는 점을 논증할 것이다. 다음으로, 이 네 가지 전제를 하나씩
+구체적으로 설명하겠다.
+
+\subsubsection{A. 민주적 제도 (Democratic
+Institutions)}\label{a.-uxbbfcuxc8fcuxc801-uxc81cuxb3c4-democratic-institutions}
+
+\textbf{(p.~1361)} 나는 우리가 상정하는 사회가
+\textbf{민주사회(democratic society)}라고 가정한다. 이 사회는 현대 서구
+세계의 대부분과 마찬가지로, 과거에는 군주제(monarchy), 전제정(tyranny),
+독재(dictatorship), 또는 식민 지배(colonial domination)의 다양한 형태를
+경험했으나, 이제는 그 법률이 제정되고 공적 정책(public policies)이
+국민과 그 대표자들에 의해 \textbf{선거를 통한 제도(elective
+institutions)}를 매개로 설정되는 상태에 도달해 있다. 이 사회는
+\textbf{보통선거(universal adult suffrage)}를 특징으로 하는 폭넓은
+민주적 정치 체제(democratic political system)를 가지고 있으며, 공정하고
+정기적인 방식으로 선출되는 \textbf{대의제 입법부(representative
+legislature)}를 갖추고 있다.\footnote{따라서, 비민주적 사회나 이와 매우
+  다른 제도를 가진 사회에 본 논문의 논증을 적용하는 것은 논외이다.} 나는
+이 입법부가 규모 있는 \textbf{심의 기구(deliberative body)}이며,
+정의(justice)와 사회정책(social policy)이라는 중요한 사안들을 포함한
+어려운 쟁점들을 다루는 데 익숙하다고 전제한다. 입법자들(legislators)은
+공적 사안에 대해 심의(deliberation)하고 표결(vote)하며, 입법 절차는
+정교하고 책임성 있으며,\footnote{Jeremy Waldron, \emph{Legislating with
+  Integrity}, 72 \emph{Fordham L. Rev.} 373 (2003).} 다음과 같은 여러
+안전장치들을 내포한다: \textbf{양원제(bicameralism)},\footnote{양원제(bicameralism)에
+  대한 전제는 문제적으로 보일 수 있다. 세계에는 잘 작동하는
+  단원제(unicameral) 입법부도 다수 존재하는데, 특히 스칸디나비아
+  국가들---덴마크, 노르웨이, 스웨덴---이 그렇다. 그러나 단원제는 다른
+  입법적 병리 현상을 쉽게 악화시킬 수 있다. 뉴질랜드에서 이 문제가
+  어떻게 나타나는지를 주장한 논변은 Jeremy Waldron, \emph{Compared to
+  What? - Judicial Activism and the New Zealand Parliament}, 2005 N.Z.
+  L.J. 441 참조.} 강력한 위원회 심사(robust committee scrutiny), 그리고
+다단계의 검토, 토론, 표결 과정. 이러한 과정들은 공식적으로는
+공청회(public hearings) 및 협의 절차(consultation procedures)를 통해,
+비공식적으로는 사회 전반의 보다 넓은 논의들과 연결되어 있다고 가정한다.
+입법부 구성원들은 자신들을 다양한 방식으로
+\textbf{대표자(representatives)}라고 인식하는데, 때로는 지역구
+유권자(constituents)의 이익과 의견을 자신들의 활동의 핵심으로 삼고,
+때로는 사회 전체의 이익과 의견을 \textbf{가상적 대표(virtual
+representation)}한다는 관점에서 활동하기도 한다. 나는 또한
+정당(political parties)이 존재하며, 입법자들의 정당 소속이 그들의 견해
+형성에 있어 지역 유권자들의 이해관계를 넘어서는 보다 넓은 시야를
+제공한다고 가정한다.
+
+이상의 전제는 논쟁적이기보다는 일반적으로 \textbf{민주주의적
+입법부(democratic legislatures)}가 통상적으로 작동하는 방식을 설명한
+것이다. 전반적으로, 나는 이 민주주의 제도들이 비교적 잘 작동하고 있다고
+전제한다. 물론 이들이 완전하지는 않을 수 있고, 개선 방법에 대해서는
+지속적인 논의가 있을 수 있다. 나는 이러한 논의가 \textbf{책임 있는
+심의(responsible deliberation)}와 \textbf{정치적 평등(political
+equality)}이라는 민주주의 문화(culture of democracy)의 가치를 바탕으로
+진행된다고 본다. 이 중에서 두 번째 가치, \textbf{(p.~1362)} 즉 정치적
+평등은 특히 강조할 가치가 있다. 나는 이 사회에서 입법의 제도, 절차,
+실천이 지속적으로 정치적 평등의 관점에서 검토되고 있다고 전제한다. 만일
+대표성(representation)에 있어 심각하게 정치적 평등의 이상을 훼손하는
+불균형이 존재한다면, 그것이 정당한 비판이라는 점을 사회 구성원 전체가
+인식하고 있으며, 필요하다면 입법부와 선거 제도 자체가 이를 교정하기 위해
+변경되어야 한다는 점도 널리 받아들여지고 있다고 본다. 또한 나는 입법부가
+이러한 변경을 자발적으로 혹은 국민투표(referendum)를 통해 조직할 수 있는
+능력을 갖추고 있다고 가정한다.\footnote{때때로 선출 제도(elective
+  institutions)는 자기 개혁이 불가능하다는 주장이 제기된다. 이는
+  입법자들이 현상 유지에 구조적으로 이해관계를 갖기 때문이라는 것이다.
+  이는 미국의 병리적인 선거 및 입법 구조에 대해서는 어느 정도 사실일 수
+  있다. (그러나 미국 내에서도 이 주장이 가장 타당하게 적용되는 쟁점은,
+  법원이 거의 개입하지 않은 사안들이다. 예컨대, 미국의 선거구 재획정
+  제도의 심각한 상태를 고려하라.) 그러나 다른 국가들에는 명백히 적용되지
+  않는다. 예컨대, 뉴질랜드에서는 1993년에 의회가 선거제도를
+  단순다수제(first-past-the-post system)에서 비례대표제(proportional
+  representation)로 변경하는 입법을 하였으며, 이는 기존의 현역 의원
+  구조를 불안정하게 만들었다. 관련 법률로는 Electoral Act 1993, 1993
+  S.N.Z. No.~87; Electoral Referendum Act 1993, 1993 S.N.Z. No.~86 참조.}
+
+내가 이렇게 민주주의 문화와 선거 및 입법 제도의 기능에 대해 장황하게
+설명하는 이유는, 그것이 이후 전개될 논증의 핵심이 되기 때문이다. 논증의
+초기 구조는 다음과 같은 질문을 던지는 것으로 시작될 것이다: 이 첫 번째
+전제가 성립한다고 가정할 때, 왜 선출되지 않은 기구(nonelective
+process)를 설정하여 입법부의 활동을 심사하거나 때로는 무효화하는 제도를
+만들어야 할 이유가 있는가? 반면, 나는 이 첫 번째 전제를 통해 어떠한
+문제를 은폐하려는 것도 아니다. 이 전제를 곧바로 두 번째 전제와 균형 있게
+제시하고자 한다. 즉, 우리가 상정하는 사회에는 또한 \textbf{잘 작동하는
+법원(courts in good working order)}이 존재하며, 이들은 사법부가 잘
+수행할 수 있는 기능들을 비교적 잘 해내고 있다고 전제한다. 우리가
+상정하는 이 사회는, 만일 사법심사(judicial review)가 타당하게 정당화될
+수 있다면, 이를 작동시킬 수 있는 조건을 갖추고 있는 사회다.
+
+한 가지 주의할 점이 있다. 내가 여기서 제도들이 ``잘 작동하고 있다(good
+working order)''고 말할 때, 그것은 해당 입법부가 제정하는 법률들이 그
+\textbf{내용(content)} 면에서 대체로 선하거나 정당하다는 것을 의미하지
+않는다. 나는 일부 법률은 정당하고 일부는 부정당하며(무엇이 어느 쪽인지는
+사람마다 견해가 다를 수 있다), 이것은 사법심사의 대상이 될 수도 있는
+법률뿐 아니라 아무도 사법심사의 대상으로 삼지 않는 법률에 대해서도
+마찬가지라고 본다. 지금까지 입법 및 선거 제도가 잘 작동하고 있다고 말한
+것은 \textbf{결과 가치(outcome values)}가 아니라 \textbf{절차적
+가치(process values)}에 대한 것이다. 그러나 제5부(Part V)에서는, 이러한
+과정에서 기대할 수 있는 \textbf{추론의 양상(reasoning)}에 대해 더
+구체적으로 논의할 것이다.
+
+\subsubsection{B. 사법 제도 (Judicial
+Institutions)}\label{b.-uxc0acuxbc95-uxc81cuxb3c4-judicial-institutions}
+
+\textbf{(p.~1363)}우리가 상정하는 사회에는 법원(courts), 즉 소송을
+심리하고 분쟁을 해결하며 \textbf{법치(rule of law)}를 유지하기 위해
+설립된, 잘 정비되어 있고 정치적으로 독립적인
+\textbf{사법부(judiciary)}가 존재한다고 전제한다. 이 사법 제도는 비교적
+잘 작동하고 있으며, 행정행위(executive actions)에 대한 사법심사(judicial
+review)를 수행할 법적 권한을 이미 부여받고 있으며, 이는
+법률적(statutorily) 및 헌법적(constitutionally) 기준에 따라 이루어진다고
+가정한다.
+
+이 사법 제도는 앞 절에서 다룬 입법 제도들과 달리, 대부분
+\textbf{선출되거나 대표성을 지닌 제도(elective or representative
+institutions)}가 아니라고 전제한다. 이는 단지 판사(judges)의 직위가
+대부분 선거직이 아니라는 것만을 의미하는 것이 아니다. 나아가 사법부
+전체가 선거, 대표성(representation), 선거 책임성(electoral
+accountability)의 윤리(ethos)에 관통되어 있지 않다는 점에서도 입법부와
+구별된다. 사법심사를 옹호하는 많은 이들은 이것을 큰 장점으로 본다.
+왜냐하면 법원이 대중의 압력(popular pressures)에서 자유롭고, 여론의
+분노에 영향받지 않으며, 원칙에 기반한 문제(principled issues)에 대해
+집중적으로 숙고할 수 있기 때문이다. 그러나 때때로 사법심사에 대한
+민주주의적 비판에 반박할 필요가 있을 때, 옹호자들은 오히려 판사가
+선출되는 주(state)를 자랑스럽게 언급하기도 한다. 이는 미국의 일부 주에서
+실제로 일어나는 일이다. 하지만 판사가 선출된다고 하더라도, 법원의 운영은
+일반적으로 입법부처럼 대표성과 선거 책임성의 윤리(an ethos of
+representation and electoral accountability)하에서 이루어지지 않는다.
+
+나는 우리가 상정하는 사회에서, 법원이 사법심사(judicial review)의 제도
+하에서 부여받게 될 기능들을 수행할 능력이 있다고 전제한다. 즉, 법원은
+입법을 심사할 수 있다. 그러나 그들이 \textbf{입법을 심사해야 하는가},
+그리고 \textbf{그들의 결정이 대표기관들(representative branches of
+government)에 대해 최종적이고 구속력을 가지는가}가 문제다. 나는, 만일
+법원에 이러한 기능이 부여된다면, 그것을 \textbf{법원이 본질적으로 자신의
+기능을 수행하는 방식}으로 실행할 것이라고 전제한다. 사법 절차(judicial
+process)의 성격과, 법원이 제도적으로 적합하거나 그렇지 않은 과제에 관한
+방대한 법학 논문(law review literature)이 존재하지만,\footnote{예: Henry
+  M. Hart, Jr.~\& Albert M. Sacks, The Legal Process: Basic Problems in
+  the Making and Application of Law 640-47 (William N. Eskridge, Jr.~\&
+  Philip P. Frickey eds., 1994); Lon L. Fuller, The Forms and Limits of
+  Adjudication, 92 Harv. L. Rev.~353 (1978).} 여기서 그 논의로 깊이
+들어가고자 하지는 않는다. 앞서 언급했듯이, 나는 다음과 같은 법원의
+일반적 특성을 전제로 삼는다: (1) 법원은 \textbf{자기발의(self-motion)}
+또는 \textbf{추상적 기준(abstract reference)}에 따라 행동하지 않으며,
+특정 원고(litigants)가 제기한 특정한 청구(claim)에 반응한다. (2) 문제는
+이항적(binary), \textbf{대립적 절차(adversarial presentation)}의
+맥락에서 다루어진다. (3) 법원은 관련 사안에 대해 자신들의 선례(past
+decisions)를 참조하고 이를 발전시키는 방식으로 판단한다. 나는 또한,
+익숙한 \textbf{법원 위계 구조(hierarchy of courts)}가 존재하며,
+\textbf{(p.~1364)} 항소 절차(provisions for appeal)가 마련되어 있고,
+상급심에서는 다수의 판사들(예: 5인 또는 9인의 재판부)이 사건을 심리하며,
+하급심 법원들은 상급심 판례에 실질적으로 구속된다는 점도 전제한다.
+
+일부 사회에서는 판사들이 별도의 교육을 통해 특별히 양성되며, 다른
+사회에서는 유능한 변호사나 법학자들 중에서 판사를 선출한다. 어느
+경우이든, 이들은 정치 체제 내에서 높은 지위를 가지며, 특정한 정치적
+압력으로부터는 어느 정도 보호받는 위치에 있다고 전제한다. 또한 이들은 그
+사회의 다른 고학력 고지위 계층(high-status and well-educated members)과
+유사한 사회적 성격을 갖고 있다고 본다. 이러한 전제는 두 가지 이유로
+중요하다. 첫째, 그 사회가 \textbf{민주사회(democratic society)}로서의
+자부심을 지니고 있으므로, 나는 판사들 또한 이러한 자부심을 공유하고
+있으며, 자신들이 입법에 대해 사법심사를 수행할 경우 \textbf{자신들의
+정당성(legitimacy)}에 대해 의식적일 것이라고 가정한다. 이는 그들이 해당
+권한을 어떻게 행사하는지에 영향을 줄 수 있다.\footnote{Jesse H. Choper,
+  Judicial Review and the National Political Process (1980) (이 맥락에서
+  대법원의 정당성을 논의함); 또한 Planned Parenthood of Se. Pa. v.
+  Casey, 505 U.S. 833, 864-69 (1992) 참조 (동일 논의).} 둘째, 판사들
+역시 다른 시민들과 마찬가지로 권리에 전념할 가능성이 충분히 있지만,
+\textbf{개인적 권리(individual rights)}와 \textbf{소수자 권리(minority
+rights)}의 의미와 함의에 관해서는 서로 견해가 다를 수 있다. 즉, 판사들
+역시 내가 네 번째 전제로 제시한 \textbf{권리에 대한
+의견불일치(disagreement about rights)}의 조건에 해당하며, 이것이 또한
+사법심사 권한을 행사할 때 영향을 미칠 수 있다. 구체적으로 말하자면,
+입법자들과 마찬가지로, \textbf{다수의 판사들로 구성된 재판부(multi-judge
+tribunal)} 내에서 권리에 대한 의견이 갈릴 경우, 그에 대한 결정
+절차(decision-procedure)가 필요하다. 이때 가장 일반적으로 사용되는
+방식은 단순한 \textbf{다수결(simple majority voting)}이다. 나는
+제5부에서 이러한 방식이 판사들이 사용하기에 적절한 절차인지 여부에 대해
+다룰 것이다.
+
+\subsubsection{C. 권리에 대한 전념 (A Commitment to
+Rights)}\label{c.-uxad8cuxb9acuxc5d0-uxb300uxd55c-uxc804uxb150-a-commitment-to-rights}
+
+내가 전제하는 바는 우리가 상정하는 사회의 대부분 구성원들은
+\textbf{개인적 권리(individual rights)} 및 \textbf{소수자 권리(minority
+rights)}의 관념에 대해 강한 전념(commitment)을 가지고 있다는 것이다.
+그들은 넓은 의미에서의 공리주의적 개념(utilitarian conception)에 따라
+공공선(the general good)을 추구해야 한다고 믿고 있으며, 또한 정치의
+일반적 원칙으로서 다수결(majority rule)을 수용하지만, 그럼에도 불구하고
+개인은 일정한 이익(interests)을 가지며 특정한 자유(liberties)를
+보장받아야 하고, 그것이 단지 다수에게 편리하다는 이유만으로 부정되어서는
+안 된다는 점을 받아들인다. 또한 이들은 소수자(minorities)는 단순한 수적
+기반이나 정치적 영향력에 의해 자동으로 보장되지 않는 일정 수준의
+\textbf{지원(support)}, \textbf{인정(recognition)},
+\textbf{보호(insulation)}를 받을 권리가 있다고 믿는다.
+
+\textbf{(p.~1365)} 이 사회에서 유행하는 권리 이론(theory of rights)의
+세부 내용은 여기서 따로 다룰 필요가 없다. 나는 이 사회 전체의 권리에
+대한 전념이 다음과 같은 인식을 포함하고 있다고 본다: 세계 인권
+합의(worldwide consensus on human rights)에 대한 이해와, 권리에 관한
+사유의 역사(history of thinking about rights)에 대한 인식.\footnote{이러한
+  인식은, 인권 협약이 1945년 이후 세계적으로 부상해 왔다는 점과 그
+  역사가 1776년의 미국 독립 선언문 및 1789년의 프랑스 인권 선언과 같은
+  문서에서 암시되는 자연권(natural right) 개념으로 거슬러 올라간다는
+  막연한 이해 이상의 것이 아닐 수도 있다.} 또한 이 전념은 살아 있는
+합의(living consensus)로서, 권리를 옹호하는 이들이 서로 어떤 권리를
+가지고 있으며 그 권리가 무엇을 의미하는지를 끊임없이 대화하는 가운데
+발전하고 진화하고 있다고 본다. 나는 이 권리에 대한 전념이 단순한
+\textbf{수사적 선언(lip service)}에 그치지 않고, 사회 구성원들이 권리를
+\textbf{진지하게 받아들이고(take rights seriously)} 있다고 전제한다. 즉,
+그들은 권리에 대해 관심을 갖고 있으며, 자신의 견해와 타인의 권리관을
+끊임없이 숙고하고 활발히 논의하며, 사회 내의 모든 공적 결정과 논의에서
+권리 문제에 민감하게 반응한다.
+
+물론 어느 사회에나 권리에 대해 회의적인 사람(skeptics)은 존재하겠지만,
+나는 그와 같은 입장은 \textbf{주류에서 벗어난 예외(outlier)}라고 본다.
+어떤 이들은 모든 정치적 도덕성(political morality)을 거부하는 입장에서
+권리를 부정하고, 또 어떤 이들은 공리주의(utilitarianism),
+사회주의(socialism), 혹은 기타 이념에 따라 정치적 도덕성의 관점에서
+권리를 부정한다. (예: 권리는 지나치게 개인주의적이며, 권리의 우선성은
+효율성의 합리적 추구를 방해한다는 식의 주장.) 그러나 나는 \textbf{개인적
+권리와 소수자 권리에 대한 일반적인 존중(general respect)}이 그 사회의
+폭넓은 합의의 진지한 일부이며, 정치적 여론 중 가장 보편적인 입장의
+일부이며, 공식적 이데올로기(official ideology)의 일부라고 가정한다.
+
+이 세 번째 전제를 보다 구체화하기 위해, 우리는 그 사회가 익숙한 형태의
+공식적인 \textbf{권리장전 또는 권리선언(Bill or Declaration of
+Rights)}을 채택할 정도로 권리를 소중히 여긴다고 가정할 수 있다. 이
+글에서는 이를 해당 사회의 \textbf{권리장전(Bill of Rights)}이라 부를
+것이다. 이는 예컨대 다음과 같은 것에 대응할 수 있다: 미국 헌법과 그 수정
+조항들에 포함된 권리 조항, 캐나다의 \textbf{「권리와 자유에 관한
+헌장(Charter of Rights and Freedoms)}」, 유럽인권협약(European
+Convention on Human Rights) (예: 「인권법(Human Rights Act)」을 통해
+영국 법에 통합된 형태), 또는 뉴질랜드의 「권리장전법(Bill of Rights
+Act)」. 이 중 마지막 예시를 잘 아는 사람이라면 내가 여기서 그 권리장전이
+\textbf{헌법에 포함되었거나(entrenched)} 또는
+\textbf{성문헌(constitutional document)}의 일부라고 전제하고 있지 않다는
+점을 이해할 것이다. 나는 그 점을 열어 두고 싶다. 내가 이 시점에서
+전제하는 것은 단지 해당 사회가 권리에 대한 전념을 구체화하기 위해 어떤
+형태로든 \textbf{권리장전(Bill of Rights)}을 제정했다는 사실뿐이다. 이는
+해당 사회가 자발적으로 어느 시점에 제정했을 수도 있고, 다른 국가를
+모방해서 도입했을 수도 있으며, 또는 국제 인권법(human rights law)에 따른
+대외적 의무(external obligations)를 이행한 결과일 수도 있다.
+
+\textbf{(p.~1366)} 이러한 전제들이 독자에게는 다소 의아하게 느껴질 수도
+있다. 한편으로는, 내가 권리장전(Bill of Rights)의 존재를 전제로
+삼음으로써, 사법심사(judicial review)에 유리하도록 논거의 전제를
+설정하는 것처럼 보일 수 있다. 다른 한편으로는, 뭔가 \textbf{교묘한
+술수(sneaky)}가 예고되는 것처럼 느껴질 수도 있다. 실제로 일부 독자들은
+내가 과거에 \textbf{사법심사란 권리 옹호자와 권리 반대자 사이의 대결이
+아니라, 서로 다른 권리관(rights) 사이의 대결로 이해되어야 한다}는 점을
+논증한 바 있다는 사실을 알고 있을 수도 있다.\footnote{Waldron, A
+  Right-Based Critique, supra note 14, at 28--31, 34--36 참조.} 이러한
+두 가지 관찰에 대해 내가 강조하고 싶은 점은 다음과 같다: 문화적 차원과
+제도적 차원 모두에서, \textbf{권리에 대한 전념(commitment to
+rights)}(설령 그것이 문서화된 전념이라 하더라도)과 그러한 전념이 취할 수
+있는 특정한 \textbf{제도적 형태(institutional form)}(예: 입법에 대한
+사법심사) 사이에는 명확한 구분이 존재한다는 점이다. 나는 사법심사를
+반대하는 사람들이 '권리에 회의적인 자들(rights-skeptics)'로 폄하되는
+것을 지겹도록 들어왔다. 이에 대한 최선의 대응은, \textbf{권리에 대한
+강력하고 광범위한 전념을 전제로 하여 사법심사에 대한 비판적 논거를
+구성하는 것}이다.
+
+이 세 번째 전제는, \textbf{권리에 대한 전념이 희박하거나 불안정한
+사회}를 \textbf{비핵심 사례(non-core cases)}로 정의한다. 이러한 방식의
+논의가 다소 이상하거나 부당하게 보일 수도 있다. 왜냐하면 사법심사를
+옹호하는 이들 중 일부는, 우리가 권리에 대한 전념을 강화하거나, 새로이
+민주화된 사회의 시민들에게 권리의 가치를 교육하거나, 다수결 체계에서
+보호받지 못할 수 있는 소수자들에게 보장을 제공하기 위해
+\textbf{사법심사가 필요하다}는 점을 논증하기 때문이다. 이러한 논변들은
+흥미롭지만, 미국, 영국, 캐나다와 같은 국가들에서 사법심사를 정당화하는
+핵심 주장에 직접적인 영향을 주지는 않는다. 이들 국가에서는 사법심사가
+\textbf{기존의 권리 전념을 제도화하거나 운영하기 위한 적절한 방식}이라고
+주장된다. 나는 이러한 주장을 액면 그대로 받아들이며, 그것이 바로 내가 이
+세 번째 전제를 설정하는 이유이다.\footnote{여기서의 접근은 John Rawls와
+  유사하다. 나는 핵심사례(core case)라는 장치를 이용하여 일종의 공적으로
+  수용된 정의 이론을 갖춘 잘 정돈된 사회(well-ordered society)를
+  규정하고자 한다. 예: John Rawls, Political Liberalism 35--36 (1993)
+  {[}이하 Rawls, Political Liberalism{]}; Rawls는 입법에 대한
+  사법심사(judicial review)가 잘 정돈된 사회에도 적절하다고 보는 듯하다.
+  Id. at 165--66, 233--40 참조; 또한 John Rawls, A Theory of Justice
+  195--99, 228--31 (1971) {[}이하 Rawls, A Theory of Justice{]} 참조.
+  내가 목표하는 바는 Rawls의 이러한 판단이 잘못되었음을 보여주는 것이다.}
+
+\subsubsection{D. 권리에 대한 의견불일치 (Disagreement About
+Rights)}\label{d.-uxad8cuxb9acuxc5d0-uxb300uxd55c-uxc758uxacacuxbd88uxc77cuxce58-disagreement-about-rights}
+
+내 마지막이자 핵심적인 전제는, 권리에 대한 합의(consensus)가 오늘날의
+자유주의 사회들에서 모든 주요 정치적 쟁점들에 나타나는 일반적인
+의견불일치(disagreement)의 발생에서 예외적이지 않다는 것이다. 다시 말해,
+나는 \textbf{(p.~1367)} 어떤 권리가 존재하며 그것이 어떤 내용을 갖는지를
+둘러싼 \textbf{실질적인 의견불일치(substantial dissensus)}가 존재한다고
+전제한다. 이러한 의견불일치 중 일부는 철학적 수준에서 명백히 드러난다
+(예: 사회경제적 권리(socioeconomic rights)가 권리장전(Bill of Rights)에
+포함되어야 하는가), 일부는 추상적인 권리 원칙을 특정 입법 제안과
+연관시키려 할 때 드러난다 (예: 종교의 자유로운 실현(free exercise of
+religion)이 일반적으로 적용되는 법률로부터의 예외를 요구하는가), 또
+일부는 개별적인 곤란한 사건의 맥락에서만 분명해진다 (예: 국가적 위기
+시기에도 이견 표현(dissident speech)을 어느 정도까지 허용해야 하는가).
+
+나는 이러한 권리-의견불일치가 대부분 좁은 의미의 법률적 해석 문제(issues
+of interpretation)가 아니라고 전제한다. 물론 처음에는 해석의 문제로
+제시되겠지만, 실제로는 공동체 전체에 중대한 실천적 함의를 지닌 쟁점들을
+내포한다. 나는 다른 글에서 이와 같은 쟁점을 \textbf{``분수령적 권리
+쟁점(watershed issues of rights)''}이라고 부른 바 있다.\footnote{Waldron,
+  Judicial Power and Popular Sovereignty, supra note 14, at 198 참조.}
+이들은 수많은 사람들의 삶에 중대한 영향을 미치는 정치철학(political
+philosophy)의 주요 주제들로, 단지 특정 사회에 국한된 특이한 문제들이
+아니다. 오히려 이러한 쟁점들은 모든 현대 사회가 직면해야 하는 중대한
+선택지를 정의하며, 기존의 도덕적·정치적 논의의 맥락에서 적절히 이해되고,
+많은 사회들에서 도덕적·정치적 의견불일치의 핵심 지점들이 된다. 즉시
+떠오를 수 있는 예시들로는 낙태(abortion), 소수우대(affirmative action),
+정부의 재분배 및 시장 개입의 정당성, 피의자의 권리(rights of criminal
+suspects), 종교 관용(religious toleration)의 의미, 소수문화권의
+권리(minority cultural rights), 선거운동에서의 표현 및 지출의 규제 등이
+있다.
+
+이러한 예시들이 보여주듯, 권리에 대한 의견불일치는 종종 주변적인 적용이
+아니라 \textbf{중심적인 적용(central applications)}에 관한 것이다. 나는
+이미 권리에 대한 일반적 헌신을 전제했기 때문에, 이 헌신이 각 권리의
+중심부(core)를 포함하며, 논란은 오직 그 권리의 외곽 영역에서만
+발생한다고 추론하고 싶어질 수 있다. 그러나 이것은 잘못된 생각이다.
+권리에 대한 헌신은 완전하고 성실한(wholehearted and sincere) 것이면서도,
+여전히 분수령적 사안에서는 논란이 있을 수 있다. 예컨대, 인종차별적
+혐오발언(racist hate speech)에 대한 규제가 허용 가능한가에 관해 의견이
+다른 두 사람은 모두 표현의 자유(free speech)가 이 사안을 사고하는 데
+핵심적 권리임을 인정할 수 있으며, 동시에 그들이 논쟁 중인 사안이 표현의
+자유라는 권리에 비추어 주변적인 사안이 아니라 중심적인 사안임을 받아들일
+수 있다. 이로부터 우리는 아마도 그들이 서로 다른 \textbf{권리
+개념(conception of the right)}을 갖고 있음을 알 수 있을 것이나, 이것이
+곧 그들의 권리에 대한 헌신이 불성실하다는 이유가 되지는
+않는다.\footnote{권리 개념(the concept of a right)과 그것의 다양한
+  관념들(conceptions of it)의 구분에 대해서는 Ronald Dworkin, Taking
+  Rights Seriously 134--36 (1977) 참조.}
+
+\textbf{(p.~1368)} 일반적으로 말해, 사람들이 권리에 관해 의견이 다르다고
+해서 그 중 한 사람은 권리를 진지하게 여기지 않는다고 결론지어야 하는
+것은 아니다. 물론 어떤 입장은 권리를 아예 무시하는 \textbf{불성실한
+자(scoundrels)}나, 권리의 중요성을 이해하지 못하는 \textbf{도덕적
+문맹자(moral illiterates)}에 의해 부정직하거나 무지하게 주장되고 있을
+수도 있다. 그러나 나는 대부분의 경우, 이와 같은 의견불일치는
+\textbf{합리적이고 성실한 태도(reasonably and in good faith)}로 제기되고
+있다고 전제한다. 이들은 심각한 쟁점들이며, 이에 대해 사회 구성원들 간에
+합의(consensus)가 있을 것이라 기대하는 것은 비현실적이다. 다시 말해,
+나는 John Rawls가 말한 \textbf{판단의 부담(burdens of judgment)}이라는
+개념을 전제하는데, Rawls는 이를 '좋음(the good)'의 문제에 주로
+적용했지만, 나는 그것을 '옳음(the right)'의 문제에도 확장 적용하고자
+한다.\footnote{Rawls, Political Liberalism, supra note 53, at 54--58
+  (``판단의 부담들(burdens of judgment)''에 대한 논의). Rawls는 ``우리의
+  가장 중요한 판단 중 다수는, 합리적 능력을 갖춘 양심적인 사람들이
+  자유로운 토론을 거친 후에도 동일한 결론에 도달할 것으로 기대하기
+  어려운 조건하에서 이루어진다''고 주장한다. Id. at 58. 이 논의를
+  권리(right)뿐 아니라 선(the good)에도 적용한 논변은 Waldron, supra
+  note 14, at 149--63 참조.} 즉, 복잡하고 긴장된 권리 쟁점들에 관해
+사람들의 견해가 언제나 하나의 합의로 수렴할 것이라 기대하는 것은
+합리적이지 않다. Rawls가 강조하듯, ``{[}이러한 문제들에 대한{]} 우리의
+모든 차이가 무지, 고의적 왜곡, 혹은 권력·지위·경제적 이득에 대한
+경쟁에서 비롯된 것이라고 가정하는 것은 비현실적이다.''\footnote{Rawls,
+  Political Liberalism, supra note 53, at 58.}
+
+이러한 의견불일치 전제는 도덕적 상대주의(moral relativism)와는 아무
+관련이 없다. 우리는 권리와 정의에 관한 의견불일치의 존재를 인식할 수
+있으며, 심지어는 실천적 정치 목적상 그것들이 해결 불가능하다는 점을
+인정할 수도 있다. 그러나 그렇다고 해서 논쟁이 벌어지는 쟁점에 대해 어떤
+\textbf{진리(fact of the matter)}도 존재하지 않는다는 \textbf{메타윤리적
+주장(meta-ethical claim)}을 받아들여야 하는 것은 아니다. 권리와
+헌정주의(constitutionalism)의 원칙에 관해 어떤 사실이 존재한다는 점은,
+그 진리가 합리적으로 부정될 수 있는 방식으로 드러나지 않는 한,
+의견불일치의 인정과 양립 가능하다.\footnote{Waldron, The Irrelevance of
+  Moral Objectivity, supra note 19, at 182 참조.}
+
+권리장전(Bill of Rights)이 존재한다면, 나는 그것이 의견불일치가 초래한
+쟁점에 관련성을 가지긴 하지만, 그 자체로 쟁점을 해결하지는 않는다고
+전제한다. 나는 몇 문단 앞에서 예시들을 언급한 바 있다. 미국의 경우,
+권리장전 조항들이 각 쟁점을 해결함에 있어 일정한 관련성을 가진다는 점은
+부정할 수 없지만, 동시에 그 조항들 자체가 그 쟁점을 합리적인 논쟁의
+여지가 없을 정도로 \textbf{결정적으로 해결(determine a
+resolution)}한다고 보기도 어렵다. 따라서 나는 이러한
+\textbf{의견불일치의 범위(extent of disagreement)}가, 우리가 만들어내는
+추상적 표현의 정교함을 압도한다고 본다. 의견불일치가 권리장전의 제정을
+방해하지는 \textbf{(p.~1369)} 않는다.\footnote{Thomas Christiano,
+  Waldron on Law and Disagreement, 19 Law \& Phil. 513, 537 (2000) 참조.}
+그러나 의견불일치는 여전히 해결되지 않은 채 남아 있고, 따라서 특정 권리
+침해의 가능성이 제기되었을 때, 해당 사안이 권리장전의 조항과 관련 있다는
+점은 누구도 부인하지 않지만, 그 관련성의 구체적 의미가 무엇인지, 즉
+그것이 해당 입법 조항을 금지하거나 제한해야 하는지를 두고는 합리적인
+사람들 사이에 여전히 논쟁이 존재한다.\footnote{다시 말하지만, 나는
+  권리장전(Bill of Rights)의 조항들이 중심사례를 포괄하며, 그 적용의
+  주변에서만 의견불일치(disagreement)가 발생한다고 말하는 것이 아니다.
+  이 조항들은 대체로 모호하고 추상적이어서, 명백히 논쟁의 여지가 없는
+  사례가 있다고 해도, 사람들이 동일한 추상적 표현을 각기 다른 실질적
+  접근에 적용할 수 있으며, 그럼에도 불구하고 여전히 모두가 권리를
+  진지하게 고려하고 있다고 말할 수 있다.}
+
+이렇다고 해서 권리장전이 해당 쟁점에 어떤 영향을 미치는지를 두고
+\textbf{결정적인 논변(conclusive arguments)}이 제시되지 않는다는 말은
+아니다. 적어도 그러한 논변을 제시하는 사람들에게는 그것이 그렇게 보일
+것이다. 만약 사법심사가 제도화된다면, 변호사들은 권리장전의
+문면(text)뿐만 아니라 그 \textbf{중력(gravitational force)}까지 활용하여
+이러한 쟁점들에 관해 논증할 것이다. 사실, 변호사들에게는 활짝 열린
+놀이터가 될 것이다. 각 쟁점에 대해 양측 모두가, 권리장전의 모호한
+헌신(bland commitments)이 관대하게(혹은 제한적으로) 읽히기만 한다면,
+자신의 입장을 그 안에서 읽어낼 수 있다고 주장할 것이다. 그러나 어느 쪽도
+공개적으로 다음과 같은 점을 인정하지 않으려 할 것이다. 바로 지금 내가
+당연하다고 전제하고 있는 것---즉, 권리장전의 모호한 수사적 표현(bland
+rhetoric)은, 권리를 진지하게 받아들이는 사람들 사이에서 불가피하게
+발생하는 \textbf{현실적이고 합리적인 의견불일치(real and reasonable
+disagreements)}를 일단 충분히 무마시켜 줄 수 있는 수준에서 법안을
+통과시키기 위해 고안된 것이었다는 점이다. 사법심사는 이러한 의견불일치에
+우리가 직접 마주하도록 독려하기보다는, 오히려 그러한 쟁점들을 권리장전의
+모호한 문구 해석 문제로 틀 지우게 한다(frame). 이런 방식이 그 쟁점들이
+제기하는 도덕적 문제들에 대해 숙고하기에 바람직한 맥락인지 여부는,
+제5부에서 우리가 검토하게 될 사안 중 하나이다.
+
+\subsection{III. 논증의 형식 (The Form of the
+Argument)}\label{iii.-uxb17cuxc99duxc758-uxd615uxc2dd-the-form-of-the-argument}
+
+이제 우리는 네 가지 전제를 세웠다. 그렇다면 이러한 전제들이 규정하는
+상황에서 우리는 무엇을 해야 하는가? 이 공동체의 구성원들은
+권리(rights)에 헌신하고 있으나, 동시에 권리에 대해 의견이
+다르다(disagree about rights). 대부분의 권리 문제는
+\textbf{결정(settlement)}이 필요하다. 여기서 결정이 필요하다는 것은 그
+쟁점을 제거한다는 뜻이 아니라\footnote{Jon Stewart 외, America (The
+  Book): A Citizen's Guide to Democracy Inaction 90 (2004) 참조 (Roe v.
+  Wade에 대한 논의에서 ``헌법상의 권리로서 태아는 인격체가 아니며,
+  사생활의 권리가 여성의 낙태 결정을 보호한다는 판결로 인해, 한때
+  논쟁적이었던 쟁점에 대한 모든 논의가 종결되었다''고 서술함).},
+\textbf{행동이 필요한 상황에서 공동의 행동을 위한 기반(common basis for
+action)}을 마련해야 한다는 의미다. 현실에는 \textbf{(p.~1370)} 공동체
+전체가 결정할 필요가 없는 모든 종류의 문제들이 있다. 예를 들어,
+화체변화(transubstantiation), 『햄릿』의 의미, 순수한 관조적 삶의 가치
+등은 그에 대한 합의가 거의 불가능한 분야이기 때문에 사회 전체가 반드시
+입장을 정해야 하는 것은 아니다. 이는 다행스러운 일이다. 하지만 권리
+문제는 다르다. 우리는 권리와 관련된 쟁점들에 대해 결정이 필요하지만,
+안타깝게도 이 영역에서도 합의의 전망은 그리 밝지 않다. 결정이 필요하다고
+해서 의견불일치(disagreement)의 사실이 사라지는 것은 아니다. 오히려 이는
+그 의견불일치의 한가운데에서 공동의 행동 근거를 형성해야 한다는 것을
+뜻한다.
+
+현실 세계에서 이러한 결정의 필요성은 입법 영역에서 가장 뚜렷이 드러난다.
+우리는 특정 영역에 대해 입법을 하고, 그 입법은 권리 문제를 야기한다.
+이러한 권리 문제들은 입법 자체의 표면에 명확히 드러나지 않을 수도 있다.
+예컨대, 입법은 결혼의 형식요건(marriage formalities), 최소
+근로시간(minimum working hours), 선거자금 개혁(campaign finance reform),
+도시 중심지의 역사적 보존(historic preservation) 등을 다룰 수 있다.
+그러나 실제로는, 누군가 이 입법의 적용이 권리 문제를 야기한다고
+지적하면서, 그 입법이 법문에 따라 적용되어야 하는가 아닌가라는 문제로서
+결정의 필요성이 발생한다.
+
+이에 대해 사법심사(judicial review)의 일종을 정당화하려는 논증이
+존재하며, 나는 그것을 일정 부분 존중한다. 그 논지는 다음과 같다.
+입법자가 제출된 입법 제안 속에 어떤 권리 문제가 내포되어 있는지 항상
+명확히 인식할 수 있는 것은 아니다. 또한 그 입법이 실제 적용될 때 어떤
+권리 문제가 발생할 수 있을지도 항상 예견할 수 없다. 그러므로 시민들이
+이러한 권리 문제를 인지하고 공론화할 수 있도록 해주는 메커니즘은
+유용하다. 그러나 이는 \textbf{약한 사법심사(weak judicial review)}에
+대한 논증일 뿐이며, 법원이 식별한 추상적 권리 문제를 그 법원이
+적절하다고 판단하는 방식으로 최종적으로 결정하는 \textbf{강한
+사법심사(strong judicial review)}를 정당화하는 논증은 아니다. 이러한
+논증은 영국에서처럼 법원이 ``해당 사안은 중대한 권리 문제를 내포하고
+있다''는 \textbf{권리선언(declaration)}을 내릴 수 있도록 하는 제도에
+대한 옹호라고 볼 수 있다.\footnote{위 주석 26--28 관련 본문 참조.} 혹은,
+사법심사가 훨씬 약한 체계에서 볼 수 있는 또 다른 제도에 대한 옹호일 수도
+있다. 예컨대, 법무장관(attorney general)이 초당적으로 입법 제안을
+검토하고, 그 제안이 제기할 수 있는 권리 문제를 공적으로 지적할 책무를
+갖는 경우이다.\footnote{New Zealand Bill of Rights Act 1990, 1990 S.N.Z.
+  No.~109, § 7 참조 (``법안이 하원(House of Representatives)에 제출되면,
+  법무장관(Attorney-General)은 \ldots{} 가능한 한 신속히 해당 법안에
+  포함된 조항이 이 권리장전에 포함된 어떠한 권리 및 자유와도 양립하지
+  않을 것으로 보일 경우 이를 하원의 주의에 환기시켜야 한다''). 이 권한
+  행사에 대한 논쟁적인 사례로는 Grant Huscroft, The Defeat of Health
+  Warnings a Victory for Human Rights? The Attorney-General and
+  Pre-Legislative Scrutiny for Consistency with the New Zealand Bill of
+  Rights, 14 Pub. L. Rev.~109 (2003) 참조.} 이와 같은 제도는 제3
+전제에서 제시된 권리 문제에 대한 민감성(alertness to issues of rights)을
+제도화한 한 방식이라 할 수 있다.
+
+\textbf{(p.~1371)} 이제 다음과 같은 상황을 가정해 보자. 입법부는 특정
+법안이 제기할 수 있는 권리 문제를 충분히 인식하고 있으며, 그 문제에 대해
+숙고한 결과, 토론과 투표를 통해 그 문제를 특정 방식으로
+\textbf{해결(resolve)}하였다. 즉, 입법부는 제4 전제에서 상정된 권리에
+대한 의견불일치들 중 하나 혹은 그 이상에 대해 입장을 정한 것이다.
+그렇다면 이제 우리가 직면하는 질문은 다음과 같다. 입법부의 이 결정이
+\textbf{최종적(dispositive)}이어야 하는가? 아니면 그것이 사법부에 의해
+재검토되고 심지어는 뒤집힐 수 있는 \textbf{이유(reason)}가 존재하는가?
+
+이 질문에 우리는 어떻게 답해야 할까? 많은 사람들이 이렇게 말하는 것을
+들은 적 있다: ``입법부의 결정은 유효하되, 그것이 권리를 침해할 경우는
+예외다.'' 그러나 이는 명백히 충분치 않다. 왜냐하면 우리는 이미 사회
+구성원들이 특정 입법이 권리를 침해하는지 여부에 대해 서로 의견이
+다르다는 것을 전제로 하고 있기 때문이다. 우리는 그 의견불일치를 해결할
+수 있는 \textbf{결정 절차(decision-procedure)}를 필요로 한다. 이 점은
+토마스 홉스(Thomas Hobbes) 이래로 오래된 통찰이다. 즉, 우리가 결정
+절차를 마련하는 이유는 그 절차의 작동이 쟁점을 해결하게 하기 위함이지,
+쟁점을 다시 불붙게 하기 위함이 아니다.\footnote{Thomas Hobbes, Leviathan
+  123 (Richard Tuck ed., 1996) (1651) 참조.} 따라서 우리가 상정한 사회
+구성원들이 권리에 대해 의견불일치하더라도, 그들은 이 의견불일치를 해결할
+결정 절차가 정당하다는 이론(theory of legitimacy)을 공유할 필요가 있다.
+결정 절차를 구성해야 할 \textbf{이유(reasons)}를 사유할 때, 우리는 그
+의견불일치의 어느 한 편에 있는 사람뿐 아니라 양편 모두가 받아들일 수
+있는 이유를 고려해야 한다.\footnote{이를 달리 표현하면, 규범적 정치
+  이론(normative political theory)은 특정 결정의 당위성에 대한 정당화
+  기반 이상을 포함해야 한다는 것이다. 즉, 단순히 정의 이론이나 일반적
+  선에 관한 이론을 넘어서, 의견불일치(disagreement)에 직면했을 때 정치적
+  결정을 내리기 위해 사용되는 결정 절차(decision-procedures)의
+  정당성이라는 규범적 쟁점을 다루어야 한다. 그렇지 않은 규범적 정치
+  이론은 본질적으로 불완전하다.}
+
+나는 정당한 결정 절차의 필요성을 \textbf{도덕적 의견불일치(moral
+disagreement)}에 대한 대응으로 제시하고 있다. 하지만 어떤 철학자들은
+정치에서 의견불일치는 만연하기 때문에, 굳이 그것에 너무 신경 쓸 필요가
+없다고 말한다. 우리가 어떤 결과에 대한 정당화만큼이나 정당한 절차에
+대해서도 의견불일치하고 있다면, 그리고 (내 설명에 따르면) 우리가 어차피
+어떤 입장을 정해야 한다면, 왜 내용(substance) 자체에 대한 입장을 그냥
+정해버리면 안 되느냐는 것이다.\footnote{Christiano는 이 점을 절차의
+  무한회귀(regress of procedures)라는 방식으로 서술한다: ``Waldron이
+  옳다면 우리는 모든 단계에서 의견불일치(disagreement)를 예상할 수 있고,
+  따라서 각 분쟁이 발생할 때마다 상위 절차에 의존해야 한다면, 절차의
+  무한회귀를 멈출 수 없게 될 것이다.'' Christiano, supra note 59, at
+  521. 그러나 Christiano는 이것이 악성 회귀(vicious regress)라는 점을
+  증명하려고 시도하지 않는다. 이에 대한 논의는 Waldron, supra note 14,
+  at 298--301 참조.} 그러나 이에 대한 대답은 분명하다. 우리는 설령 그
+영역에서도 의견불일치가 예상되거나 말거나, \textbf{정당성의 문제(issue
+of legitimacy)}로 향해야 한다는 \textbf{(p.~1372)} 것이다. 하나는,
+우리는 실제로 결정 절차를 \textbf{설계(design)}해야 하며, 그 설계에
+관련된 이유들을 숙고해야 한다. 다른 하나는, 공정성(fairness),
+참여(participation), 목소리(voice)와 같이 정당성과 관련된 이유들은 바로
+의견불일치가 존재하기 때문에 제기되는 것이며, 의견불일치가 없다면
+제기되지도 않았을 이유들이다. 우리가 이에 대해서도 의견불일치할 수는
+있지만, 그럼에도 그 이유들을 고려하지 않을 수는 없다. 우리가 그 이유들에
+대해 의견불일치할 것이라는 사실 자체가, 그것들을 무시하고 선행되거나
+본질적인 의견불일치에 대해 단순히 한쪽 입장을 취하는 방식으로 나아가야
+한다는 근거가 되지는 않는다.
+
+그 어떤 결정 절차도 완벽하지 않다. 그것이 사법의 통제를 받지 않는 입법
+과정이든, 사법심사 과정이든, 때로는 잘못된 결정을 내릴 수 있으며, 이는
+권리를 수호하기보다는 \textbf{배신(betray)}할 수도 있다.\footnote{어떤
+  사람들은 오류가 입법부 측에서 더 심각할 가능성이 항상 높다고 말한다:
+  입법부는 권리를 실제로 침해할 수 있지만, 법원이 할 수 있는 최악은
+  개입하지 않아 권리를 보호하지 못하는 것뿐이라는 것이다. 이는 잘못된
+  주장이다. 사법심사의 권한을 행사하는 법원이 권리를 보호하려는 입법을
+  무효화함으로써 권리를 침해할 수도 있다. 이 점은 제 IV부 말미에서 더
+  논의할 것이다.} 이것은 정치의 현실이다. 모든 사람은 자신이 옳다고
+여기는 선택과, 자신이 정당하다고 여기는 결정 절차가 산출하는 선택 사이에
+\textbf{괴리(dissonance)}가 발생할 수 있다는 점을 인정해야 한다. 리처드
+울하임(Richard Wollheim)은 이를 \textbf{``민주주의 이론의 역설(paradox
+in the theory of democracy)''}이라 불렀다.\footnote{Richard Wollheim, A
+  Paradox in the Theory of Democracy, in Philosophy, Politics and
+  Society 71 (Peter Laslett \& W.G. Runciman eds., 2d ser. 1969).} 한
+시민이 ``정책 A는 입법되어서는 안 된다''고 말하면서도, 동시에 ``정책 A는
+입법되어야 한다''고 주장할 수 있다는 것이다. 전자는 그가 반대한
+정책이고, 후자는 다수결로 선택된 정책이기 때문이다. 하지만 이 역설을
+민주주의만의 문제로 환원한 것은 울하임의 오류다. 이것은 \textbf{``무엇이
+행해져야 하는가''에 대해 의견불일치가 있을 경우, 그에 대한 결정을 어떻게
+내려야 하는가''}에 관한 모든 정치 이론이 겪는 일반적인 역설이다.
+
+이제 그러한 주의를 염두에 두고, 권리(rights)에 관한 의견불일치를
+해결하기 위한 \textbf{결정 절차(decision-procedure)}를 설계하거나 평가할
+때 고려해야 할 이유들은 무엇일까? 두 종류의 이유가 고려될 수 있다. 나는
+이를 각각 \textbf{``결과 관련 이유(outcome-related reasons)''}와
+\textbf{``절차 관련 이유(process-related reasons)''}라고 부르겠다. 이 두
+가지 이유 모두 결정 절차의 정당성 문제와 관련되어 있다.
+
+\textbf{절차 관련 이유(process-related reasons)}란, 특정한 결과가 어떤
+것이어야 하는지에 대한 고려와는 무관하게, 어떤 사람이 그 결정을 내릴
+권한을 갖거나 그 결정에 참여할 권리를 가진다고 주장하는 이유를 말한다.
+개인의 삶에서 우리는 종종 부모가 자녀에 대해 징계를 할지 말지를 결정할
+권리가 있다고 말한다. 이 결정은 길을 지나가던 행인이나 버스의 다른
+승객이 대신해서 내려서는 안 된다는 것이다. 우리는 \textbf{(p.~1373)}
+아이에게 징계가 필요하다고 판단하기 이전에, 이 결정을 부모가 내려야
+한다고 말할 수 있다. 실제로 우리는 행인이 부모보다 더 나은 결정을 내릴
+가능성이 있더라도 여전히 이 권한은 부모에게 있다고 말할 수 있다. 정치
+영역에서는 이러한 절차 관련 이유들이 평등한 참정권(political equality)과
+민주적 투표권(right to vote), 즉 자신의 의견이 타인의 반대에도 불구하고
+존중받아야 한다는 권리에서 가장 뚜렷하게 나타난다.
+
+\textbf{결과 관련 이유(outcome-related reasons)}는 그와는 반대로, 올바른
+결과(good, just, or right decision)가 산출될 수 있도록 결정 절차를
+설계해야 한다는 이유들이다. 지금 우리가 다루는 주제는 \textbf{권리에
+대한 의견불일치(rights-disagreements)}이다. 권리가 중요하므로, 우리는
+권리에 대한 판단을 정확히 내리는 것이 중요하며, 따라서 결과 관련
+이유들을 매우 진지하게 받아들여야 한다. 정책(policy)과 관련된 문제에서는
+잘못된 판단이 어느 정도 용인될 수 있지만, 원칙(principle)의 문제에서는
+잘못된 판단은 곧 권리의 침해(violation of rights)로 이어질 수 있다.
+우리가 상정하는 이 사회의 구성원들은 이러한 결과를 피하거나 최소화하는
+것이 얼마나 중요한지를 잘 이해하고 있다.
+
+물론, 권리 문제에 관하여 대립하는 입장을 가진 사람들이 공통적으로 수용할
+수 있는 결과 관련 이유를 도출하는 것이 쉬운 일은 아니다. 앞서
+언급했듯이,\footnote{위 주석 64 관련 본문 참조.} 결정 절차의 설계는
+그것이 해결하려는 특정 의견불일치로부터 독립적이어야 한다. 그렇지 않으면
+그 절차 자체가 그 의견불일치를 다시 불붙게 만들 뿐이다. 따라서 우리는
+특정 논쟁적 결론을 지지하기 위한 결과 관련 이유는 피해야 한다. 예컨대,
+``이 결정 절차는 낙태 권리(pro-choice)를 더 잘 보호해줄 가능성이
+크다''고 해서 그 절차를 선택하는 방식은, 낙태 반대자(pro-life
+advocate)들의 동의를 얻기 어려울 것이다. 중요한 점은, 그 의견불일치
+속에서도 정당성 있게 받아들여질 수 있는 절차를 설정해야 한다는 것이다.
+
+그럼에도 보다 온건한 방식으로 결과 관련 이유를 정당화할 수는 있다. 즉,
+논쟁적인 권리 집합을 산출할 가능성이 높은 정치 절차를 선택하자고
+주장하는 대신, \textbf{권리에 대한 진실(the truth about rights)}을
+밝혀줄 가능성이 더 높은 절차를 선택하자고 주장할 수 있다. 에일린
+카바나(Aileen Kavanagh)는 다음과 같이 말한다:
+
+\begin{quote}
+``우리는 우리가 어떤 권리를 가지고 있고, 그것이 어떻게 해석되어야
+하는지에 대한 정확한 이론 없이도 \textbf{수단주의적 주장(instrumentalist
+claims)}을 할 수 있다. 많은 수단주의적 논증은 특정한 권리의 내용에 대한
+지식이 아니라, \textbf{(p.~1374)} 입법부와 사법부가 결정을 내리는 방식,
+이들의 결정에 영향을 미치는 요인, 그리고 개인이 어느 기관에 어떻게
+자신의 청구를 제기할 수 있는지를 포함하는 \textbf{일반적인 제도적
+고려사항(general institutional considerations)}에 기초한다.''\footnote{Aileen
+  Kavanagh, Participation and Judicial Review: A Reply to Jeremy
+  Waldron, 22 L. \& Phil. 451, 466 (2003).}
+\end{quote}
+
+이러한 종류의 이유들은 진지하게 고려할 만한 가치가 있다. 조셉
+라즈(Joseph Raz)는 더 나아가, 이러한 결과 관련 이유들이 유일하게 고려할
+가치가 있는 이유들이라고 주장한 바 있다.\footnote{J. Raz, Disagreement
+  in Politics, 43 Am. J. Juris. 25, 45-46 (1998); 또한 다음을 보라:
+  Rawls, A Theory of Justice, supra note 53, 230쪽 (``어떤 절차를
+  판단하는 근본적인 기준은 그 절차가 산출할 것으로 예상되는 결과의
+  정의(justice)이다.'').} 이러한 독단적 주장(dogmatism)은 아마도 해당
+쟁점들이 갖는 중요성에서 비롯된 것일 것이다. 권리에 대한 판단은 그만큼
+중대한 결과를 낳기 때문이다. 그러나 절차 설계에 있어 우리가 고려해야 할
+이유들은 결과 관련 이유만이 아니다. 예컨대
+\textbf{자기결정(self-determination)}의 원칙을 생각해보자. 권리에 대한
+의견불일치를 해결하는 결정은 각 사회의 정치 체계 내에서 해결되는 것이
+바람직하며, 외부의 명령(diktat)에 의해 결정되어서는 안 된다는 이유가
+존재한다. 일부는 이것이 결정적(reason-conclusive)인 이유는 아니라고 말할
+수 있다. 예컨대 어떤 경우에는 \textbf{국제적 권위(international
+authority)}가 인권 문제에 있어 국민자결권(national
+self-determination)이나 주권(sovereignty)보다 우선해야 한다고 주장할 수
+있다.\footnote{예를 들어 다음을 보라: Louis Henkin, That ``S'' Word:
+  Sovereignty, and Globalization, and Human Rights, Et Cetera, Fordham
+  University School of Law, Robert R. Levine Distinguished Lecture
+  Series 발표문 (1999년 2월 23일), 수록: 68 Fordham L. Rev.~1 (1999).}
+하지만 극소수를 제외하면, 이러한 절차 관련 이유가 전혀 중요하지 않다고
+부정하는 사람은 없다. 라즈는, 권리 판단의 절차 설계에서 결과 관련 이유가
+매우 중요하다는 점은 인정하면서도, 그 외의 이유들도 상당히 중요할 수
+있다는 점에는 충분한 주의를 기울이지 않았다.
+
+이처럼 다양한 이유들이 존재한다는 사실을 인식하게 되면, 우리는 이들
+이유들의 \textbf{규범적 성격(normative character)}을 검토해야 한다. 이는
+각 이유가 서로 어떤 관계를 갖는지를 이해하는 데 중요하기 때문이다.
+``결과 관련''이라는 용어는 다소 결과주의적(consequentialist)처럼 들릴 수
+있지만, 우리가 피하고자 하는 결과가 \textbf{권리
+침해(rights-violations)}이기 때문에, 그 회피에는 권리의 맥락에서
+나타나는 \textbf{의무적 긴급성(deontological urgency)}이 부여된다. 물론
+그것이 직접적 권리 침해를 금지하는 원칙만큼 강력한 것은 아닐 수 있다.
+결정 절차를 설계하는 사람은 그러한 침해에 대해 직접적으로 책임지지는
+않기 때문이다. 그러나 여전히 이들은 \textbf{권리에 기반한
+책임(rights-based responsibility)}을 지니며, \textbf{주의할 의무(duty to
+take care)}를 갖는다.\footnote{특정한 권리(right)가 다양한 파장의
+  의무(duty)를 유발한다는 사상은 다음에서 논의된다: Jeremy Waldron,
+  Rights in Conflict, 99 Ethics 503, 509--12 (1989).}
+
+\textbf{(p.~1375)} 그렇다면 절차 관련 이유(process-related reasons)의
+규범적 성격은 어떠한가? 절차 관련 이유는 종종 의무론적
+긴급성(deontological urgency)의 문제이기도 하다. 로널드 드워킨(Ronald
+Dworkin)은 참여적 이유(participatory reasons)의 성격을 ``정치적 절차의
+참여적 결과(participatory consequences of a political process)''라고
+표현함으로써 이를 잘못 기술했다고 생각한다.\footnote{Ronald Dworkin,
+  Sovereign Virtue: The Theory and Practice of Equality 187 (2000).}
+그는 공동체의 정치적 의사결정(political decisionmaking)에 시민 개개인이
+참여할 기회를 갖도록 허용하는 것이 하나의 결과---좋은 결과---를
+가져온다고 주장한다. 즉, 그것은 그들이 공동체 내에서 동등한 구성원 혹은
+지위(equal membership or standing)를 가진 존재임을 확인시켜 준다는
+것이다. 이는 다른 사람들이 그들의 의견(opinions)과 선택(choices)을 가치
+있는 것으로 간주한다는 점에서 그들을 안심시키는 효과가 있다. 또한,
+사람들에게 참여를 허용하는 것은 정치적 결정(political decisions)의
+결과와 시민들이 자신을 동일시하도록 돕고, 그러한 결정들을 어떤
+의미에서든 자신의 결정으로 받아들이게 하여 정당성(legitimacy)에 긍정적인
+파급 효과(knock-on effects)를 준다(여기서 '정당성'은 사회학적 의미에서의
+용어이다).\footnote{Dworkin의 입장에 대한 요약적 진술은 Kavanagh, supra
+  note 70, 458--59쪽을 참조하여 작성되었다.} 이러한 설명은 모두 의심할
+바 없이 중요하다. 그러나 이는 마치 교장이 학생회(school council)를 통해
+교육 문제에 대해 학생들에게 발언을 부여함으로써 얻을 수 있는 이점을
+설명하는 듯한 인상을 준다. 드워킨의 설명은 참여할 권리(right to
+participate), 즉 한 사회의 의사결정에 있어 평등하게 다뤄져야 한다는
+당위(imperative), 그리고 ``이 결정은 나에게 영향을 미치고 나는 그에
+구속되는데, 도대체 무슨 권리로 나의 발언을 배제하고---나를 시민권 박탈
+상태(disenfranchise)에 놓는가?''라고 분노하며 항의할 때 문제되는
+원칙의식(sense of principle)을 근본적으로 과소평가한다.
+
+그렇다면 이제 우리는 절차 관련 이유와 결과 관련 이유를 어떻게 비교
+평가할 수 있을까? 이는 흔히 있는 딜레마다. 가령 ``가장 빠르면서 가장
+저렴한 차''를 찾는 것처럼, 우리는 두 가지 서로 다른 가치를 동시에
+극대화하려 한다. 다음과 같은 방식으로 질문을 설정할 수 있다: ``권리에
+대한 진실에 도달할 가능성이 가장 크면서, 동시에 그에 영향을 받는
+사람들의 목소리가 \textbf{들릴 동등한 청구권(equal claim to be heard)}을
+적절히 존중하는 방법은 무엇인가?''\footnote{Frank I. Michelman, Brennan
+  and Democracy 59--60 (1999)에서는 이 문제를 다음과 같이 제기한다.}
+또는 반대로, ``영향받는 사람들의 목소리가 들릴 동등한 청구권을 가장 잘
+존중하면서도, 권리에 대한 진실에 도달할 현실적 가능성이 있는 방법은
+무엇인가?'' 나는 이러한 고르디우스의 매듭(Gordian knot)을 잘라낼 수
+있다고 생각한다. 내가 제IV부에서 논증할 바는 다음과 같다. \textbf{결과
+관련 이유는 최대한 긍정적으로 평가해도 여전히 결정적이지
+않다(inconclusive)}는 것이다. 그들은 중요하지만, 흔히 주장되는 것처럼
+사법심사를 정당화하는 명확한 근거를 제공하지는 않는다. 반면, 절차 관련
+이유는 매우 일방적이다(one-sided). 이들은 사법심사의 정당성을 훼손하며,
+입법에 의한 결정은 온전히 살아남게 만든다. 따라서 나는 어떤 방식으로
+질문을 정식화하든 입법 과정이 우위에 선다고 본다. 이것이 바로
+\textbf{사법심사에 반대하는 핵심 논증(the core of the case against
+judicial review)}이 될 것이다.
+
+\subsection{IV. 결과 관련 이유들 (Outcome-Related
+Reasons)}\label{iv.-uxacb0uxacfc-uxad00uxb828-uxc774uxc720uxb4e4-outcome-related-reasons}
+
+Raz에 따르면, ``진행의 자연스러운 방식은, 근본적 권리(fundamental
+rights)의 집행(enforcement)을, 해당 시간과 장소의 상황 속에서 그것들을
+가장 잘 집행하고 부작용을 최소화할 가능성이 가장 높은 정치적 결정
+절차(political decision-procedure)에 위탁하는 것이라고 가정하는
+것''이다.\footnote{Raz, supra note 71, 45쪽.} 이 지점에서 논의는
+법과정학파(legal process school)가 시작한 법원의 제도적
+역량(institutional competence)에 대한 보다 광범위한 논쟁과 연속되어야 할
+것이다.\footnote{Hart \& Sacks, supra note 49, 640--47쪽을 보라.}
+법원(court)은 어떤 쟁점을 다루는 데에는 능숙하지만, 다른 쟁점에는 그렇지
+않다. 기술적으로는, 법원에서 청구(claim)를 제기하려면 권리(right)에 대한
+주장을 명시해야 하므로, 법원이 통상적으로 결정하는 쟁점을 지칭하기 위해
+``권리(rights)''라는 용어를 사용한다. 그러나 Lon Fuller가 지적했듯이,
+그렇다고 해서 법원이 여기서 논의되는 비기술적 의미에서의 권리 청구(claim
+of right)를 다루기에 적절한 포럼이라는 결론이 도출되는 것은
+아니다.\footnote{Fuller, supra note 49, 368--70쪽.} 일부 권리 청구는
+법원이 다루기에 적합한 이진적(binary) 성격을 가지지만, 다른 것들은 보다
+다면적(multifaceted) 성격을 지니며, 이는 전통적으로 사법 구조에서
+결정되기에 부적합한 것으로 여겨져 왔다. 이 문제는 추가적인 고려를 필요로
+하며, 여기서 더 언급하기보다는 이 글의 주요 주제인 도덕적 쟁점들에 관한
+법원과 입법기관의 역량에 대한 보다 구체적인 주장으로 논의를 전환하고자
+한다.
+
+결과 관련 이유(outcome-related reasons)를 사법심사(judicial review)에
+대한 옹호와 연결짓고, 절차 관련 이유(process-related reasons)를
+사법심사에 대한 반대와 연관시키는 유혹이 존재한다. 이는 오류이다. 중요한
+절차 관련 이유들 중 많은 수가 참여(participation)에 기반을 두고 있으며,
+따라서 선출되거나 대표적인 기관을 지지하는 것이 사실이다. 그러나
+그렇다고 해서 모든 결과 관련 이유들이 반대 방향으로 논증하는 것은
+아니다. 결과 관련 이유들은 실제로 양방향으로 작용한다. 입법기관은 때때로
+권리가 방어하고자 하는 유형의 압력에 취약할 수 있는 특성을 지니며, 반면
+법원은 권리에 대한 의견불일치(rights-disagreements)가 제기하는 도덕적
+쟁점들을 직접적으로 다루는 데 어려움을 겪는 측면도 있다.
+
+Raz는 결과 관련 이유가 양쪽 모두에 무게를 싣는다는 점을 인정한다. 그는
+익숙한 방식으로 다음과 같이 논증한다:
+
+\begin{quote}
+\textbf{(p.~1377)} ``많은 국가들에서는 입법기관 구성원들이 종파적
+이익(sectarian interests)에 의해 상당히 영향을 받아, 어떤 이들이 가지는
+권리(rights)가 무엇인지조차 확인하려는 시도를 하지 않을 것이라고 의심할
+만한 이유가 충분하다. 우리는 특정 요인들이 판단을 흐리게 할 가능성이
+있다는 것을 알고 있다. 예를 들어, 그들은 자신들의 이해관계에 편향될 수
+있다. 그러므로 우리는 결정권자가 자신의 결정에 의해 영향을 받지 않거나,
+직접적으로 영향을 받지 않는 절차를 선호할 수도 있다. 판단에 영향을
+미친다고 알려진 다른 요인들도 존재하며, 그 성격과 존재는 해당 권리의
+구체적 내용에 대한 지식 없이도 확인할 수 있다.''\footnote{Raz, supra
+  note 71, 46쪽.}
+\end{quote}
+
+이러한 비판을 고려할 때, 우리는 그것이 우리의 세 번째 전제와
+양립가능성(compatibility)을 가지는지 물어야 한다. 이러한 종파적 편향은
+모든 사회의 입법기관에서 전형적인 것인가? 아니면, 권리에 대해 전반적으로
+무관심한 사회라는 비핵심 사례(non-core case)와 연결되어야 하는가? 이에
+대해서는 제7부에서 더 논할 것이다.\footnote{아래 본문 중 주석 137--141에
+  해당하는 텍스트를 보라. 이 부분에서는 (핵심 사례가 아닌 경우에)
+  소수자의 권리(rights)에 공감하는 판사가 입법자보다 대중적 편견에
+  저항할 위치에 더 낫다는 주장에 대해 논의한다.} 그러나 글자 그대로
+받아들인다 해도, Raz의 논변은 일방적인 경향을 갖고 있지 않다. 동일한
+종파적 압력은 종종 법원이 권리를 경시하는 이유이기도 하다. 우리는 미국의
+Korematsu, Schenck, Dred Scott, Prigg 사건 등에서 이를
+보아왔다.\footnote{Korematsu v. United States, 323 U.S. 214 (1944)
+  (제2차 세계대전 중 일본계 미국인에 대한 강제 수용을 보호하지 않음);
+  Schenck v. United States, 249 U.S. 47 (1919) (제1차 세계대전 중 징병
+  비판을 ``극장 안에서 '불이야'라고 외치는 것''과 유사하다고 판시함);
+  Dred Scott v. Sanford, 60 U.S. (19 How.) 393, 425--27 (1857); Prigg v.
+  Pennsylvania, 41 U.S. (16 Pet.) 539, 612 (1842) (아프리카계 미국인을
+  도망노예 사냥꾼으로부터 보호하려는 주 법률을 무효화함).} 더 최근에는,
+보통 사법심사의 강력한 옹호자로 알려진 Laurence Tribe조차도 9/11 이후의
+미국의 공황 상태를 언급하며 ``시민권과 자유에 대해 우려하는 이들이 위기
+상황에서 사법부에 과도한 기대를 거는 것은 심각한 실수일 것''이라
+경고하였다.\footnote{Laurence Tribe, Trial by Fury: Why Congress Must
+  Curb Bush's Military Courts, New Republic, Dec.~10, 2001, 18, 19쪽;
+  또한 다음을 보라: Ronald Dworkin, The Threat to Patriotism, N.Y.
+  Rev.~Books, Feb.~28, 2002, 44, 46--47쪽 (위기 상황에서 권리 침해에
+  대한 과거 법원의 관용을 지적).}
+
+어쨌든 Raz는 결과 관련 이유가 반대 방향으로 논증할 수 있다는 점도
+인정한다:
+
+\begin{quote}
+때때로 \ldots{} 한 결정에 의해 자신의 이해관계가 영향을 받지 않을
+사람들은 그 상황에서 무엇이 정의로운지에 대해 진지하게 파악하려
+\textbf{(p.~1378)} 하지 않을 것이라는 이유가 존재한다. 때때로 사람은
+자신이 동일한 계층에 속해 있지 않으면 어떤 계층의 고통을 이해할 수
+없으며, 그러므로 그 결정은 영향받지 않는 이들이 아닌, 영향을 받는
+이들에게 맡겨야 한다.\footnote{Raz, supra note 71, 46쪽.}
+\end{quote}
+
+입법기관은 바로 이러한 이해 능력을 증진하기 위해 대표 구조(structures of
+representation)를 갖추고 있다.
+
+민주적 참여 구조가 적절한 결과 확보의 독립적 중요성을 전혀 고려하지 않고
+단순히 다수에게 권력을 부여한다고 주장되기도 한다. 이는 터무니없는
+주장이다. 모든 민주주의 체제는 일정 수준의 성숙한 판단을 보장하기 위해
+참정권(franchise)을 다양한 방식으로 제한한다. 예컨대, 어린이는 해당
+결정의 영향을 받음에도 불구하고 투표권이 배제된다. 또한 입법기관은
+사회의 다양한 집단에 의해 받아들여질 수 있는 선택지들에 관한 정보가
+의사결정 절차에 전달되도록 설계된다. 그리고 일반적으로 의사결정은
+양원제(bicameral) 구조 내에서 이루어지며, 각각 다소 상이한 선출 주기를
+지닌 두 개의 의회에서 다수의 지지를 받아야만 입법안이
+통과된다.\footnote{영국과 같은 일부 양원제 체계(bicameral systems)는
+  선출되지 않은 상원(upper house)을 가지며, 하원이 갈등 상황에서 결국
+  우위를 점하도록 허용하는 규정(Parliament Acts)과 영국 헌법의
+  관습들(conventions)을 포함한다.} 게다가, 약한 사법심사 또는 사법심사가
+존재하지 않는 체제에서도 입법 과정에서 권리 쟁점들이 강조되도록 별도의
+장치를 마련하는 경우가 있다.\footnote{supra note 63 및 이에 해당하는
+  본문을 보라.} 대부분의 민주주의 국가에서는 선거 시기를 중심으로 면밀히
+조정된 논의 절차뿐만 아니라, 입법부 내의 공식 토론과 입법부 외부에서
+이루어지는 비공식 토론 및 정보 축적 간의 다양한 연결 고리들을 갖추고
+있다. 이 모든 것이 민주적 절차에 대한 결과 관련 조정들이다. 참여
+측면에서 우리가 보게 되는 것은 Rawls가 '순수한 절차적 정의(pure
+procedural justice)'라 부른 것이 아니라, 일종의 '불완전한 절차적
+정의(imperfect procedural justice)'에 가깝다.\footnote{Rawls, A Theory
+  of Justice, supra note 53, 84--85쪽. 순수 절차적 정의(pure procedural
+  justice)는 정의로운 절차를 철저히 따랐다는 사실 자체가 결과의 정의를
+  보장한다고 보는 개념이다. 반면, 불완전한 절차적 정의(imperfect
+  procedural justice)는 산출된 결과의 정당성을 절차뿐 아니라 그 자체의
+  내용에 의해서도 평가해야 한다는 점을 강조한다.}
+
+일반적으로, 사법심사를 지지하는 결과 관련 논변을 읽다 보면, 사람들은
+결과 관련 논변은 법원을 지지하는 논변일 수밖에 없다고 \textbf{(p.~1379)}
+가정하는 경향이 있다. 그 이유는 사법심사를 반대하는 가장 익숙한 논변들이
+비결과 관련적(non-outcome-related)이기 때문이다. 이들은 결과 관련
+이유들을 사법부와 연관시키려 무리하게 노력하며, 그 과정에서 사법적
+의사결정(judicial decisionmaking)에 대해 현실과 동떨어진 서사를
+퍼뜨리기도 한다.\footnote{미국 연방대법원(Justices)의 구성원 간 도덕적
+  숙고가 신중하게 이루어진다는 주장에 대해 일반적 비판을 가한 논의로는
+  Kramer, supra note 11, 240쪽을 보라. Kramer는 대법관의 정치적 의제와
+  각 재판부 내 이념적으로 동기화된 로클럭들(phalanxes of ideologically
+  motivated clerks)이 진정한 동료 간 숙고(collégial deliberation)를
+  방해한다고 지적한다.} 사법심사 반대자들이 입법기관에 대해 순진하게
+낙관적인 시각을 가진 것으로 비판받기도 하지만, 때로 우리는 사법부
+옹호자들이 법원의 현실을 솔직히 설명하지 않는 데 대한 대응으로
+의도적으로 낙관적 대조를 이루기도 한다.\footnote{Jeremy Waldron, The
+  Dignity of Legislation 2 (1999).}
+
+이 절의 남은 부분에서는, 법원을 지지하는 근거로 종종 제시되는 세 가지
+결과 관련 이점을 보다 자세히 검토하고자 한다. (a) 권리 쟁점이 특정
+사건의 맥락에서 법원에 제기된다는 점, (b) 법원이 권리 쟁점을
+권리장전(Bill of Rights)의 문언에 근거하여 다룬다는 점, (c) 사법적
+심의(judicial deliberation)에서 추론(reasoning)과 이유
+제시(reason-giving)가 핵심적인 역할을 한다는 점이 그것이다. 이 세 가지
+모두가 사법심사를 정당화하는 요소로 여겨진다. 그러나 나는 이 세 가지
+측면 각각에서, 법원이 권리를 다루는 방식에는 중요한 결과 관련 결함이
+있으며, 입법기관 쪽에는 중요한 결과 관련 장점이 존재한다는 점을 논증할
+것이다.
+
+\subsubsection{A. 개별 사안에 대한 지향 (Orientation to Particular
+Cases)}\label{a.-uxac1cuxbcc4-uxc0acuxc548uxc5d0-uxb300uxd55c-uxc9c0uxd5a5-orientation-to-particular-cases}
+
+사람들은 종종 권리에 관한 사법적 사유(judicial reasoning)가 (입법적
+사유{[}legislative reasoning{]}와는 달리) 특별히 뛰어난 점은
+권리(right)에 관한 쟁점이 살아 있는 구체적 개인의 상황으로 판사 앞에
+제시된다는 점이라고 논증한다. 권리는 결국 개별적 권리(individual
+rights)이기 때문에, 어떤 법률 조항이 한 개인에게 어떤 영향을 미치는지를
+보는 것은 사고를 집중시키는 데 도움이 된다. 마이클 무어(Michael Moore)의
+표현을 빌리자면, ``판사들은 도덕적 통찰(moral insight)을 위한 위치에
+입법자보다 더 잘 놓여 있다. 왜냐하면 판사들은 도덕적 통찰에 필요한 세부
+정보와 구체적인 개인적 관여를 포함한 도덕적 사고실험(thought
+experiment)을 매일같이 접하기 때문이다.''\footnote{Michael S. Moore, Law
+  as a Functional Kind, in Natural Law Theory, supra note 19, 188,
+  230쪽. 이에 대한 반론은 Waldron, Moral Truth and Judicial Review,
+  supra note 19, 83--88쪽을 보라.}
+
+그러나 이는 대부분 신화에 가깝다. 사법심사(judicial review)에 대한
+논쟁에서 우리가 주로 말하는 사건들이 고등 항소심(high appellate
+levels)에 도달할 때쯤이면, 최초의 살아 있는 권리 보유자(flesh-and-blood
+right-holders)의 흔적은 거의 사라진다. 그 시점에서의 논증은
+\textbf{(p.~1380)} 해당 권리(right)의 추상적인 쟁점만을 중심으로
+순환된다. 원고(plaintiff)나 청원인(petitioner)은 대체로 옹호
+단체(advocacy groups)에 의해 선택되며, 이는 그들이 일반적인 공공
+정책(public policy) 논증의 일부로 강조하고자 하는 추상적 특성들을
+구현하기 위해서이다. 개별 소송 당사자의 특이한 정황이나 개성은 대부분
+미국 연방대법원(U.S. Supreme Court)에 사건이 도달할 때쯤이면 사라지며,
+대법원은 거의 항상 해당 쟁점을 일반적인 개념으로 논의한다.\footnote{Sarah
+  Weddington, Roe v. Wade: Past and Future, Suffolk University Law
+  School, The Donahue Lecture Series 발표문 (1989년 12월 7일), 수록: 24
+  Suffolk U. L. Rev.~601, 602--03 (1990).}
+
+반면, 입법 과정은 개별 사안들을 고려하는 데 개방적이다. 이는 로비
+활동(lobbying), 공청회(hearings), 그리고 입법 토론(debate)을 통해
+가능하다. 실제로 오늘날 입법은 악명 높은 특정 개인 사건에 기초해
+시작되는 경향을 보이기도 한다. 예컨대 '메건법(Megan's Law)'이 그
+예이다.\footnote{Megan의 법(Megan's Law)은 성범죄자 등록제를 도입한
+  법으로, Megan Nicole Kanka가 성범죄 전과자에 의해 강간 및 살해된 사건
+  이후 1994년 뉴저지에서 제정되었다. 1994 N.J. Laws 1152 (현재 N.J.
+  Stat. Ann. §§ 2C:7-1 to 7-11 (2005)로 성문화됨). 연방 수준에서도
+  Megan의 법이 제정되었으며, 42 U.S.C. § 14071 (2000)이 그에 해당한다.
+  해당 법의 제정 경위에 대한 설명은 다음을 참조하라: Daniel M. Filler,
+  Making the Case for Megan's Law: A Study in Legislative Rhetoric, 76
+  Ind. L.J. 315 (2001).} 물론, ``어려운 사건(hard cases)은 나쁜 법(bad
+law)을 만든다''고 흔히 말하기도 한다. 그러나 이 말이 일정 부분
+타당하다면, 특정 개별 사건이 수백만 명에게 다방면으로 영향을 미치는
+일반적인 권리 문제에 비추어 어떤 의미를 가지는지 평가함에 있어, 입법부는
+훨씬 유리한 위치에 있다고 보는 것이 타당하다고 생각된다.\footnote{Eisgruber,
+  supra note 13, 173쪽: ``판사들은 구체적 당사자들 간의 논쟁을 해결하는
+  과정에서 헌법적 쟁점을 다루게 된다. 그 결과, 이 쟁점들은 불완전한
+  방식으로 법원에 제기된다. 모든 이해관계자들이 법정에 출석할 수 있는
+  것은 아니다. 판사들은 제한된 수의 당사자로부터 증거를 받고 주장만을
+  듣는다. 따라서 전체 사회·정치·경제 체계의 공정성에 대한 포괄적 관점을
+  형성하는 데 필요한 정보를 갖지 못할 수 있다.'' Eisgruber는 이러한
+  점에서, 판사들이 포괄적 도덕 원칙에 의존하여 문제를 해결하려는 시도는
+  현명하지 못하다고 결론짓는다. 위 저작의 165, 171, 173쪽 참조.}
+
+\subsubsection{B. 권리장전 문언에 대한 지향 (Orientation to the Text of
+a Bill of
+Rights)}\label{b.-uxad8cuxb9acuxc7a5uxc804-uxbb38uxc5b8uxc5d0-uxb300uxd55c-uxc9c0uxd5a5-orientation-to-the-text-of-a-bill-of-rights}
+
+우리는 지금 권리장전(Bill of Rights)이 존재하는 사회를 상정하고 있으며,
+입법에 대한 사법심사(judicial review)가 존재한다면, 그것은 아마도
+권리장전을 중심으로 이루어질 것이다. 우리가 이미 가정한 바와 같이,
+권리장전은 구성원들이 개인의 권리(individual rights)와 소수자의
+권리(minority rights)에 대한 공통된 헌신(commitment)을 바탕으로
+채택되었으며, 이들은 해당 권리들이 무엇이고 그것이 어떤 함의를
+가지는가에 대해 의견불일치(disagreement)를 갖고 있음에도 불구하고 이를
+수용하였다. 이제 입법과 관련하여 권리에 대한 의견불일치가 발생할
+\textbf{(p.~1381)} 경우, 해당 쟁점이 제기되는 결정
+절차(decision-process)에서 권리장전이 어떤 역할을 해야 하는지가
+문제된다. 결과 관련 관점(outcome-related point of view)에서 보았을 때,
+권리장전의 문언에 기반하여 권리에 대한 의견불일치를 다투는 것이 바람직한
+일일까, 아니면 그렇지 않은 일일까?
+
+그것이 바람직하다고 생각할 수 있는 한 가지 이유는, 권리장전의 서면
+표현들이 쟁점이 되는 추상적인 권리 문제들에 대해 당사자들이 보다 명확히
+집중할 수 있도록 도와줄 수 있기 때문이다. 그러나 반대편에도 강력한
+이유들이 존재한다. 권리장전에 사용된 표현 방식은 권리에 대한
+의견불일치를 고려하여 선택된 것이 아닐 수 있다. 혹은, 그러한
+의견불일치가 존재하였을 때, 그것을 회피(finesse)하기 위해 그러한 표현이
+선택되었을 수도 있다. 그러한 상투적 표현들은 권리에 대한 의견불일치를
+냉철하고 책임 있게, 그리고 성실하게 탐구하려는 시도를 오히려 방해하는
+잘못된 출발점일 수 있다.
+
+권리장전의 서면 표현들은 또한 일정한 경직된 문언 형식주의(textual
+formalism)를 조장하는 경향이 있다.\footnote{이 주장은 Waldron, A
+  Right-Based Critique, supra note 14에서 내가 전개한 것이다.}
+권리장전의 보호를 받는 법적 권리(legal right)는 그 조항들이 명시된
+정형화된 문구(canonical form of words) 아래에서 그 보호를 받는다. 미국
+헌법 해석의 경험에서 얻을 수 있는 하나의 교훈은, 각 조항의 문구가
+독자적인 생명력을 가지게 되어, 해당 권리에 대해 말하고자 하는 모든
+내용을 반복적으로 표현하는 강박적 표현(catchphrase)으로 작용하게 된다는
+것이다. 입법우위(legislative supremacy) 체제에서는 이러한 위험이 비교적
+적은데, 이는 입법자들이 권리장전의 표현을 참조하지 않고서도 스스로
+문제를 제기할 수 있기 때문이다. 그러나 법원은 그 작동 방식상 사유의
+정당화를 위한 문언적 근거(textual haven)를 추구하기 때문에, 권리장전의
+문언에 집착하는 방식으로 사고를 조직하게 되는 경향이 있다.
+
+최소한, 법원은 권리에 대해 논증할 때, 권리장전과 같은 문헌을 어떻게
+접근해야 하는지에 대한 부차적인 논증에 휘말리게 될 것이다. 미국의 경험은
+이를 뒷받침한다. 대부분의 사법 의견에서 해석 이론(theories of
+interpretation)에 대한 논의의 비중이 도덕적 쟁점에 대한 직접적인 논의의
+비중보다 훨씬 높으며, 실제 쟁점들이 중요하다고 생각하는 사람이라면
+누구도 이를 만족스럽다고 여길 수 없다. 이는 부분적으로, 사법심사 자체의
+정당성(legitimacy)이 문제적이라는 점 때문이다. 판사들 또한 우리와
+마찬가지로 자신들이 이러한 쟁점을 결정하는 절차가 정당한가에 대해
+우려하며, 도덕적 이유에 대한 직접적인 논의로 나아가기보다는 그들을
+정당화해주는 문언(authorizing texts)에 집착하고, 그 해석을 둘러싼 논쟁에
+매달리게 된다.\footnote{Tushnet, supra note 11, 60쪽: ``법원은
+  본질적으로 헌법적 가치보다는 자신의 제한된 능력을 반영하는 방식으로
+  일부 법리를 설계할 수 있다.''}
+
+\textbf{(p.~1382)} 마지막으로 하나 더 지적할 점이 있다. 권리장전의
+문언은 포함하고 있는 내용뿐 아니라 생략하고 있는 내용을 통해서도 사법적
+사유(judicial reasoning)를 왜곡할 수 있다. 특정 사회의 구성원들이
+권리장전이 부정적 권리(negative rights, 자유권)뿐 아니라 긍정적
+권리(positive rights, 사회경제적 권리)도 포함했어야 했는지에 대해
+의견불일치를 갖고 있다고 해 보자.\footnote{Jackson v. City of Joliet,
+  715 F.2d 1200, 1203 (7th Cir. 1983) (Posner, J.): 미국 헌법 체계는
+  ``긍정적 자유(positive liberties)``가 아니라 ``부정적 자유(negative
+  liberties)``의 헌장이라는 관찰을 담고 있음. 이에 대한 반례로는 다음을
+  보라: Mark Tushnet, An Essay on Rights, 62 Tex. L. Rev.~1363, 1393--94
+  (1984): ``우리는 물론 다른 헌법을 가질 수도 있었을 것이다\ldots{}
+  인간성의 당파(the party of humanity)는 권리의 언어를 재구성하기 위해
+  노력해야 하며, 그 결과 Posner 판사의 묘사가 자연스럽지 않게 들리고,
+  심지어 부적절하게까지 보일 수 있도록 해야 한다는 주장이 가능하다.''}
+긍정적 권리가 포함되었어야 한다고 생각하는 이들은, 현재의 권리장전이
+그것을 생략함으로써 도덕적 사유를 왜곡하고 있다고 생각할 수 있다. 이에
+대한 반론으로, 최악의 경우 그 생략은 적절하게 사법심사가 이루어져야 할
+입법에 대해 그것이 이루어지지 않는 결과를 초래할 뿐이며, 그것 자체로
+사법심사 일반에 대한 비판은 아니라고 주장될 수 있다. 그러나 그것은
+지나치게 단순한 주장이다. 긍정적 권리의 부재는 포함된 권리들에 대한
+판사의 이해를 바꾸거나 왜곡할 수 있다. 예컨대, 만약 재산권(property
+rights)이나 계약의 자유(freedom of contract)가 명시적인 복지권(welfare
+rights)과 병렬적으로 제시되었다면, 판사들은 그것들에 지금보다 덜 중대한
+무게를 부여했을 수도 있다. 그러나 그러한 병렬 구성이 존재하지 않을 경우,
+판사들은 재산권이나 계약의 자유에 과도한 무게를 부여할 수 있으며, 그
+결과 권리장전의 문언에 담기지 않은 권리들을 입법을 통해 실현하려는
+입법의도를 가진 법률들을 위헌으로 무효화하게 되는 일이 발생할 수 있다.
+
+\subsubsection{C. 이유 진술하기 (Stating
+Reasons)}\label{c.-uxc774uxc720-uxc9c4uxc220uxd558uxae30-stating-reasons}
+
+개별적 권리(individual rights)의 문제에 관한 사법적 결정(judicial
+decisionmaking)의 가장 큰 장점은 그에 수반되는 명시적 사유
+제시(reasoning and reason-giving)라고 종종 여겨진다. 법원(courts)은
+자신들의 판결에 대해 이유를 제시하며, 이는 쟁점의 중요성을 진지하게
+받아들이고 있다는 표시이고, 반면에 입법부(legislatures)는 그렇지 않다는
+것이다. 하지만 이는 잘못된 대비이다. 입법자들도 판사들과 마찬가지로
+자신들의 투표에 대해 이유를 제시한다. 우리는 그것을 '토론(debate)'이라고
+부르며, 그 내용은 『한자드(Hansard)』나 『미국 의사록(Congressional
+Record)』에 공개된다. 차이점은 법률가들이 판사의 사유(reason)에 대해
+정밀한 연구를 하도록 훈련받는 반면, 입법부의 논증에는 그렇게 훈련되어
+있지 않다는 데 있다. (물론 해석적 목적을 위해 입법부 논의 내용을
+활용하는 경우는 있다.)
+
+어쩌면 이 논점은 사유 제시의 유무가 아니라 그 질(quality)에 관한 것일
+수도 있다. 그러나 내 생각에는, 입법에 대한 사법심사(judicial review)를
+수행할 때 법원이 제시하는 이유들은, 이상적 정치적 숙의(deliberation)에서
+다루어질 법한 완전한 논의에서 검토될 이유들과는 상당히 다르며, 그 이유를
+탐색하고 인용하고 평가하고 비교하는 \textbf{(p.~1383)} 방식도 이상적
+정치적 숙의자(ideal political deliberator)의 그것과는 매우 다르다. 이는
+앞서 언급된 지점과도 관련이 있다. 즉, 그 이유들은 권리장전(Bill of
+Rights)의 용어에 맞춰져 있다는 점이다. 만약 우리가 훌륭하고 최신의
+권리장전을 가지고 있다면, 사법적 사유(reason-giving)와
+합리적·도덕적·정치적 숙의에서 우리가 기대하는 사유 제시 간에 일정한
+일치가 있을 수도 있다. 하지만 수백 년 된 구시대 헌법을 가지고 있다면,
+이른바 사유 제시는 인위적이고 왜곡된 것이 되기 쉽다. 미국에서는 '사유
+제시(reason-giving)'라고 불리는 것이 대체로 법원이 직면한 판결을 18세기
+혹은 19세기의 사고가 미치지 못한 낡은 문장들과 연결시키려는 시도일
+뿐이다. (예컨대, ``실질적 적법절차(substantive due process)''라는 개념이
+모순어법(oxymoron)인지 아닌지를 따지는 논의가 노동법이나 낙태권(abortion
+rights)을 논하는 데 적절한 틀인가?)
+
+법원의 사유 제시는 또한 현재의 결정을 과거의 유사한 결정들과 연결하거나
+구별하려는 필사적인 유비 혹은 비유비의 구성을 포함한다. 비록 최고 수준의
+법관들도 판례(precedent)가 문제를 확정 짓지는 못한다고 인정하면서도,
+여전히 판례에 대한 힘겨운 논의가 지속된다.\footnote{예: Henry Paul
+  Monaghan, Stare Decisis and Constitutional Adjudication, 88 Colum. L.
+  Rev.~723 (1988).} (그와 동시에, 어떤 상황에서 판례를 유지하거나
+무시해야 하는가에 대한 논의도 끊임없이 이어진다.\footnote{예: Planned
+  Parenthood of Se. Pa. v. Casey, 505 U.S. 833, 854--69 (1992) (헌법적
+  선례를 뒤집을 수 있는 조건에 대해 논의함).}) 그러는 사이, 권리에 관한
+선의의 의견불일치(good faith disagreement)에서 실제로 쟁점이 되는
+핵심적인 문제들은 주변부로 밀려난다. 보통 그러한 핵심 쟁점들은 수십 쪽의
+판결문 중 한두 단락 정도만을 차지하며, 그나마도 직접적으로 다루어지는
+일은 드물다. 예컨대, \emph{로 대 웨이드(Roe v. Wade)} 판결문은 50쪽이
+넘는데, 그 가운데 재생산의 자유(reproductive rights)와 사생활(private
+life)의 관계에 관한 도덕적 중요성을 논하는 부분은 몇 단락에 불과하며, 또
+하나의 도덕적 쟁점인 태아(fetus)의 권리 지위(rights-status)에 대한 몇
+단락은 단지 그 쟁점에 대한 다양한 입장들이 존재함을 보여주는 데 할애되고
+있다.\footnote{해당 판결에는 방대한 법률적·사회적 역사 서술이 담겨
+  있으나, 실제로 쟁점이 되는 도덕적 문제에 대한 논의는 몇 페이지만을
+  차지한다. Roe v. Wade, 410 U.S. 113, 153--55 (1973) (사생활과 재생산
+  권리의 중요성에 대해 논의); id. at 159--62 (태아의 권리나 인격성에
+  대한 주장에 대해 논의).} 그 단락들을 읽어보라. 결론이 매력적으로 보일
+수는 있지만, 그 '논증(reasoning)'은 매우 빈약하다.
+
+나는 이것이 나름 정당한 이유를 지니고 있다고 본다. 법원은 자신들의
+결정의 정당성(legitimacy)에 대해 우려하고 있으며, 그래서 자신들의 '사유
+제시(reason-giving)'를 \textbf{(p.~1384)} 헌법(constitution),
+법률(statute), 혹은 판례(precedent)에 의해 자신들이 법적으로 권한을 갖고
+있음을 보여주는 사실들에 집중시키는 것이다. 이는 이해할 수 있는
+행위이다. 하지만 입법보다 사법심사가 바람직하다는 결과 중심
+논증(outcome-related argument)에서는 이러한 점이 법원에 불리하게
+작용한다.\footnote{Eisgruber는 이를 사실상 인정한다: ``{[}판사들은{]}
+  논쟁적인 판결을 정당화하기 위해 모호한 선례들을 인용하고, 그들의
+  진정한 이유를 이전 판례로부터 인용된 불분명한 문구들로 감추려는 시도를
+  자주 한다.'' Eisgruber, supra note 13, 70쪽; 또한 135쪽 참조:
+  ``{[}판사들은{]} 종종\ldots{} 자신들이 정치적 판단을 내리고 있지
+  않다고 가장하며, 그들의 판결이 단지 문언적 세부사항이나 역사적 사실에
+  의해 강요되었다고 주장한다.''} 정당성 문제에 주의를 빼앗긴 법원은 다른
+법원이 무엇을 했는가, 권리장전의 문구가 무엇인가에 집중하는 반면,
+입법자들은---비록 많은 결함이 있을지라도---문제의 핵심으로 직접
+들어가려는 경향을 보인다.\footnote{Mark Tushnet이 강조했듯이, 우리는
+  입법자가 판사처럼 추론하지 않는다고 비판해서는 안 된다. 그것이 문제를
+  해결하는 현명한 방식이 아닐 수도 있기 때문이다. Tushnet, supra note
+  11, at 63--65.}
+
+이 점에서, 사법심사가 없는 국가에서 권리에 관한 중대한 쟁점을 다룰 때
+입법 토론에서 보여지는 풍부한 논증의 깊이는 주목할 만하다.\footnote{Waldron,
+  supra note 46에서 일부 내용을 수정하여 인용함.} 나는 최근 1966년 영국
+하원의 \emph{임신의 의료적 종료 법안(Medical Termination of Pregnancy
+Bill)}에 대한 토론을 읽은 적이 있다.\footnote{영국 의회에서는
+  제2독회(second reading) 토론이 법안의 주요 원칙들에 대한 심의가
+  이루어지는 단계이다.} 이는 낙태법을 완화하려는 법안이었으며, 그
+제2독회 토론은 정치 제도가 도덕적 문제와 씨름하는 가장 훌륭한 사례 중
+하나였다. 『한자드(Hansard)』에 100쪽에 달하는 토론이 수록되어
+있으며,\footnote{732 Parl. Deb., H.C. (5th ser.) (1966) 1067,
+  1067--1166.} 친생명(pro-life) 노동당 의원들과 선택 지지(pro-choice)
+노동당 의원들, 친생명 보수당 의원들과 선택 지지 보수당 의원들이 낙태를
+둘러싼 모든 쟁점들을 진지하게 토론했다. 그들은 권리, 원칙, 실용적 쟁점
+모두에 주의를 기울이며 열정적이면서도 철저하고 명예롭게 논쟁하였다. 결국
+법안 지지파가 승리했고, 선택 지지 입장이 우위를 점하였다.\footnote{물론
+  제2독회 토론이 끝은 아니었다. 장시간의 위원회 단계와 제3독회 토론,
+  그리고 상원(House of Lords)에서의 유사한 토론이 이어졌다. 그러나
+  궁극적으로는 자유화 입법이 통과되었다.} 인상 깊은 점은, 토론에 참여한
+모든 이들---심지어 표결 결과를 예상한 친생명 의원들조차---자신들의
+입장이 존중받으며 \textbf{(p.~1385)} 경청되었다는 점에 경의를 표했다는
+사실이다.\footnote{예: 732 Parl. Deb., H.C. (5th ser.) (1966) 1152.
+  가톨릭 신자이자 법안에 반대 투표를 한 Norman St.~John-Stevas 의원은
+  ``이것이 의회의 가장 고귀한 전통에 걸맞는 수준에서 진행된 매우 중요한
+  토론이었다는 데에는 우리 모두가 동의할 것이다''고 말하며 자신의 주장을
+  시작하였다. 이어 그는 법안을 발의한 의원에게 ``법안을 소개한 방식이
+  매우 절제되고 능숙했음을'' 치하하였다. Id.} 생각해 보라. 미국에서
+낙태에 반대하는 입장을 가진 이가 \emph{로 대 웨이드} 판결에서 자신의
+입장이 정중하게 경청되었고 성실히 다루어졌다고 공공연히 말한 적이
+있었는가?\footnote{이 예시를 언급하면 미국 친구들은 영국 의회는
+  미국에서는 불가능한 형태의 토론이 가능하도록 조직되어 있다고 말하곤
+  한다. 그러나 미국이 병리적 사례인지 여부를 떠나, 이는 사실이 아니다.
+  위 토론은 하원(House of Commons)이 권리 문제에 한해서 정당 기강(party
+  discipline)을 일시적으로 중단했기 때문에 가능했던 것이다. 의원들은
+  실제로 자신들의 의견을 명확하고 강력하게 표현하는 방식으로 토론을
+  벌였으며, 이는 오히려 미국식 의회 운영에 가까운 것이었다.}
+
+미국에서는 낙태권과 같은 개별적 권리 문제를 법원에 위임하여 헌법적
+판단을 받게 하는 것을 자축하며, 법원을 '원칙의 포럼(forum of
+principle)'으로 간주하는 경향이 있다. 이는 로널드 드워킨(Ronald
+Dworkin)의 유명한 표현이다.\footnote{Dworkin, supra note 3, at 33,
+  69--71.} 우리는 때때로 영국인들이 이러한 방식으로 하지 않는 것을 두고
+시대에 뒤떨어졌다고 말하기도 한다.\footnote{Editorial, Half-Measures on
+  British Freedoms, N.Y. Times, Nov.~17, 1997, at A22 (Human Rights
+  Act가 영국을 강력한 사법심사 체제로 완전히 전환하지 못한 점을 비판함).}
+그러나 영국의 입법 토론과 미국의 사법적 사유 사이의 핵심 차이는, 후자가
+주로 해석과 교리에 집중하는 반면, 전자는 낙태 그 자체와 그에 수반되는
+문제들---태아의 윤리적 지위, 임신한 여성의 상황, 그들의
+선택·자유·사생활의 중요성, 그 모든 것에 따르는 도덕적 갈등과 실천적
+문제들, 그리고 사적 도덕 문제에 대해 법이 어떤 역할을 해야 하는가---를
+중심으로 집중하여 논의한다는 점이다. 낙태권에 관하여 사회가 결정을
+내려야 할 때 반드시 논의되어야 하는 쟁점들은 바로 이러한 것이며, 입법
+토론에서는 이 문제들이 가장 많이 다루어지고, 사법적 심의에서는 가장 적게
+다루어진다.\footnote{Elena Kagan 등은, 법원이 권리에 대해 논의하는
+  방식에 대한 본 비판은 우리가 보호하려는 것이 도덕적 권리(moral
+  rights)라는 전제에 기반한 것이라고 지적하였다. 반면, 우리가 보호하고자
+  하는 것이 헌법적 법적 권리(legal constitutional rights)라면, 이와 같은
+  논의 방식은 그다지 부적절하지 않다는 것이다. 그러나 나는 이에 동의하지
+  않는다. 우리가 보호하고자 하는 것은 권리이며, 현대 국가 내에서 이를
+  가장 잘 보호하고 지적으로 논의할 수 있는 메커니즘이 무엇인지가 문제다.
+  내가 주장하는 바는 도덕철학 세미나의 담론 방식을 이상화하자는 것이
+  아니다. 다만 우리가 겪는 의견불일치에서 실제 인간의 이익과 자유라는
+  문제에 어떻게 접근할 것인지가 중요하다는 점을 강조하고자 한다.
+  법률주의적인 방식이 그것에 적합할 수도 있고 아닐 수도 있지만, 법률주의
+  자체를 목적으로 삼아야 한다고 말하는 것은 잘못된 태도일 것이다.}
+
+\textbf{(p.~1386)} 결과 중심 논증(outcome-related argument)에 관하여 더
+논의할 수 있는 여지는 분명 있다. 분명 법원이 권리 쟁점을 다루는 방식이
+실제 쟁점의 본질을 왜곡하는 것과 마찬가지로, 입법의 논증도 당황하거나,
+경솔하거나, 단지 인기 있는 혹은 분파적 구호를 반복하는 방식으로 진행되어
+수치스러운 경우도 있다. 문제는 다음과 같다. 이러한 심의의 결함들 가운데
+어떤 것들이 해당 제도(법원이나 입법부)의 정상적 행위로 간주되어야 하며,
+어떤 것이 일탈(aberration)로 간주되어야 하는가? 드워킨의 ``원칙의
+포럼''이라는 수사에도 불구하고, 나는 법원이 전례(precedent), 문헌(text),
+교리(doctrine), 기타 법형식주의적 요소들에 집중하는 방식으로 행동할
+것이라 기대되는 기관이라고 본다. 우리가 법원에 대해 갖고 있는 두 번째
+가정(assumption two)은 법원이 바로 그런 방식으로, 즉 법형식주의적 기준에
+따라 잘 행동하는 기관이라는 것이다. 반면 입법부의 경우, 경솔하거나
+분파적인 입법 행위는 입법부가 수행하도록 설계된 정상적 이론의 일부가
+아니다. 그것은 권리를 존중하는 시민이 다수인 사회에서 입법 결정의 핵심
+사례(core case)에 대해 우리가 가져야 할 기본적인 전제가 아니다. 물론
+어떤 국가들---예컨대 미국---에서는 입법의 병리적 현상이 발생했을 수
+있다. 만약 그것이 사실이라면, 미국인들은 사법심사에 대한 비핵심 사례
+논증(non-core argument)을 자신들의 예외적 상황에 한정해야 할 것이다.
+
+\subsection{V. 절차 관련 이유 (Process-Related
+Reasons)}\label{v.-uxc808uxcc28-uxad00uxb828-uxc774uxc720-process-related-reasons}
+
+우리가 어떤 방식으로 의사결정 절차(decision-procedures)를 구성할지를
+결정하는 데 있어 고려하는 이유들 가운데 일부는, 특정 결과나 일반적인
+결과와는 거의 무관하다. 이러한 이유들은 오히려 \emph{목소리(voice)},
+\emph{공정성(fairness)} 또는 그 밖의 절차 그 자체의 측면들과 관련된다.
+앞서 언급했듯, 절차 관련 논거(process-related arguments)는
+사법심사(judicial review)에 반대하는 방향으로 명확히 작용한다고 흔히
+간주된다. 이는 완전히 사실은 아니다. 이 관행을 옹호하는 사람들 중 일부는
+미약한 절차 관련 논거들을 꾸며내기도 했으며, 나는 본 절의 마지막에서
+그것들을 검토할 것이다. 그러나 대부분의 경우 그 반대는 사실이다. 절차
+관련 이유들의 압도적 다수는 입법부(legislatures)를 지지하는 방향으로
+작용한다.
+
+결과에 대한 의견불일치(disagreement)가 존재하는 상황에서 의사결정 절차의
+정치적 정당성(political legitimacy)을 묻는 문제는 다음과 같이 제기될 수
+있다. (이 논의는 다소 추상적일 수밖에 없음을 양해 바란다.)
+
+\textbf{(p.~1387)} 우리는 특정한 절차에 따라 결정이 이루어지는 상황을
+상상하고, 그 결정에 의해 구속되거나 부담을 지게 될 시민 Cn이 해당 결정에
+동의하지 않으며, 왜 자신이 그것을 받아들여야 하는지, 왜 준수하거나
+감내해야 하는지를 묻는 장면을 상상한다. 그 결정을 지지하는 사람들 중
+일부는, 그 결정이 실질적 측면에서 정당하다고 설득하려 할 수 있다. 그러나
+그들은 설득에 실패할 수도 있는데, 이는 Cn이 고집스럽기 때문이 아니라,
+단지 이 중대하고 난해한 문제에 대해 Cn이 여전히 (그리고 합리적으로) 다른
+견해를 유지하고 있기 때문이다. 그렇다면 이제 Cn에게 무엇을 말할 수
+있을까? 그녀에게 제시될 수 있는 그럴듯한 응답은 그 결정이 도달된 절차에
+관한 것일 수 있다. 비록 결과에는 동의하지 않더라도, Cn은 그것이 공정하게
+도달된 것이라고 받아들일 수 있을지도 모른다. 이러한 절차 중심의 응답이
+기반하는 이론이 바로 정치적 정당성 이론(theory of political
+legitimacy)이다.
+
+정치적 의사결정 절차들은 대체로 다음과 같은 형식을 취한다. 특정 결정에
+대해 의견불일치가 있을 경우, 해당 결정은 지정된 일련의 개인들 \{C1, C2,
+\ldots, Cm\}에 의해, 지정된 절차에 따라 이루어지게 된다. 정당성 이론이
+감당해야 할 과제는, 왜 바로 이들 개인들, 그리고 다른 누군가가 아니라,
+이들이 그러한 의사결정에 참여할 특권을 가져야 하는지를 설명하는 것이다.
+Cn의 표현을 빌리자면, ``왜 그들인가? 왜 내가 아닌가?''라는 물음에 대해,
+정당성 이론은 그에 대한 설명의 기초를 제공해야 한다. 이 문제는 일반적인
+것이며, Cn 개인의 특이한 완고함 때문이 아니므로, 동일한 논변이 포함되지
+않은 다른 시민들---Co, Cp, 기타 모든 C들---의 유사한 질문에도 적용되어야
+한다. 그러나 설령 이 응답이 받아들여진다고 해도 문제는 끝나지 않는다.
+정당성 이론은 Cn이 제기할 수 있는 또 다른 질문에도 답해야 한다. 즉, ``그
+결정 절차에서, 왜 나와 같은 견해를 가진 결정자들의 의견에 더 큰 비중이
+주어지지 않았는가?''라는 질문이다. \{C1, C2, \ldots, Cm\}의 구성에 대한
+정당화뿐 아니라, 그들이 사용한 결정 절차 자체에 대한 방어가 필요하다.
+
+이제 이와 같은 추상적인 대수(algebra)를 구체화해 보자. 어떤 시민이
+권리에 관한 입법적 결정에 동의하지 않으며, 위에서 상정한 두 가지 질문을
+제기한다고 하자. 그녀는 다음과 같이 묻는다. (1) ``나와 2억 5천만 명의
+사람들에게 영향을 미치는 권리 문제에 대해, 왜 이 대략 500명 정도 되는
+남녀(입법부 구성원들)가 결정을 내릴 특권을 가져야 하는가?'' 그리고 (2)
+``비록 이 500명의 특권을 인정한다고 하더라도, 왜 나와 같은 견해를 지닌
+입법자들의 의견에 더 많은 비중이 주어지지 않았는가?''
+
+민주주의 체제에서 입법부는 위 두 가지 질문에 대해 비교적 설득력 있는
+응답을 제공하는 방식으로 구성된다. 첫 번째 질문에 대한 응답은 입법부
+구성에 이르는 공정한 선거(fair elections)에 관한 이론에 의해 제공된다.
+그 선거에서는 Cn과 같은 사람들이 다른 모든 시민들과 동등하게
+대우받았으며, 이와 같은 유형의 결정에 참여할 소수자들을 누구로 할 것인지
+결정하는 데 기여하였다. 두 번째 질문에 대한 응답은 다수결 결정
+원칙(majority decision, MD)의 정당성을 뒷받침하는 잘 알려진 공정성
+논변들(fairness arguments)에 \textbf{(p.~1388)} 의해 제공된다. 나는
+여기서 이를 옹호하는 임무를 수행할 필요는 없다. 다수결 규칙에 대한
+공정성/평등성 방어는 익히 알려져 있다.\footnote{사회선택이론(social
+  choice theory)에서 단순다수결(MD, majority decision)이 공정성, 평등성,
+  합리성의 기본 요건을 충족하는 유일한 방식이라는 정리에 관해서는 다음
+  문헌들을 보라: Amartya K. Sen, Collective Choice and Social Welfare
+  71--74 (1970); Kenneth O. May, A Set of Independent Necessary and
+  Sufficient Conditions for Simple Majority Decision, 20 Econometrica
+  680 (1952). 또한 다음 논의들도 유익하다: Charles R. Beitz, Political
+  Equality 58--67 (1989); Roberta Dahl, Democracy and Its Critics
+  139--41 (1989).} 다수결 결정 원칙(MD)은 다른 어떤 규칙보다도 논쟁 중인
+결과들 사이에서 중립적이며, 참가자들을 평등하게 대우하고, 각 의견에 대해
+가능한 최대의 비중을 부여하되 모든 의견에 동일한 비중을 주는 데 필요한
+양립가능성(compatibility)을 유지한다. 우리가 바람직한 결과에 대해
+의견불일치를 겪고 있으며, 사전에 어느 쪽으로도 편향되지 않기를 원하고,
+관련된 모든 참가자가 그 절차에서 동등하게 대우받아야 할 도덕적
+청구권(moral claim)을 지닌다고 할 때, 다수결 결정 원칙(MD)---혹은 그와
+유사한 어떤 것---이 우리가 사용해야 할 원칙이다.\footnote{Ronald
+  Dworkin은 개인적 대화에서, 정의(justice)의 제1차적 사안에 대해
+  단순다수결(MD)을 적용하는 것은 적절하지 않다고 나를 설득하였다. 만약
+  우리가 과밀한 구명보트에 있고 누군가가 보트에서 나가야 하는
+  상황이라면, 그 사람을 누구로 할지를 다수결로 결정하는 것은 적절하지
+  않다. 그러나 일반적인 규칙들 사이의 선택에서는 MD가 적절한 원칙이 될
+  수 있다. 예를 들어 누군가는 제비뽑기를 제안하고 다른 사람은 가장 나이
+  많은 사람이 떠나야 한다고 제안할 때, 이러한 규칙들 중에서 선택할 때는
+  MD가 공정한 방식일 수 있다.}
+
+그러면 누군가 다음과 같이 반응한다면 어떠한가: 나는 Cn과 같은 개별
+시민들이 자신들에게 영향을 미치는 문제에 관한 의사결정 과정에서 동등하게
+대우받을 \emph{권리(right)}를 갖는다는 점은 이해할 수 있다. 그러나 왜
+입법부의 500명 대표들은 이 과정에서 동등하게 대우받을
+\emph{권리(right)}를 갖는가? 그들이 MD를 사용할 정당성은 어디에서
+비롯되는가?
+
+그에 대한 대답은 입법부의 경우 제1질문과 제2질문에 대한 응답 간의
+연속성에 있다. 입법부에서는 대표자를 선출하기 위해 다수결의 일종을
+사용하고, 대표자들 사이의 의사결정에도 다수결의 일종을 사용한다.
+이론적으로, 이 두 가지는 함께 시민 전체 사이의 의사결정 절차로서 다수결
+원칙을 사용하는 것의 합리적인 근사값을 제공하며, 따라서 다수결 원칙의
+기초에 놓인 가치들을 전체 시민에게 적용하는 것의 합리적인 근사값을
+제공한다.
+
+일반적으로, 우리가 Cn에게 전하려는 말은 대략 다음과 같다: 이와 같은
+의사결정 절차에 대해 도전하는 것은 Cn 혼자가 아니다. 실제로는 수백만
+명의 개인들이 같은 질문을 던진다. 그리고 우리는 각 개인에게 그 지점을
+인정하고, 그 의사결정에서 일정한 \emph{발언(a say)}을 제공함으로써
+응답한다. 사실 우리는 가능한 한 많은 \emph{발언(a say)}을 제공하려고
+한다. 물론, 이는 다른 모든 시민들의 \emph{목소리가 들릴 동등한
+청구권(the equal claim to be heard of the voices)}을 고려하는 동일한
+논변 구조에 따라 공정하게 응답하려는 우리의 시도에 의해 제한된다. 우리는
+각 개인에게, \textbf{(p.~1389)} 다른 모든 사람들과
+\emph{양립가능성(compatibility)}을 유지하면서도 가장 많은 \emph{발언(a
+say)}을 제공하고자 한다. 이것이 우리의 원칙이다. 그리고 우리는 우리의
+복잡한 선거 및 대표 제도가 정치적 평등---즉, 동등한 목소리와 동등한 결정
+권한(decisional authority)---에 대한 요구를 대략적으로 만족시킨다고
+믿는다.
+
+물론 현실 세계에서, 선거, 대표, 그리고 입법 절차를 통한 정치적 평등의
+실현은 완전하지 않다. 선거 제도는 종종 결함을 갖고 있다(예: 선거구 경계
+설정 방식의 불만족스러움, 선거구 간의 비례성 부족 등). 입법 절차 역시
+결함이 있을 수 있다(예: 입법부 내의 연공서열 시스템이 공정성을 해치는
+경우). 이러한 모든 점들은 인정 가능하다. 하지만 우리의 제1전제를
+기억하라: 평등성과 공정성이라는 민주적 가치와 관련하여 대체로 양호한
+상태에 있는 일련의 입법 제도---입법부 선거 제도 및 내부 의사결정 제도를
+포함하는---가 존재한다고 가정하는 것이다. 또한, 입법자들과 그들의
+유권자들이 이러한 제도들이 해당 원칙에 부합하는지를 검토하며 지속적으로
+감시하고 있다고 가정한다. 예컨대, 많은 민주국가에서는 비례대표제, 선거구
+구획, 입법 절차 등에 대해 다양한 대안들이 논의된다. Cn은 이 제도들이
+완전하지 않으며, 마땅히 이루어졌어야 할 만큼 개혁되지 않았다고 불평할 수
+있다. 그러나 (현실 정치체를 위한) 정당성 이론은 불가피한 결함을 수용할
+수 있도록 일정한 유연성을 지녀야 한다. 그것은 완전한 공정성이 아니라
+합리적인 공정성(reasonable fairness)에 대해 논의해야 한다. 물론 일부
+선거 및 입법 제도는 이러한 관대한 기준조차 충족하지 못할 수 있다. 그러나
+우리가 논의하는 핵심 사례(core case)는 입법 및 선거 제도가 병적으로 혹은
+교정 불가능할 정도로 기능 장애를 일으키는 상황을 다루기 위한 것이
+아니다.
+
+이제 다시 우리의 핵심 사례와, 완강한 시민 Cn과의 가상적 대면 상황으로
+돌아가 보자. 위에서 서술한 바와 같은 내용이, 비교적 잘 조직된 입법부의
+결정에 대해 Cn이 제기한 불만에 대한 응답으로 제시될 수 있다는 점은
+정당성 측면에서 중요하다. 하지만 이것이 결정적인 것은 아니다. 왜냐하면
+Cn은 입법 절차보다 더 정당한 다른 절차를 상정할 수도 있기 때문이다.
+\emph{정당성(legitimacy)}은 부분적으로 \emph{비교적(comparative)}인
+개념이다.\footnote{Waldron, supra note 47 참조.} 상이한 제도와 절차가
+서로 다른 결과를 낳을 수 있기 때문에, 특정 제도나 절차의 정당성을
+옹호하려면 그것이 사용 가능했던 다른 제도나 절차보다 더 공정했거나 더
+공정할 것임을 보여주어야 한다.\footnote{Michelman, supra note 76, at
+  57--59 참조.}
+
+이제 우리는 다음과 같은 장면을 상상할 수 있다---혹은 미국과 같은
+체제에서는 실제로 목격하게 된다: 결정이 입법부가 아니라 법원(이를테면
+미국 \textbf{(p.~1390)} 대법원)에서 이루어지며, 그 결정은 권리에 대한
+시민들 사이의 \emph{의견불일치(disagreement)}가 존재하는 중대한 사안에
+관한 것이다. 그리고 한 시민---다시 Cn이라 부르자---이 그 판결의 실질적
+내용에 동의하지 않으며 불만을 제기한다. 그녀는 다음과 같이 묻는다: (1)
+왜 이 아홉 명의 남녀(대법관들)가 이 사안을 결정해야 하는가? 그리고 (2)
+그들이 결정한다고 하더라도, 왜 그들이 사용하는 현재의 절차를 통해 결정을
+내려야 하는가? 왜 내가 지지하는 견해를 가진 대법관들에게 더 많은 비중이
+주어지는 다른 절차가 아닌가?
+
+이 질문들은 입법자들에게 제기된 질문보다 훨씬 더 대답하기 어렵다. 우리는
+이런 도전들이 종종 법원 외부에서 시끄럽게 제기된다는 점, 그리고
+대법관들이 이로 인해 때때로 심리적 불편을 겪는다는 점을 신뢰할 만한
+권위자로부터 잘 알고 있다. 그러나 그들 중 일부는 그러한 불편함을
+성찰하기도 한다. (이제 눈을 굴리고 잠시 주의를 내려놓아도 좋다. 왜냐하면
+내가 지금부터 안토닌 스캘리아(Justice Antonin Scalia)의 인용을 길게
+소개할 것이기 때문이다.)
+
+\begin{quote}
+실제로, 나는 법원이 느끼는 바로 그 ``정치적 압력''에 대해 법원만큼이나
+심각한 불편함을 느낀다. 즉, 우리의 견해를 바꾸도록 유도하기 위해 시위,
+항의서한, 그리고 항의 시위가 법원을 향해 쏟아지는 현실 말이다. 이 얼마나
+당혹스러운 일인가. 너무도 많은 우리 시민들---선량하고 합법적인 사람들로,
+이 낙태 문제를 포함한 여러 사안들에서 다양한 입장을 가진 이들---이
+우리가 어떤 객관적 법률을 파악하는 것이 아니라 일종의 사회적 합의를
+결정하고 있다고 생각하며, 따라서 대법관들이 자신들의 견해를 고려해야
+마땅하다고 생각한다는 점 말이다. 나는 법원이 이 불편한 현상의 ``사실''
+자체보다, 그것의 ``원인''에 더 많은 관심을 기울였으면 한다. 그 원인은
+오늘의 판결문 전체에 스며들어 있다. 즉, 헌법적 판단의 새로운
+방식---문언(text)이나 전통적 관행이 아닌, 법원이 말하는 ``이성적
+판단(reasoned judgment)''에 의존하는 방식인데, 결국 이는 철학적 성향과
+도덕적 직관에 불과하다.\footnote{Planned Parenthood of Se. Pa. v. Casey,
+  505 U.S. 833, 999--1000 (1992) (Scalia, J., 반대의견) (인용 생략).}
+\end{quote}
+
+스캘리아 대법관은 이어 다음과 같이 말했다:
+
+\begin{quote}
+이 모든 것이 법원에 대한 ``정치적 압력''이 불편하게 적용되는 문제와
+관련되는 까닭은 두 가지 사실 때문이다. 첫째, 미국 국민은 민주주의를
+사랑하며, 둘째, 미국 국민은 어리석지 않다. 이 법원이 우리 대법관들이
+여기서 주로 변호사로서의 업무---문언을 해석하고 그에 대한 우리 사회의
+전통적 이해를 밝히는 작업---를 수행한다고 믿었고, 국민들 또한 그렇게
+믿었을 때, 대중은 우리를 거의 내버려두었다. 문언과 전통은 연구해야 할
+사실이지, 시위해야 할 신념이 아니기 때문이다. 그러나 헌법적 판단의 실제
+과정이 주로 가치판단(value judgments)을 내리는 일이라면\ldots{} 그렇다면
+\textbf{(p.~1391)} 자유롭고 지성적인 국민의 태도는 달라질 수밖에 없으며,
+그렇게 되어야만 한다. 국민은 그들의 가치판단이 법대에서 배운 그 어떤
+것과도 동등하거나 어쩌면 더 낫다고 알고 있다. 만약 헌법이 보호하는
+``자유(liberties)''가 법원이 말하듯 정의되지 않았고 경계도 없다면,
+국민은 우리가 우리의 가치가 아니라 그들의 가치를 구현하지 않는다는
+이유로 시위를 하고 항의해야 한다.\footnote{Ibid., 1000--01.}
+\end{quote}
+
+따라서 스캘리아(Scalia)가 말했듯이, 정당성(legitimacy)에 관한 질문은
+논의의 중심에 위치하며, 사법심사(judicial review)의 옹호자들은 이에 대한
+응답을 도출해내야만 한다.
+
+첫 번째로, 왜 이 대법관들(Justices), 그리고 이 대법관들만이 해당 사안을
+결정해야 하는가? 하나의 응답은 다음과 같을 수 있다. 대법관들은 일정한
+선출 정당성(elective credentials)을 지닌 결정자들과 결정기관들(대통령과
+상원)에 의해 지명되고 승인된다. 대통령은 선출된 인물이며, 그가 대법원에
+어떤 유형의 인물을 임명할 가능성이 있는지는 유권자들이 대개 인지하고
+있다. 또한 임명 승인을 담당하는 미합중국 상원의원들 역시 선출된
+인물들이며, 그들 또한 이 문제에 대한 입장이 잘 알려져 있을 수 있다. 물론
+대법관들은 입법자들처럼 정기적으로 책임을 지는 구조에 놓여 있지는 않다.
+그러나 이미 언급했듯이, 우리는 완전함(perfection)을 요구하는 것이
+아니다.
+
+따라서, 시민의 도전에 대해 사법심사의 옹호자가 전혀 무력한 것은 아니다.
+할 말은 있다. 그러나 만약 정당성이 비교적인(comparative) 개념이라면,
+위의 응답은 실로 놀라울 정도로 불충분하다. 입법 선거 제도 역시 완전하지
+않지만, 민주주의와 민주적 가치(democratic values)의 관점에서 보았을 때,
+사법부가 지닌 간접적이고 제한된 민주적 정당성에 비해 명백히 우월하다.
+입법자들은 자신들의 유권자들에 대해 정기적으로 책임을 지며, 정치적
+의사결정에 참여하는 데 있어 자신들의 선출 정당성이 중요하다는 점을
+실질적으로 고려하며 행동한다. 반면 이러한 점들은 대법관들에 대해서는
+전혀 해당되지 않는다.
+
+두 번째로, 설사 이러한 중대한 \emph{권리(right)} 문제들이 이 아홉 명의
+남성과 여성에 의해 결정되어야 한다는 점을 인정한다 하더라도, 왜 그
+결정이 단순 다수결(simple majority voting)을 통해 이루어져야 하는가? 이
+지점에서 사법심사의 옹호자들에게 상황은 더욱 불리해진다. 나는 항상
+법원이 그들의 소수 인원에 대해 다수결 원칙(MD: majority decision)을
+적용해 표결을 통해 결정을 내리는 사실에 흥미를 느껴왔다. 물론 그들은
+판결문(reasoning)을 작성하고, 위에서 논의한 바와 같은 방식으로 논증을
+제시한다. 그러나 결국 결론은 숫자 싸움이다: 미국 대법원에서는 다섯 표가
+네 표를 이긴다. 대법관들이 어떤 논증을 구성했는지와 무관하게 말이다. 이
+문맥에서 다수결 원칙(MD)에 대한 도전이 제기된다면, 우리는 입법부를
+변호할 때 상정했던 방식과 유사하게 이를 방어할 수 있을까? 사실상 그렇지
+않다. 우리는 그렇게 할 수 없다. 다수결 원칙(MD)은 \textbf{(p.~1392)}
+일정한 의사결정 절차에서 동등하게 간주되어야 할 \emph{도덕적
+청구권(moral claim)}을 지닌 개인들에게 적절한 것이다. 그러나 대법관들에
+대해서는 그러한 청구권의 도덕적 근거를 발견할 수 없다. 그들은 누구도
+대의하지 않는다. 그들의 참여에 대한 \emph{청구권(claim)}은
+기능적(functional)일 뿐, 자격(entitlement)에 근거하지 않는다.
+
+나는 여기서, 법원이 다수결 원칙(MD)을 사용하는 것에 대해 이론적으로
+진지하게 논의한 학문적 연구가 거의 전무하다는 점 때문에 제약을
+받는다.\footnote{이 주제에 대해서는 Waldron, Deliberation, Disagreement,
+  and Voting, supra note 14, at 215--24에서 간략히 다룬 바 있다.}
+학자들은 법원 내 표결과 표결 전략에 대한 경험적 논의는 어느 정도
+해왔으며, 일부는 개별 사안의 전체 결론이 아닌 특정 쟁점별로 판사들의
+표를 조합하는 새로운 방식을 제안하기도 했다.\footnote{관련 논의는 다음
+  문헌을 보라: Lewis A. Kornhauser \& Lawrence G. Sager, The One and the
+  Many: Adjudication in Collegial Courts, 81 Cal. L. Rev.~1 (1993);
+  Lewis A. Kornhauser \& Lawrence G. Sager, Unpacking the Court, 96 Yale
+  L.J. 82 (1986); David Post \& Steven C. Salop, Rowing Against the
+  Tidewater: A Theory of Voting by Multijudge Panels, 80 Geo. L.J. 743
+  (1992).} 그러나 나는 사법적 다수주의(judicial majoritarianism)를 위한
+기본적인 정당화 논의를 알지 못한다.\footnote{사법심사를 옹호하는 이들은
+  권리에 관한 사안에서 재판관들 사이의 단순다수결 투표 문제를 꺼내는
+  것을 꺼린다. 그들은 다수결이 입법부의 특징이라고 비판하길 원하기
+  때문이다. 물론 그들 역시 대법원에서 판결이 5대4, 6대3 등으로
+  결정된다는 사실을 인정하지만, 이를 스스로 논의에 포함시키거나 왜
+  그것이 정당한 방식인지 설명하려는 경우는 매우 드물다.} 일반적으로
+사용되는 공정성과 평등에 기반한 방어 논거는 여기서는 적용될 수 없다. 내
+생각에는, 법원이 다수결 원칙(MD)을 사용하는 것을 정당화하려 한다면,
+그것은 이 절차가 단지 이론적 함의를 지니지 않는 단순한 기술적 결정
+수단이라는 점을 강조하거나,\footnote{Hannah Arendt, On Revolution 163
+  (photo, reprint 1982) (1963): ``다수결의 원리는 결정 절차 그 자체에
+  내재하며, 거의 자동적으로 모든 유형의 심의기관과 의회에서 채택된다''고
+  진술함.} 아니면 콩도르세의 배심 정리(Condorcet's jury theorem)에
+근거해 옹호할 것이다. 이 정리는 다수결이 개별 구성원의 평균 능력보다
+집단의 판단 역량을 수학적으로 향상시킨다고 주장한다.\footnote{Marquis de
+  Condorcet, Essay on the Application of Mathematics to the Theory of
+  Decision Making (1785), 재수록: Condorcet: Selected Writings 33 (Keith
+  Michael Baker ed.~\& trans., 1976).} 그러나 이 경우, 다수결에 대한
+옹호는 사법적 능력(judicial competence)에 대한 \emph{결과 기반
+논거(outcome-related case)}의 일부가 되며, 이는 입법부라는 훨씬 더 큰
+표결 집단에 대해 제기할 수 있는 유사한 논거와 경쟁해야 할
+것이다.\footnote{콩도르세 정리(Condorcet theorem)는 투표 집단의 규모가
+  클수록, 개별 유권자의 평균 역량이 50\%를 초과한다는 조건 하에서,
+  다수결이 개별 유권자 평균을 넘는 집단 역량을 보장할 가능성이 커진다는
+  것이다. 이 조건의 적용에 대한 콩도르세 자신의 회의는 Jeremy Waldron,
+  Democratic Theory and the Public Interest: Condorcet and Rousseau
+  Revisited, 83 Am. Pol. Sci. Rev.~1317, 1322 (1989)에서 논의된다.} 이
+논변이 어떻게 전개되든 간에, 내가 \textbf{(p.~1393)} 말하려는 요지는
+다음과 같다: 입법부에 대해 제시될 수 있는 것과 같은 공정성 논거는 법원에
+대한 다수결 원칙 사용에는 적용되지 않는다.
+
+이 마지막 논점들은 우리가 QC(비판적 시민)가 입법 절차와 사법 절차 모두에
+대해 제기한 도전에 대해 상정해온 응답들이 독립적으로 존재하는 것이
+아님을 상기시켜준다. 우리는 또한 결과 기반 논거(outcome-related case)를
+통해 그녀의 도전에 대응할 수 있다. 그러나 나는 이번 장과 그 이전 장에서,
+결과 기반 논거는 결정적인 것이 아니며(혹은 입법부에 유리한 옹호 논증을
+제기하며), 절차 기반 논거는 거의 전적으로 입법부 측에 유리하다는 점을
+보여줄 수 있었다고 생각한다. 제3장에서 말했던 바도 기억하라. 양측의
+논거는 모두 \emph{권리(right)}에 관한 것이다. 만약 한 기관이 다른
+기관보다 사람들이 실제로 어떤 \emph{권리(right)}를 가지고 있는지를 더
+정확히 판단할 수 있다면, 이는 그 기관에게 결정적으로 유리한 근거가 될
+것이다. 그러나 현실은 그렇지 않다. 절차 측면에서 볼 때, 이러한 문제들에
+대한 최종 권한을 판사들에게 부여하는 제도는 평범한 시민이 제기하는
+공정성에 대한 불만에 대해, 정치적 평등(political equality)의
+\emph{원칙(principle)}---단순한 \emph{가치(value)}가 아니라---에 기초한
+어떠한 적절한 응답도 제공하지 못한다. 만약 사법적 결정에 대해 결과
+기반의 설득력 있는 논거가 존재한다면, 이러한 실패는 감수할 수 있을지도
+모른다. 사법심사의 옹호자들은 그러한 논거가 존재한다고 주장한다. 그러나
+앞서 살펴본 바와 같이, 그것은 단지 근거 없는 주장일 뿐이다.
+
+아마 이러한 점들을 인식하고 있기 때문에, 사법심사의 옹호자들은 자신들이
+선호하는 제도를 민주적 가치(democratic values)와 조화시키기 위해 마지막
+시도의 일환으로 몇 가지 논변들을 시도해왔다. 나는 그것들을 간략히 살펴볼
+것이다. 왜냐하면 그리 중요하거나 강력한 논거들이 아니기 때문이다.
+
+첫째, 사법심사(judicial review)의 옹호자들은 판사들이
+\emph{권리(right)}에 대한 자신들의 결정을 내리는 것이 아니라, 단지
+국민의 결정이 구현된 \emph{권리장전(Bill of Rights)}을 집행할 뿐이라고
+주장한다. 이 권리장전은 입법이나 헌법의 일부로서 일정한 민주적
+신용(democratic credentials)을 갖춘 것이라는 주장이다. 그러나 이와 같은
+주장은 사법심사에 반대하는 핵심 논거(core case)를 무너뜨리지 않는다.
+우리는 \emph{권리장전(Bill of Rights)}이 개인과 소수자
+\emph{권리(rights)}에 대해 사회 내부에 존재하는
+\emph{의견불일치(disagreements)}를 해결해 주지 않는다는 전제를 두고
+있다. 권리장전은 이러한 문제들에 영향을 미치기는 하지만, 그것들을
+해결하지는 않는다. 기껏해야 권리장전의 추상적인 조항들은 이러한 문제들에
+대한 쟁점이 전개되는 장소로 대중적으로 선택된 것일 뿐이다. 우리가
+검토해온 쟁점은, 이러한 쟁점들이 다투어지는 그 장소에서 누가 그 문제들을
+최종적으로 해결할 것인가에 관한 것이다.
+
+둘째, 이와 유사한 취지로, 사법심사의 옹호자들은 판사들이 단지 사회가
+특정한 \emph{권리(right)} 원칙들에 대해 미리 맺어둔
+자기구속(precommitment)을 집행하는 것이라고 주장한다. 사회는 특정한
+\emph{권리(right)}의 원칙에 대해 자신의 몸을 돛대에 묶어둔 것이며,
+판사들은 마치 율리시스의 선원들처럼 밧줄이 풀리지 않도록 보장하는 역할을
+한다는 것이다. 이와 같은 익숙한 비유는 학계에서 이미 철저히 비판된 바
+있다.\footnote{Jon Elster, Ulysses Unbound 88--96 (2000) 참조. 이 책은
+  Elster의 이전 저작인 Ulysses and the Sirens: Studies in Rationality
+  and Irrationality 93 (1984)에서 주장된 일부 논거에 대해 의문을 제기함.
+  또한 Waldron, supra note 14, at 255--81 참조.} 간단히 말해,
+\textbf{(p.~1394)} 사회가 어떤 \emph{권리(right)}가 무엇을 수반하는지에
+대해 특정한 견해에 스스로를 구속시켰다고 말할 수는 없다. 그러므로 시민들
+사이에서 이에 대한 \emph{의견불일치(disagreement)}가 발생할 경우,
+판사들에게 그 문제를 결정할 권한을 부여하는 것이 어째서 기존의
+자기구속을 존중하는 행위로 간주되어야 하는지 불분명하다. 누군가가 사회가
+특정한 \emph{권리(right)}에 관해 특정한 견해에 자신을 구속했다고
+주장한다 하더라도, 그리고 판사들이 표결을 통해 그 자기구속을 somehow
+밝혀낸다고 하더라도, 그 \emph{권리(right)}에 대한 대안적 이해가
+현실적으로 제시되는 순간, 왜 그 기존의 자기구속(precommitment)이 그대로
+유지되어야 하는지는 여전히 설명되지 않는다. 율리시스 모델은 이러한
+자기구속이 일탈(aberration)에 대한 방어일 경우에만 작동한다. 그러나
+그것이 어떤 결과가 정당한지에 대한 진지한
+\emph{의견불일치(disagreement)} 속에서 마음을 바꾸는 것을 방어하는
+수단일 경우에는 적절하지 않다.\footnote{Waldron, supra note 14, at
+  266--70 참조.}
+
+셋째, 사법심사의 옹호자들은 만약 입법자들이 어떤 판결에서
+\emph{권리(right)}에 대한 판단에 동의하지 않는다면, 권리장전을 개정하여
+그 판결을 명시적으로 무력화하는 캠페인을 벌일 수 있다고 주장한다. 그들이
+그렇게 하지 않았다는 사실은 묵시적인 민주적 승인(tacit democratic
+endorsement)을 의미한다는 것이다. 그러나 이 주장은 사법적 결정이
+형성하는 기준선(baseline)을 정당화하지 못한다는 점에서 결함이 있다.
+\emph{권리장전(Bill of Rights)}의 개정은 일반적으로
+초다수제(supermajority)를 필요로 한다. 또는 그것이 영국이나 뉴질랜드식의
+법률 형식일 경우, 해당 법률이 정치문화적 정당성을 갖추고 있어 개정
+시도에 상당한 부담을 부과하게 된다. 만약 불만을 가진 시민 Cn이 왜 그
+기준선이 이처럼 불균형하게 설정되어야 하느냐고 묻는다면, 우리가 줄 수
+있는 유일한 응답은 사법적 결정에 근거한 것이며, 이는 이미 충분치
+못하다는 평가를 받았다.
+
+넷째, 사법심사의 옹호자들은 판사들 또한 민주적 신용(democratic
+credentials)을 지닌다고 주장한다. 그들은 선출된 공직자들에 의해 지명되고
+승인되며, 오늘날에는 정치 후보자가 어떤 종류의 판사 지명을 할 것인지를
+유권자들이 중요하게 고려하는 경우가 많아, 판사 지명은 선거 캠페인에서도
+주요한 역할을 한다는 것이다.\footnote{Eisgruber, supra note 13, at 4
+  (``비록 대법관들이 직접 선거로 선출되지는 않지만, 그들은 정치적·민주적
+  절차를 통해 임명된다. 대통령이 지명하고 상원이 승인한다는 점에서,
+  이들은 정치적 견해와 정치적 연줄에 기반해 임명되며, 이는 법적 전문성과
+  마찬가지로 중요하다.'')} 이는 사실이다. 그러나 (이미 언급했듯이)
+문제는 비교적(comparative) 성격을 띠고 있으며, 이러한 정당성은 선출된
+입법자들이 지닌 민주적 신용과는 도저히 경쟁이 되지 않는다. 게다가,
+판사들을 이와 같은 민주적 신용 때문에 수용한다면, 사법심사가 독자적으로
+가치 있는 정치적 결정 형태라는 긍정적 논거 자체를 약화시키는 결과가
+된다.
+
+다섯째이자 마지막으로, 사법심사의 옹호자들은 이 제도가 시민들이 정치
+체제에 접근할 수 있는 추가적인 수단으로 정당화될 수 있다고
+\textbf{(p.~1395)} 주장한다. 시민들은 때로 유권자로, 때로 로비스트로,
+때로 소송 당사자(litigant)로 정치 시스템에 접근한다는 것이다. 이들은
+특정한 요소의 민주적 신용만을 따지기보다는, 시민 참여의 다양한 방식들이
+구성하는 전체적 체계의 정당성을 평가해야 한다고 말한다. 이 논점은 일정
+부분 타당하다. 그러나 사법심사를 시민 참여의 더 넓은 체계 안에
+포함시킨다고 해서, 이 방식이 정치적 평등(political equality)의 원칙에
+의해 규율되지 않는 형태의 참여라는 사실이 달라지지는 않는다. 사람들은
+자신들의 의견이 선거 정치에서 부여받는 무게보다 더 큰 무게를 갖길 원할
+때 사법심사를 찾는 경향이 있다. 물론 다른 정치적 변화 경로가 차단되어
+있을 경우, 이 방식의 접근이 일정한 정당성을 얻을 수도 있다.\footnote{John
+  Hart Ely, Democracy and Distrust: A Theory of Judicial Review (1980).}
+이에 대해서는 제7장에서 논의할 예정이다. 그러나 우리가 논의하고 있는
+핵심 사례(core case), 즉 입법부와 선거제도가 민주적 가치들에 비추어 보아
+비교적 잘 작동하고 있는 상황에서는, 사법심사가 동료 시민들에 대해
+전달하는 태도는 결코 정당화되기 어렵다.
+
+\subsection{VI. 다수의 폭정(The Tyranny of the
+Majority)}\label{vi.-uxb2e4uxc218uxc758-uxd3eduxc815the-tyranny-of-the-majority}
+
+나는 사법심사(judicial review)를 옹호하는 이들에게---우리가 설정한 핵심
+사례(core case)를 전제로---마지막 기회를 주고자 한다. 민주적
+입법기관(democratic legislature)의 작동에 대해 가장 흔히 제기되는
+우려는, 다수결주의(majoritarianism)를 바탕으로 조직된 입법 절차가
+``다수의 폭정(tyranny of the majority)''을 구현하게 될 수 있다는 점이다.
+이 공포는 매우 널리 퍼져 있으며, 우리 정치문화의 익숙한 요소가 되었고,
+``다수의 폭정''이라는 표현은 우리의 입에서 너무도 자연스럽게
+흘러나온다.\footnote{John Stuart Mill은 Toqueville의 Democracy in
+  America에 대한 유일한 비판으로 ``다수의 폭정(tyranny of the
+  majority)''이라는 표현이 보수 세력에게 진보적 입법을 반대하는 수사적
+  도구를 제공할 것이라고 지적하였다. John Stuart Mill, M. de Tocqueville
+  on Democracy in America, Edinburgh Rev., Oct.~1840, 재수록: 2
+  Dissertations and Discussions: Political, Philosophical, and
+  Historical 1, 79--81 (photo, reprint 1973) (1859).} 그 결과, 입법
+결정을 사법적으로 감시하는 제약을 설정해야 한다는 주장은 거의 자명한
+것으로 여겨지게 되었다. 다수의 폭정으로부터 소수자(minorities)를 지켜줄
+수 있는 다른 안전장치는 무엇이 있는가?
+
+나는 이 흔한 주장이 심각하게 혼동된 것이라 본다. 일단 다음과 같이 전제해
+보자. 즉, \emph{권리(right)}가 부정될 때 누군가에게 '폭정(tyranny)'이
+발생한다고 가정하자. 이 정의에 따르면, 폭정은 거의 모든
+\emph{권리(right)}에 관한 \emph{의견불일치(disagreement)}에서 언제나
+쟁점이 될 수밖에 없다. 어떤 \emph{권리(right)}에 대해 보다 넓은 이해를
+지지하는 쪽(혹은 상대가 인정하지 않는 \textbf{(p.~1396)}
+\emph{권리(right)}를 주장하는 쪽)은 상대방의 입장이 잠재적으로
+폭압적이라고 생각할 것이다. 예를 들어, 페요테를 종교의식에 사용하는
+이들은, 그들의 성례가 일반적인 마약 규제법에 의해 제한되는 것을 폭정이라
+여길 것이다. 선거 자금법(campaign finance laws)에 반대하는 이들은 그
+법을 폭압적이라 생각할 것이다. 하지만 그들이 옳은지는 여전히 개방된
+문제다. 이 중 일부는 실제로 옳을 수도 있다. 그러나 단지 그렇게
+주장된다는 사실만으로 그것이 옳아지는 것은 아니다. 실제로 어떤
+\emph{권리(right)} 문제에서는 양측이 모두 상대방의 입장을 폭정이라
+주장하기도 한다. 낙태 \emph{권리(rights)}를 옹호하는 이들은, 생명 보호
+입장이 여성에게 폭정이라고 생각하지만, 반대로 생명 보호론자들은 선택의
+자유를 옹호하는 입장이 태아(fetuses)를 향한 폭정이라 주장한다(그들에
+따르면 태아는 인격자(persons)이다). 어떤 이들은 적극적
+우대조치(affirmative action)가 폭압적이라고 생각하며, 또 어떤 이들은 그
+조치를 시행하지 않는 것이 오히려 폭정이라 생각한다. 이러한 사례는 무수히
+많다.
+
+우리는 3장에서 월하임(Wollheim)의 역설을 논할 때도 인정했듯이, 민주적
+제도들은 때때로 잘못된 \emph{권리(right)} 판단을 내리고 이를 강제할 수
+있다. 이는 곧 민주적 제도도 때때로 폭압적으로 작동할 수 있음을 뜻한다.
+하지만 이 점은 어떤 결정 절차에도 동일하게 적용된다. 법원 역시 때로는
+폭정적으로 판단할 수 있다.\footnote{여기서 말하는 것은 입법부의 권리
+  침해를 막지 못한 '부작위의 죄(sins of omission)'가 아니라, 사법심사
+  권한이 오히려 입법부가 실제로 인정하려 했던 권리(rights)를 막아선
+  '작위의 죄(sins of commission)'이다. 예시는 supra note 4 및 해당 본문
+  참조.} 우리가 지금 전제하고 있는 정의에 따르면, 폭정은 거의 피할 수
+없는 것이다. 문제는 단지 얼마나 많은 폭정이 발생할 가능성이 있는가일
+뿐이며, 이것은 우리가 4장에서 다룬 문제이다.
+
+그렇다면 어떤 정치적 결정이 다수에 의해 부과될 때, 그 폭정성이
+심화되는가? 법원이 역시 다수결로 판결을 내릴 수 있다는 (형식적인) 지적은
+일단 제쳐두자. 그러나 민중 다수(예: 선출된 대표자들의 다수, 그리고 이
+대표자들이 각각 자신의 유권자 다수의 지지를 받고 있는 경우)에 의한
+폭정은 특별히 더 심각한 폭정인가? 나는 그렇게 볼 수 없다고 생각한다.
+우리는 폭정이란 누가 어떤 방식으로 결정을 내리든 그 자체로 폭정이라고 할
+수도 있고, 혹은---내 입장은 이쪽이다---다수의 측면이 오히려 폭정의
+정도를 약화시킨다고 말할 수도 있다. 왜냐하면 적어도 그 결정은 어떤
+사람들을 정치적 평등의 입장에서 참여할 자격 없이 배제하는 방식으로
+만들어진 것이 아니기 때문이다.
+
+이 주장이 지나치게 가볍다고 느껴질 수 있으니, 좀 더 신중하게 설명해
+보겠다. 입법 권한이 무제한일 경우 가장 자주 제기되는 우려는, 소수자나
+개인들이 다수에 의해 억압당할 수 있다는 것이다. 그들은 억압받거나
+차별당하거나, 다수에 비해 \emph{권리(rights)}가 부정되거나 침해되거나,
+그들의 이익이 부당하게 다수자의 이익에 종속될 수 있다(예:
+\textbf{(p.~1397)} 정의에 반할 정도로 해를 입거나 방치됨). 이러한 폭정,
+억압, 불의의 양상들을 설명할 때 우리는 ``다수(majority)''와
+``소수(minority)''라는 용어를 사용한다. 그러나 이 맥락에서 이 용어들은
+반드시 정치적 결정 절차와 관련된 용어는 아니다. 다음과 같이 구분해보자.
+
+불의(injustice)는 소수자의 \emph{권리(right)} 또는 이익이 다수자의 것에
+부당하게 종속될 때 발생한다. 우리는 다수결 정치적 결정이 이러한 결과를
+초래할 수 있다는 점을 인정했다. 그러나 그런 경우, 우리는 최소한 ``결정의
+다수(decisional majority)''와 ``결정의 소수(decisional minority)''를,
+그리고 ``주제적 다수(topical majority)''와 ``주제적 소수(topical
+minority)''를 구분해야 한다.\footnote{여기서 ``주제적 소수(topical
+  minority)''라는 표현을 사용하는 것은, 해당 결정의 주제가 되는 권리와
+  이익을 지닌 집단을 의미하기 때문이다. 이 용어는 다소 느슨하게
+  정의되며, 그 구성원을 둘러싼 논쟁도 있을 수 있다(``주제적 다수(topical
+  majority)''도 마찬가지다). 그러나 그 느슨함은 문제가 되지 않는다. 이
+  구분은, 권리에 관한 사안에서 패배한 표를 던졌다고 해서 모두가 해당
+  권리에 부정적 영향을 받은 소수에 속한다고는 할 수 없다는 점을 명확히
+  해준다. Waldron, supra note 14, at 13--14; Waldron, Precommitment and
+  Disagreement, supra note 19; Waldron, Rights and Majorities, supra
+  note 19, at 64--66 참조.} 여기서 ``주제적 다수/소수''란, 그 결정에서
+\emph{권리(rights)}가 직접적으로 문제된 집단을 말한다. 어떤 경우에는
+결정의 다수와 주제적 다수가 일치하고, 결정의 소수와 주제적 소수가
+일치하기도 한다. 예를 들어, 인종적 불의의 경우 그러한 경향이 강하다.
+백인 입법자들(결정의 다수)이 백인 특권(주제적 다수)을 위한 표결을 하고,
+흑인 입법자들(결정의 소수)은 흑인의 평등 \emph{권리(rights)} 확보에
+실패한다. 나는 이러한 경우야말로 ``다수의 폭정''이라는 표현이 진정으로
+문제 삼아야 할 사례라고 본다.
+
+이 구분을 바탕으로 다시 \emph{권리(rights)}에 관한
+\emph{의견불일치(disagreement)} 사례로 돌아가 보자. 어떤 사회 내부에
+주제적 소수(topical minority)의 \emph{권리(rights)}에 관해 의견불일치가
+있다고 하자. 이 의견불일치를 해결해야 한다면, 사회는 이에 대해 숙고하고
+기존의 결정 절차를 적용해야 한다. 이 사회가 다수결(MD)을 사용한다고
+하자. 내가 이 결정 과정에 참여했고, 내가 지지한 입장이 패배했다면 나는
+그 사안에서 결정의 소수(decisional minority)가 된다. 그러나 이것만으로
+나에게 무언가 폭정적인 일이 일어났다고 말할 수는 없다. 그것이 폭정이라는
+것을 보이기 위해서는 추가로 두 가지를 더 입증해야 한다: (1) 그 결정이
+실제로 잘못되었고, 그 영향이 관련된 사람들의 \emph{권리(rights)}에 대해
+폭정적인 것이었다는 점, (2) 내가 그러한 잘못된 결정에 의해 영향을 받은
+주제적 소수(topical minority)에 속했다는 점.
+
+\textbf{(p.~1398)} 여기서 기억해야 할 요점은 다음과 같다. 내가 속한
+공동체가 내 의견을 채택하지 않았다는 사실만으로 나에게 폭정적인 일이
+발생했다고 할 수는 없다. 공동체가 채택한 의견이 나의 이익을 타인의
+이익과 함께 적절히 고려한 것이라면, 내 의견이 채택되지 않았다는 사실은
+나의 \emph{권리(right)}, 자유(freedom), 복지(well-being)에 대한 위협이
+되지 않는다. 내가 주제적 소수에 속한 경우에도 이 점은 반드시 달라지지
+않는다. 사람들은---주제적 소수에 속한 사람들을 포함하여---자신이 갖고
+있다고 생각하는 \emph{권리(rights)}를 실제로는 갖고 있지 않을 수도 있다.
+그들이 착오를 가졌을 수도 있고, 오히려 다수의 입장이 옳을 수도 있다.
+``다수의 폭정(tyranny of the majority)''에 대해 책임 있는 논의를 하고자
+한다면, 이러한 분석적 구분들을 반드시 염두에 두어야 한다.
+
+요약하자면, 다수의 폭정은 발생할 수 있다. 그러나 이 용어는 단순히
+다수결의 결과에 대한 화자의 \emph{의견불일치(disagreement)}를 나타내는
+방식으로 사용되어서는 안 된다. 다수의 폭정을 가장 생산적으로 개념화하는
+방식은, 그것이 결정의 소수(decisional minority)와 주제적 소수(topical
+minority)가 일치할 때 발생한다고 이해하는 것이다. 7장에서는 이 개념이
+``명확하고 고립된 소수(discrete and insular minorities)''라 불리는
+집단에 어떻게 적용될 수 있는지를 논할 것이다.\footnote{본문 중 note
+  137--141을 동반하는 본문 참조.} 그러나 지금 단계에서 우리가 주목할
+점은, 우리가 전제로 삼고 있는 핵심 가정(core assumptions) 하에서는 이와
+같은 정렬(alignment)이 발생하지 않을 것이라는 사실이다. 세 번째 가정은,
+대부분의 사람들이---즉 어떤 결정의 다수에 속한 사람들
+대부분이---\emph{권리(rights)}에 대해 결정의 소수에 속한 사람들과
+마찬가지로 관심을 갖고 있다는 것이었다. 네 번째 가정은,
+\emph{의견불일치(disagreement)}가 대개 이기심에 의해 유발되지 않는다는
+것이었다. \emph{의견불일치(disagreement)}는 쟁점의 복잡성과
+난해함만으로도 충분히 설명될 수 있다. 롤즈(John Rawls)가 ``판단의
+부담(the burdens of judgment)''\footnote{Rawls, Political Liberalism,
+  supra note 53, at 54--58.}이라 부른 개념은, 우리가 본 것처럼, 다수의
+폭정에 대한 책임 있는 논의가 전제로 삼아야 할 그러한
+정렬(alignment)---즉 의견과 이익이 일치한다는 전제---를 오히려 거부하는
+논증을 제공한다.
+
+결론은, 그렇다고 해서 다수의 폭정(tyranny of the majority)이 우리가
+걱정할 필요 없는 문제라는 것이 아니다. 오히려 결론은, 만약 이 용어가
+책임 있게 사용된다면, \emph{다수의 폭정}은 핵심 사례(core case)가 아닌
+경우들의 특징이라는 것이다. 즉, 사람들이 자신이나 자기 집단을 제외한
+소수자나 개인의 \emph{권리(rights)}에 거의 관심을 기울이지 않는 상황을
+의미한다. 나는 그러한 상황이 실제로 발생한다는 점을 부정하려는 것이
+아니다. 다만, 내가 강조하고 싶은 것은, 그것이 이 논문에서 전제한 세 번째
+가정(third assumption)과 양립하지 않는다는 점이다. 따라서 우리는
+\emph{권리(rights)}에 헌신된 사회에 대해 말하면서 동시에 다수의 폭정이
+상존하는 가능성이라고 주장하려 해서는 안 된다.
+
+이 장에서 설정한 구분들은 사법심사(judicial review)에 대한 두 가지 다른
+주장에 대해서도 대응하는 데 도움을 준다. 첫째, 로널드 드워킨(Ronald
+Dworkin)은 『자유의 법(Freedom's Law)』에서 \textbf{(p.~1399)} 다음과
+같이 논증한다. 즉, \emph{권리(rights)}가 존중되지 않는 한, 민주적
+결정(democratic decisionmaking)은 본질적으로 폭정적이라는 것이다. 그는
+이것이 단지 폭정적인 결과를 낳을 수 있기 때문만이 아니라,
+\emph{권리(rights)}에 대한 존중이 어떤 정치적 결정 체계의 정당성의 배경
+조건(background condition)이라는 점에서 그러하다고 논증한다. 드워킨은
+단지 민주주의가 투표권(right to vote), 혹은 간접적으로는 언론의
+자유(freedom of speech)나 결사의 자유(freedom of association) 같은
+일정한 \emph{권리(rights)}에 본질적으로 의존한다는 익숙한 주장을 하고
+있는 것이 아니다. 그의 주장은 그보다 더 정교하다. 그는 다수결(MD)과 같은
+절차는, 참여하는 각각의 투표자들이 서로를 동등한 배려와 존중(equal
+concern and respect)으로 대한다고 확신할 수 있는 경우가 아니면, 민주적
+맥락에서도, 그 밖의 어떤 맥락에서도 정당성을 갖지 못한다고 주장한다.
+테러리스트 집단이 다수결로 나의 운명을 결정한다면---심지어 그 다수결
+과정에 나에게도 투표권이 주어진다 해도---그 결정은 전혀 정당하지 않다는
+것이다. 왜냐하면 그 배경 조건이 충족되지 않기 때문이다. 드워킨의 논증에
+따르면, 일반적으로 어떤 개인이 공동체의 다른 구성원들이 자신이나 자신과
+같은 유형의 사람에 대해 존중하거나 신중하게 고려하지 않는다는 것을 알게
+된다면, 그가 그러한 공동체 내의 다수결 결정을 정당하다고 수용하기를
+기대하는 것은 거의 불가능하다는 것이다.\footnote{Dworkin, supra note 10,
+  at 25.}
+
+드워킨은 이러한 주장을 통해 사법심사에 대한 민주주의적 반박(democratic
+objection)을 반박하고자 한다.\footnote{Dworkin은 이 주장이
+  사법심사(judicial review)를 옹호하는 논변은 아님을 명확히 밝히고 있다.
+  Id. at 7 (``민주주의는 판사들이 최종 결정을 내려야 한다고 주장하지도
+  않지만, 그들이 최종 결정을 내려서는 안 된다고 주장하지도 않는다.'').}
+가령 어떤 법률이 선출된 의회에 의해 제정되었고, 한 시민이 그 법률이
+\emph{민주적 정당성(democratic legitimacy)}의 조건이 되는 어떤
+\emph{권리(right) R}을 침해한다고 주장하며 이의를 제기한다고 하자. 다른
+사람들은 이와 \emph{의견불일치(disagreement)}를 가질 것이다. 어떤 사람은
+R이 민주주의의 조건이 아니라고 생각하고, 어떤 사람은 R을 전혀 다른
+방식으로 이해할 수 있다. 이 문제가 법원에 최종 판단을 위한 사안으로
+배정되었고, 법원이 해당 법률을 위헌으로 판단하며 시민의 이의를
+수용했다고 하자. 이것이 민주주의에 손해를 주는 일일까? 드워킨의 대답은
+명확하다. 이는 전적으로 법원이 올바른 결정을 내렸는지 여부에 달려 있다.
+즉, 그 법률이 정말로 다수결(MD)의 정당한 적용을 위한
+\emph{권리(rights)}와 양립할 수 없는 것이라면, 법원이 그 법률을 무효화한
+것은 오히려 민주주의를 향상시킨 것이 된다. 그 결과 공동체는 해당 법률이
+존속되었을 경우보다 더 민주적으로 정당한 상태가 된 것이다.\footnote{Ibid.
+  at 32--33 (''{[}법원의 결정이 잘못되었다고 가정할 경우{]}, 위와 같은
+  논지는 전혀 성립하지 않는다. 권위 있는 법원이 민주주의의 요건에 대해
+  잘못된 결정을 내렸다면, 이는 민주주의를 훼손한다. 그러나 그것은 다수결
+  입법기관이 잘못된 헌법적 결정을 내리고 그것이 그대로 유지되는 경우와
+  전혀 다르지 않다. 오류의 가능성은 대칭적이다.'').}
+
+\textbf{(p.~1400)} 그러나 이 주장에는 많은 문제가 있으며, 그 중 일부는
+내가 다른 곳에서 지적한 바 있다.\footnote{이에 대한 전체적인 반론은
+  Waldron, supra note 14, at 282--312 참조.} 우선, 드워킨은 정치적
+결정이 민주주의와 관련된 경우에는 그 결정이 어떤 제도적 절차를 통해
+이루어졌는지에 대한 흥미로운 논의는 성립하지 않는다고 보는 듯하다. 나는
+이것이 잘못되었다고 생각한다. 예컨대 다수결 절차 자체(또는 그 정당성의
+조건)에 관한 결정이 여성의 참여를 배제하는 방식으로 내려졌다면, 그
+절차에 대한 평등 기반의 이의 제기는 단지 다수결의 정당성이 쟁점이라는
+이유만으로 배제되어서는 안 된다. 우리는 절차 자체가 쟁점일 때에도 절차적
+가치(process values)를 중요하게 여긴다.
+
+그러나 이 주장에 대한 가장 결정적인 반박은 다음과 같다. 드워킨의 전제를
+수용하자. 즉, \emph{민주적 절차(democratic procedures)}는 오직
+구성원들이 서로의 \emph{권리(rights)}를 존중하는 경우에만 정당하다는
+것이다. 이 전제는 두 가지 방식으로 해석될 수 있다: (1) \emph{민주적
+절차}는 오직 서로의 \emph{권리(rights)}에 대한 올바른 견해를 가지고 이를
+실천하는 사람들 사이에서만 정당하다는 해석, 혹은 (2) \emph{민주적
+절차}는 서로의 \emph{권리(rights)}를 진지하게 받아들이고 그것이 무엇인지
+최선을 다해 알아내려는 진지한 시도를 하는 사람들 사이에서 정당하다는
+해석이다. 첫 번째 해석은 지나치게 강하다. 상상 가능한 어떤 정치체제도
+이를 만족시키지 못한다. 그러나 두 번째 해석에는 아무런 이의가 없다.
+그리고 우리가 이 두 번째 해석을 수용한다면, 이 논문에서 가정하는 사회는
+드워킨의 전제를 만족시키는 것이다. 사람들이 \emph{권리(rights)}에 관해
+\emph{의견불일치(disagreement)}를 가질 수는 있다. 하지만 그들은 서로의
+\emph{권리(rights)}를 진지하게 받아들일 수 있다. 결정의 다수(decisional
+majority)는 때로 옳고 때로는 틀릴 수 있다. 하지만 그것은 모든 결정
+체계가 공유하는 문제이며, 주제적 소수(topical minority)가 자신의
+\emph{권리(rights)}가 공동체 구성원 대다수에게 진지하게 고려되고 있다는
+확신을 가질 수 있다면, 그 체계의 정당성을 무너뜨리는 근거가 될 수 없다.
+
+둘째, 이 장에서 논의한 구분은 또 다른 주장을 평가하는 데에도 유용하다.
+즉, 사법심사가 존재하지 않는 상태에서 \emph{권리(rights)}에 대해
+입법기관이 최종 결정을 내리는 것은, 다수가 자기 사건의 재판관이 되는
+것과 같다는 주장이다. 이때 인용되는 격언이 ``nemo iudex in sua
+causa''(자기 사건의 재판관이 되어서는 안 된다)이다. 이 격언을 적용하는
+사람들은, \emph{권리(rights)}에 관한 최종 판단은 국민의 손에 맡겨서는 안
+되며, 오히려 법원과 같은 독립적이고 공정한 제도에 위임되어야 한다고
+주장한다.
+
+그러나 이 주장이 실제로 갖는 힘은 그다지 크지 않다. 어떤 결정 규칙이든
+결국 누군가는 자신의 사건에 대해 결정을 내리는 위치에 서게 될 것이다.
+우리가 무한한 항소 절차를 상상하지 않는 한, 항상 어떤 사람이나 기관이
+최종 결정을 내리게 된다. 그리고 그 사람이나 기관에 대해서는,
+\textbf{(p.~1401)} 그들이 최종 결정을 내리는 순간 자동적으로 자신들의
+견해의 정당성을 스스로 판단하게 되는 것이라 말할 수밖에 없다. 이러한
+방식으로 ``nemo iudex in sua causa''를 기계적으로 인용하는 것은 정당성의
+기본 논리를 망각하는 변명이 될 수 없다. 사람들은
+\emph{의견불일치(disagreement)}를 가지고 있고, 그렇기에 우리는 최종적인
+결정과 그 결정을 내리는 절차(final decision procedure)를 필요로 한다.
+
+이 두 번째 주장---즉 사법심사의 필요성에 대한 주장---이 의미하는 바는,
+주제적 다수(topical majority), 즉 자신의 \emph{권리(rights)}나 이익이
+쟁점이 된 집단이 그러한 \emph{권리(rights)}나 이익을 유지할지 여부를
+결정하는 데 결정적 표를 행사해서는 안 된다는 뜻일 수 있다. 그리고 주제적
+다수와 결정의 다수(decisional majority)가 일치하는 경우에는 우려할 만한
+타당한 이유가 존재한다. (이러한 일치가 만연하다면, 나는 그것이 핵심
+사례가 아닌 상황이라고 판단하며, 그 이유는 7장에서 설명할 것이다.)
+하지만 이런 경우는 실제로 드물며, 특히 미국에서 사법심사가 다루는
+일반적인 사건들에서는 더욱 그러하다. 앞서 언급한 두 가지 예를 떠올려
+보자: 낙태와 적극적 우대조치(affirmative action). 어느 경우에도 우려할
+만한 정렬(alignment)은 보이지 않는다. 많은 여성이 낙태
+\emph{권리(rights)}를 지지하지만, 많은 남성도 이를 지지하며, 또 많은
+여성은 이에 반대한다. 많은 아프리카계 미국인이 적극적 우대조치를
+지지하지만, 많은 백인도 지지하며, 또 많은 아프리카계 미국인은 반대한다.
+이는 우리가 2장에서 설정한 세 번째, 네 번째 가정이 충족된 사회에서
+기대할 수 있는 모습이다. \emph{권리(rights)}를 진지하게 여기는 사람들은
+이에 관해 \emph{의견불일치(disagreement)}를 가질 수 있다. 그러나 바로 그
+진지함이 이 \emph{의견불일치(disagreement)}들이 개인의 이해관계와
+독립적으로 나타난다는 것을 보여주는 지표가 된다.
+
+\subsection{VII. 핵심 사례가 아닌 경우 (Non-Core
+Cases)}\label{vii.-uxd575uxc2ec-uxc0acuxb840uxac00-uxc544uxb2cc-uxacbduxc6b0-non-core-cases}
+
+지금까지 내가 제시한 논증은 네 가지 매우 엄격한 전제에 기반하고 있다.
+그렇다면 이러한 전제가 실패할 경우, 혹은 해당 전제가 성립하지 않는
+사회에서는 이 논증은 어떤 의미를 가지는가? 특히 내가 염두에 두고 있는
+것은 첫 번째 전제와 세 번째 전제이다. 즉, 첫 번째 전제는 정치적
+평등(political equality)의 관점에서 보았을 때 민주적이고 입법적 제도들이
+제대로 작동하고 있다는 것이며, 세 번째 전제는 우리가 논의하는 사회의
+구성원들이 대체로 개인과 소수자의 \emph{권리(rights)}에 헌신하고 있다는
+것이다. 많은 이들에게 있어 사법심사(judicial review)에 대한 주장은
+이러한 전제를 받아들이지 않는 데서 출발한다. 사법심사는 민주적 제도의
+실패에 대한 반응이거나, 많은 사람들이 \emph{권리(rights)}를 충분히
+진지하게 받아들이지 않기 때문에 (그들을 대신하여) 법원이 이를 대신해야
+한다는 생각의 산물이다. 요컨대, 사법심사 옹호자들은 현실 세계(real
+world)에서 입법에 대한 사법심사가 필요하다고 주장한다. 이는 내가 설정한
+전제가 규정한 이상적 세계(ideal world)와는 다른 것이다.
+
+\textbf{(p.~1402)} 이에 대해 몇 가지 응답을 제시할 수 있으며, 이후에
+핵심 사례가 아닌 경우(non-core cases)에 대한 구체적 쟁점들을 살펴볼
+것이다. 첫째, 내가 사용한 전제들이 비현실적인 것은 아니다. 예를 들어 세
+번째 전제---사회 내의 전반적 \emph{권리(rights)}에 대한 헌신---는 비교적
+쉽게 만족된다. 왜냐하면 사법심사에 대한 논의는 거의 항상, 사법심사가
+도입될 사회가 시민들의 견해와 일정한 관련성을 지닌 권리장전(Bill of
+Rights)을 갖고 있다는 점을 전제로 하기 때문이다. 첫 번째 전제는 선거 및
+입법 절차가 상당히 잘 작동하고 있다는 것이며, 정치적 평등(political
+equality)의 이름으로 완전무결함을 요구할 권리가 우리에게 있는 것도
+아니다. 또한, 제5장에서 입법부와 법원의 정당성에 대해 논의할 때 나는
+다시금 강조하였다. 나의 논증은 시민 개개인이 \emph{목소리가 들릴 동등한
+청구권(the equal claim to be heard of the voices)}을 요구하는 데 완벽히
+응답해야 한다는 전제에 의존하지 않는다. 입법적 결정의 정당성을 옹호하는
+주장은, 입법 제도가 유토피아적으로 완벽하다는 전제에 의존하지 않으며,
+선거 절차와 제도적 구조가 정치적 평등의 원칙을 완벽하게 구현하고 있다는
+전제에도 의존하지 않는다. 대신 그것은, 해당 제도가 정치적 평등이라는
+원칙에 명시적으로 지향되고 있으며, 그 원칙을 충족시키도록 조직되어 있고,
+이를 실현하기 위한 합리적 노력을 기울이고 있다는 점에 기반한다.
+마지막으로, 나는 철학적 선험적 구성물이 아닌 실제 입법 절차의 사례---즉
+1966년 영국 하원의 '임신중절 의료법안(Medical Termination of Pregnancy
+Bill)'에 관한 토론---를 인용하여, 입법부가 어떻게 작동할 수 있는지를
+보여주었다.
+
+이 모든 말을 인정하더라도, 우리는 여전히 다음과 같은 질문을 던져야 한다:
+이러한 전제가 성립하지 않을 경우, 사법심사에 반대하는 논증은 어떻게
+되는가?
+
+만약 전제가 성립하지 않는 경우라면, 이 논문에서 제시한 사법심사 반대
+논증은 성립하지 않는다. 제2장에서 강조한 바와 같이, 나의 논증은
+조건부(conditonal) 논증이다.\footnote{note 43과 관련된 본문을 참조하라.
+  이 논변이 실패하는 사례로는 Waldron, supra note 47 참조.} 그러나
+그렇다고 해서 전제가 무너질 경우 항상 사법심사가 정당화된다는 결론이
+나오는 것도 아니다. 나의 전제에 의존하지 않는 다른 유효한 사법심사 반대
+논증이 존재할 수 있다. 또는 사법심사가 특정 상황을 개선하는 데 아무런
+희망도 제공하지 못할 수도 있다. 만약 법원 또한 입법부 못지않게
+부패하거나 편견에 물들어 있다면, 그러한 사회에서 입법에 대한 사법심사를
+설정하는 것은 적절하지 않을 수 있다. 핵심 사례에 대해 우리가 논의했던
+많은 논증이 비교적(comparative) 논증이었던 만큼, 이 논리는 핵심 사례가
+아닌 경우에도 동일하게 적용된다.
+
+예를 들어, 나의 첫 번째 전제가 실패한 경우를 가정해보자. 즉, 입법부가
+대표성과 숙의성을 결여하고 있으며, 선거 제도가 훼손되었고,
+\textbf{(p.~1403)} 입법부에서 사용되는 절차들이 더 이상 정치적 정당성과
+신뢰할 만한 관계를 맺고 있지 않다. 그렇다면 두 가지 질문이 제기된다. (1)
+입법부와 관련된 상황을 개선할 수 있는가? (2) 중요한
+\emph{권리(rights)}에 관한 쟁점에 대해 최종 결정 권한을 법원에 부여해야
+하는가, 만약 법원이 그 문제를 더 잘 다룰 수 있다면? 이 두 질문은
+독립적인 질문이다. 왜냐하면 우리는 어떤 \emph{권리(rights)}의 문제들은
+보다 책임 있는 입법부가 나타날 때까지 기다릴 수 없을 정도로 시급하다고
+생각할 수도 있기 때문이다. 그러나 이 두 질문은 완전히 분리되어 있지는
+않다. 법원에 최종 결정 권한을 부여하는 것은 입법부의 개혁을 더 어렵게
+만들 수 있으며, 첫 번째 전제와 아마도 세 번째 전제가 전제하는 입법적
+규범(legislative ethos)의 형성을 방해할 수 있다. 미국의 상황에 대해 이와
+같은 추측을 들어본 적이 있다. 예를 들어, 미국---특히 주의회---의
+입법부가 무책임하게 작동하고 있으며, \emph{권리(rights)}를 진지하게
+다루지 않는 방식으로 운영되는 이유는, 법원이 뒤에 버티고 있다는 인식이
+책임 있는 입법 문화의 발전을 어렵게 만들기 때문이라는 것이다. 이 말이
+실제로 어느 정도 사실인지는 모르겠다. 그러나 충분히 고려해볼 만한
+주장이다.
+
+마지막으로, 나의 첫 번째 전제가 실패할 수 있는 잘 알려진 사례 하나를
+살펴보며 이 장을 마무리하고자 한다. 내가 염두에 두고 있는 것은 스톤
+대법관(Justice Stone)이 유명한 Carolene Products 판결의 각주 4(footnote
+four)에서 제안한 내용이다. ``{[}D{]}iscrete and insular minorities에
+대한 편견은, 소수자를 보호하는 데 일반적으로 의존되는 정치적 절차의
+작동을 심각하게 저해하는 특별한 조건이 될 수 있다\ldots{}''\footnote{United
+  States v. Carolene Products Co., 304 U.S. 144, 153 n.4 (1938); 또한
+  Keith E. Whittington, An ``Indispensable Feature''? Constitutionalism
+  and Judicial Review, 6 N.Y.U. J. Legis. \& Pub. Pol'y 21, 31 (2002)
+  참조 (Whittington은 내가 『Law and Disagreement』에서 이 아이디어를
+  다루지 않은 것이 ``미국 헌법 이론의 관점에서 보았을 때 주목할
+  만하다''고 말한다).} 나의 판단으로는, 이는 입법 결정에 대한 사법심사가
+일정한 타당성을 갖는 핵심 사례가 아닌 경우를 묘사하는 훌륭한 방식이다.
+이러한 상황에 놓인 소수자들은 비선출적(non-elective) 제도만이 제공할 수
+있는 특별한 보호---그들의 \emph{권리(rights)}를 보호하고, 존 하트
+일라이(John Hart Ely)가 지적한 바와 같이, 정치체제를 복원하며 대표성을
+가능케 하는 방식으로---가 필요할 수 있다.\footnote{Ely, supra note 126,
+  at 135--79.}
+
+그러나 우리는 이 논증을 다룰 때 신중해야 한다. 제6장에서 논의한 바에
+따르면, 모든 소수자가 이러한 특별한 대우를 받아야 하는 것은 아니다.
+결정의 소수(decisional minority) 전체도, 주제적 소수(topical minority)
+전체도 예외가 아니다.\footnote{Tushnet, supra note 11, at 159 (``모든
+  법은 패배한 소수의 견해를 무시한다. 여기서 우리는 단지 패배한
+  사람들과, 정치 과정에서 자신을 보호할 수 없기 때문에 패배한 소수
+  집단을 구별해야 한다.'').} 심지어 만성적인 소수(chronic minority)라
+하더라도, 그들이 항상 이러한 특별 대우를 받아야 할 \textbf{(p.~1404)}
+이유는 없다. 특히 만성적인 결정의 소수---예컨대 미국 내
+볼셰비키(Bolsheviks)---는 그렇지 않다.
+
+우리는 너무 자주 ``discrete and insular''라는 표현을 무비판적으로
+사용한다. 모든 뚜렷하고 식별 가능한 소수자가 'discrete and insular'한
+것은 아니다. 스톤 대법관의 표현에 어떤 마법적 힘이 있는 것도 아니다.
+그러나 이 표현이 진지하게 받아들여진다면, ``discrete''와 ``insular''는
+유용한 형용사들이다. 이들은 단지 정치적 결정 과정에서 분리되어 존재하는
+소수자---즉 주제적 소수(topical minority)---를 뜻하는 것이 아니다. 그
+구성원들이 공동체의 나머지 구성원들과 여러 공통의 이익을 공유하지
+못하여, 자신들의 이익을 위해 연합(coalition)을 구축하는 것이 불가능한
+유형의 고립된(minimally connected) 소수자를 의미한다. 우리가 제6장에서
+경고했던 결정의 소수와 주제적 소수가 일치하는 상황은 이러한 의미에서
+'고립(insularity)'의 좋은 예이며, 그것은 분명한 우려의 대상이다.
+
+그렇다면 스톤 대법관(Justice Stone)이 언급한 다른 기준---즉, 해당 소수자
+집단이 \emph{편견(prejudice)}의 피해자라는 기준---은 어떠한가? 만연한
+편견은 분명히 나의 세 번째와 네 번째 전제와 양립할 수 없는 것이다.
+그것은 해당 집단 구성원의 \emph{권리(rights)}에 대한 무관심 혹은
+적대감을 내포하며, 대다수 집단의 구성원들이 소수 집단 구성원들의 자기
+인식과 비합리적인 방식으로 다르게 판단하도록 이끌 수 있다. 그러나
+``편견(prejudice)''이라는 용어는 지나치게 협소하며, 하나의 집단과 다른
+집단 사이에 고착화되고 무의식적인 반감을 형성하는 깊이를 포착하지 못할
+수 있다.\footnote{Charles R. Lawrence III, The Id, the Ego, and Equal
+  Protection: Reckoning with Unconscious Racism, 39 Stan. L. Rev.~317
+  (1987) 참조. 이 점을 강조해준 Ian Haney-Lopez에게 감사한다.} 여기서
+핵심은 반감의 특정 양태를 고집하는 것이 아니라, 그것이 다양한 양태를
+지니고 있으며, 정당한 \emph{권리(rights)}에 대한
+\emph{의견불일치(disagreement)}와 구별되어야 한다는 점이다.\footnote{편견(prejudice)과
+  종교적 또는 윤리적 근거에 기반한 강한 신념은 구별되어야 한다. 우리는
+  생명권(pro-life)을 지지하는 이들의 견해가 단지 우리가 그들의 종교적
+  신념을 공유하지 않는다는 이유로 편견이라고 간주해서는 안 된다. 권리에
+  관한 거의 모든 견해―선택권(pro-choice)을 지지하는 견해를 포함하여―는
+  강한 감정적 기반을 가지며, 궁극적으로는 확고하고 깊이 뿌리내린 가치
+  신념에 기초한다.}
+
+이러한 경우에는, 내가 앞서 전개한 사법심사에 반대하는 핵심 논증(core
+argument)은 유지될 수 없다. 그러나 이 역시 곧바로 사법심사를 찬성하는
+논거가 성립된다는 의미는 아니다. 모든 것은 사법부의 다수(decisional
+majorities)가 입법부의 다수와 동일한 \emph{편견(prejudice)}에 물들어
+있는지 여부에 달려 있다. 만약 동일하다면, 이는 단지 핵심 사례(core
+case)가 아닌 것이 아니라, 아예 희망이 없는(non-viable) 경우이다. 해당
+사회 전체에서 소수자의 \emph{권리(rights)}에 대한 어떠한 지지도 존재하지
+않는다면, 사법심사의 실천은 소수자의 \emph{권리(rights)}에 아무런 도움도
+줄 수 없다. 이러한 상황에서 종종 제기되는 사법심사 옹호 논증은, 해당
+소수자의 \emph{권리(rights)}에 대한 일정한 존중이 소수자 집단 내부
+구성원을 넘어 사회 내의 정치 엘리트(political elites) 사이에
+제한적으로나마 존재한다는 점을 전제로 한다. \textbf{(p.~1405)}
+가정하건대, 일반 대중 대다수는 그러한 동정(sympathy)을 공유하지 않는다.
+이러한 동정을 공유하는 엘리트 집단 구성원들(이를 나는 \emph{엘리트
+동조자(elite sympathizers)}라 부르겠다)은 입법부에 있을 수도 있고,
+사법부에 있을 수도 있다. 사법부에 최종 결정 권한을 부여하자는 논증은
+다음과 같다: 사법부 내 \emph{엘리트 동조자(elite sympathizers)}들이,
+선출된 입법부 내의 \emph{엘리트 동조자}들보다, 비인기 소수 집단의
+구성원들에게 \emph{권리(rights)}를 부여할 때 스스로를 더 잘 보호할 수
+있다는 것이다. 그들은 대중의 분노에 덜 노출되며, 보복에 대해서도 걱정할
+필요가 없다. 그러므로 이들은 소수자를 더 잘 보호할 가능성이 높다.
+
+이러한 사법심사 옹호 논증이 소수자의 \emph{권리(rights)}에 대한 지지
+분포(distribution of support)에 관한 특정한 가정에 의존하고 있다는 점에
+주목하라. 이 논증은 해당 동정(sympathy)이 정치 엘리트 내에서 가장 강하게
+존재한다고 가정한다. 만약 이 가정이 거짓이라면---즉, 동정이 일반 대중
+사이에서 더 강하게 존재한다면---앞 단락의 논증을 받아들일 이유는 없다.
+반대로, 선출 기관(elective institutions)이 소수자의
+\emph{권리(rights)}를 보호하는 데 더 효과적일 수 있으며, 선거 제도는
+소수자의 \emph{권리(rights)}에 대한 대중적 지지를 입법부로 연결할 수
+있는 통로를 제공하는 반면, 사법부에는 그러한 통로가 존재하지 않는다.
+물론 소수자 \emph{권리(rights)}에 대한 지지의 분포는 사안마다 다를 수
+있다. 그러나 내가 흥미롭게 여기는 점은 다음과 같다. 사법심사를 옹호하는
+다수의 이론가들이, 만약 해당 사회 내에 소수자의 \emph{권리(rights)}에
+대한 일정한 지지가 존재한다고 가정할 경우, 그 지지가 어디에 있든 간에
+반드시 엘리트층에 존재할 것이라고 확신한다는 점이다. 이들은 이것을
+실증적 주장(empirical claim)으로 방어하려 하겠지만, 나는 그것이 민주적
+결정(democratic decisionmaking)에 대한 오래된 편견과도 정확히 조응한다고
+말하고 싶다.
+
+또 하나 고려해야 할 요소는, 사법심사의 확립된 관행이 장기적으로 선출 및
+입법 기능의 실패를 바로잡는 데 더 용이하게 작용할지, 혹은 오히려 더
+어렵게 만들지를 따져보는 일이다. 특정한 상황에서는, \emph{discrete and
+insular minorities}(분리되고 고립된 소수자들)이 그들의
+\emph{권리(rights)}를 보호받기 위해 사법적 개입(judicial
+intervention)으로부터 이익을 얻을 수 있다. 그러나 제도적 차원에서는,
+사법적 배려(judicial solicitude)가 상황을 더 악화시키거나, 최소한 큰
+개선 효과를 내지 못할 수도 있다. 미국이 1950년대와 1960년대에 경험한
+바와 같이, Brown 사건 및 기타 판례들에서의 사법적 인종차별 철폐 노력에
+열광했음에도 불구하고, 궁극적으로 필요한 것은 강력한 입법 개입---즉,
+민권법(Civil Rights Act) 형태의 개입---이었다. 그리고 결정적인 차이를
+만든 것은 사법부(courts)와 입법부(legislatures) 사이의 구별 자체가
+아니라, 연방(federal) 기관과 주(state) 기관 사이의 구분이었다. 결국에는
+연방 입법부가 결정적 역할을 수행했다.
+
+전반적으로, 우리는 Carolene Products 판결의 각주나 유사한 교의를
+일반적인 사법심사 관행을 \emph{레버리지(leverage)} 하기 위한 수단으로
+해석해서는 \textbf{(p.~1406)} 안 된다.\footnote{사법심사를 옹호하기 위한
+  논거로 이와 같은 논지의 유용성에 한계가 있다는 점에 대해서는, Tushnet,
+  supra note 11, at 158--63을 참조하라. 이 부분에 대한 일반적인 논의가
+  잘 정리되어 있다.} \emph{discrete and insular minorities}(분리되고
+고립된 소수자들)의 문제는 사법심사의 일종의 '트로이 목마'로 간주되어서도
+안 되며, 사법심사에 반대하는 논증들을 곤혹스럽게 만들기 위한 논거로
+사용되어서도 안 된다. 이러한 사례를 고려하는 목적은 사법심사를
+옹호하려는 것이 아니라, 해당 소수자의 \emph{권리(rights)}를 가장
+효과적으로 확보할 수 있는 방안을 찾는 데 있다. 우리는 바로 그 목표를
+지향해야 하며, 그 과정에서 이러한 사례들이 사법심사를 옹호하는 일반
+논증의 일종의 이념적 전위(ideological vanguard)로 간주될 수 없다는 점을
+명확히 인식해야 한다.
+
+\subsection{결론(CONCLUSION)}\label{uxacb0uxb860conclusion}
+
+나는 입법에 대한 사법심사(judicial review)의 실천이 모든 상황에서
+부적절하다고 보이려는 것이 아니었다. 대신, 나는 \emph{권리(right)}에
+기반한 사법심사가 다음과 같은 사회에서는 부적절하다는 점을 보이고자
+했다: 입법 제도가 기능 장애(dysfunction)을 일으키는 것이 주요 문제가
+아니라, 그 구성원들이 \emph{권리(rights)}에 대해
+\emph{의견불일치(disagreement)}를 보이고 있는, 비교적 민주적인 사회.
+
+\emph{권리(rights)}에 대한 \emph{의견불일치(disagreement)}는 비합리적인
+것이 아니다. 사람들은 서로의 \emph{권리(rights)}를 진지하게
+받아들이면서도 그에 관하여 \emph{의견불일치}할 수 있다. 이러한
+상황에서는, 당사자들이 수백만 명에 이르는 구성원들의
+\emph{권리(rights)}가 논쟁의 대상이 되는 가운데 그들의
+\emph{의견(opinions)}과 \emph{목소리(voices)}를 존중하고, 그들을 절차
+내에서 동등한 존재로 대우하는 방식으로
+\emph{의견불일치(disagreements)}를 해결하기 위한 절차를 채택해야 한다.
+동시에, 그 절차들은 그러한 \emph{권리에 대한
+의견불일치(rights-disagreements)}가 제기하는 어렵고 복잡한 문제들을
+책임감 있고 숙고적인(deliberative) 방식으로 다루어야 한다. 나는 이러한
+절차적 요구를 일반적인 입법 절차가 충족할 수 있다는 점을 논증해왔다.
+그리고 그 위에 법원이 최종 결정을 내릴 수 있도록 덧붙이는 사법심사의
+층위는, 절차에 실질적인 기여를 하기는커녕, 오히려 경멸적인 방식으로
+시민들의 \emph{발언(a say)}을 박탈하고, 우리가 \emph{권리(rights)}에
+관해 벌이는 \emph{의견불일치(disagreements)} 속에 내재한 도덕적 쟁점을
+법률적 언어로 모호하게 만드는 역할만을 할 뿐이다.
+
+물론, 특이한 병리들, 기능 장애가 있는 입법 제도, 부패한 정치문화,
+인종차별과 같은 구조화된 편견의 유산과 같은 상황들에서는 이러한
+모호화(obfuscation)와 배제(disenfranchisement)의 대가를 일시적으로
+감수할 가치가 있을지도 모른다. 그러나 사법심사를 옹호하는 이들이라면,
+이러한 실천을 정당화하려는 주장을 할 때, 그 기반이 되는 상황을 솔직하게
+인정하고, 그 상황에 대해 일정한 겸허함(humility)과 부끄러움(shame)을
+갖고 논증을 전개해야 할 것이다. 그것을 마치 \emph{권리(rights)}에 대한
+존중의 전형(epitome)인 양, 현대 헌정 민주주의에서 보편적이고 정당한
+제도인 양 외부에 전파하려 해서는 안 된다.
+
+\clearpage
+\backmatter
+
+\end{document}

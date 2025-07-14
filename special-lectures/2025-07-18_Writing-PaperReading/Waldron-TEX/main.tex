@@ -1,0 +1,125 @@
+\documentclass[12pt, oneside]{book}  % 13pt는 직접 설정함
+
+% --- Language and Font Settings ---
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{kotex}  % Korean typesetting
+
+% --- Font Configuration (Main + Korean) ---
+\usepackage{libertinus}
+\setmainhangulfont[
+  Path = ./,
+  UprightFont = *Batang Light.ttf,
+  BoldFont    = *Batang Medium.ttf
+]{KoPubWorld}
+
+% --- Page Geometry: A4 with wide margins for print readability ---
+\usepackage[b5paper, margin=1in]{geometry}
+
+% --- Line Spacing ---
+\usepackage{setspace}
+\setstretch{1.45}
+
+% --- Section Formatting: Disable numbering ---
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+
+\usepackage{chngcntr}
+\counterwithin*{footnote}{section}
+
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries}
+  {}{0pt}{\Huge}\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {}{0pt}{\Large}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {}{0pt}{\large}
+
+\usepackage{etoolbox}
+\pretocmd{\section}{\clearpage}{}{}
+
+% --- Math and Tables ---
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tabularx, booktabs}
+\usepackage{footmisc}
+
+% --- Quotes, Hyperlink, Header/Footer ---
+\usepackage{csquotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+
+% --- Bibliography (biblatex) ---
+\usepackage[style=verbose-note, backend=biber, maxbibnames=99]{biblatex}
+\addbibresource{references.bib}
+\AtEveryBibitem{\clearfield{pages}}
+
+% --- Title Info ---
+\title{\Huge\textsc{The Concept of Law} \\[2ex] \Large Third Edition}
+\author{\Large H. L. A. Hart}
+\date{}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+  {\Huge\textsc{The Concept of Law}}\\[1.5ex]
+  {\Large Third Edition}\\[4ex]
+  \textsc{H. L. A. Hart}\\[6ex]
+  {\small 2025 SUMMER 강의용 한국어판\\
+  강좌 외의 사용을 불허함}
+  \vfill
+\end{titlepage}
+
+% ==========================
+% 📚 본문 시작
+% ==========================
+\begin{document}
+
+\frontmatter
+\maketitle
+\input{sections/01_1961_PREFACE-translation.tex}
+\input{sections/02_1994_Editors_Note-translation.tex}
+\input{sections/03_2012_Third_Preface-translation.tex}
+\input{sections/04_2012_INTRODUCTION-translation.tex}
+
+\tableofcontents
+\clearpage
+
+\mainmatter
+\cleardoublepage
+\markboth{}{}
+
+\input{sections/chapter_1-translation.tex}
+\input{sections/chapter_2-translation.tex}
+\input{sections/chapter_3-translation.tex}
+\input{sections/chapter_4-translation.tex}
+\input{sections/chapter_5-translation.tex}
+\input{sections/chapter_6-translation.tex}
+\input{sections/chapter_7-translation.tex}
+\input{sections/chapter_8-translation.tex}
+\input{sections/chapter_9-translation.tex}
+\input{sections/chapter_10-translation.tex}
+\input{sections/chapter_11-POSTSCRIPT-translation.tex}
+
+\clearpage
+\backmatter
+
+\end{document}
+
+
+pandoc /Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase.md -o /Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase.tex
+/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-CoreCaseJudicial-2006(kor).md
+
+/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-CoreCaseJudicial-2006(kor).md
+
+special-lectures/2025-07-18_Writing-PaperReading/Waldron-CoreCaseJudicial-2006(kor).md

@@ -1,20 +1,12 @@
----
-title: (번역)사법심사에 반대하는 핵심 논거
-layout: home
-nav_order: 10
-parent: 소논문 강독 특강(2025.7.18)
-permalink: /special-lectures/paper-reading/translation
----
+# 사법심사에 반대하는 핵심 논거(*The Core of the Case Against Judicial Review*)
+
+*제레미 월드런 (JEREMY WALDRON)*
 
 The Core of the Case against Judicial Review  
 Author(s): Jeremy Waldron  
 Source: The Yale Law Journal , Apr., 2006, Vol. 115, No. 6 (Apr., 2006), pp. 1346-1406  
 Published by: The Yale Law Journal Company, Inc.  
 Stable URL: <https://www.jstor.org/stable/20455656>  
-
-# 사법심사에 반대하는 핵심 논거(*The Core of the Case Against Judicial Review*)
-
-*제레미 월드런 (JEREMY WALDRON)*
 
 **초록(ABSTRACT).** 이 에세이는 입법에 대한 사법심사(judicial review of legislation)에 반대하는 일반적인 논거를 명확히 제시하며, 특정 판결이나 헌법 제도 내에서의 역사적 기원에 대한 논의로 복잡하게 얽히지 않도록 구성되어 있다. 본문은 두 가지 주요 이유를 들어 사법심사를 비판한다. 첫째, 사법심사가 민주적으로 구성된 입법부보다 권리를 더 잘 보호한다고 가정할 이유가 없다는 점을 논증한다. 둘째, 그 결과와는 무관하게, 사법심사는 민주적으로 정당하지 않다는 점을 논증한다. 두 번째 논증은 비교적 익숙한 반면, 첫 번째 논증은 덜 알려져 있다.
 

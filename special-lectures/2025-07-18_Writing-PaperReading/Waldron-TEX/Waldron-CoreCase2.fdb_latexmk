@@ -1,0 +1,26 @@
+# Fdb version 4
+["pdflatex"] 1752499530.76153 "/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase2.tex" "Waldron-CoreCase2.pdf" "Waldron-CoreCase2" 1752499530.97332 2
+  "/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase2.tex" 1752499530.16126 227038 3cedd76fc4e614e62cf28d08549f79d4 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty" 1707339808 146276 10a40dabec03ce18494af0c3a51bcbdc ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-en.ini" 1661803479 3966 caeee5a9e5771d4446aa1ca9015ba1b2 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.tex" 1498512262 336 ed676b5e7dfd862bc78d634f6a973f37 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def" 1704662920 6948 df63e25be1d2bc35bbad5a0141f41348 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls" 1705352648 20144 147463a6a579f4597269ef9565205cfe ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo" 1705352648 8449 f07039d8e4e89f21078d9b5137579bfc ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.sty" 1707868014 3484 ff877041166391bc5ca8a1e45614784e ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1708463273 30006 3d512c0edd558928ddea1690180ef77e ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty" 1708463273 6565 10e89ed128ccd59431746bbdd82129fc ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1708376303 9327 11bedad2ac38f92e405a38ed18489a03 ""
+  "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
+  "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731916346 8221433 b7e86e76b68688b1af45b501dbdda9ad ""
+  "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
+  "Waldron-CoreCase2.aux" 0 -1 0 "pdflatex"
+  "Waldron-CoreCase2.tex" 1752499530.16126 227038 3cedd76fc4e614e62cf28d08549f79d4 ""
+  (generated)
+  "Waldron-CoreCase2.aux"
+  "Waldron-CoreCase2.log"
+  "Waldron-CoreCase2.pdf"
+  (rewritten before read)
