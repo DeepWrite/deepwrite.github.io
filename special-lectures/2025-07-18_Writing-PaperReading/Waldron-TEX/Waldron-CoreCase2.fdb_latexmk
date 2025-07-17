@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1752499530.76153 "/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase2.tex" "Waldron-CoreCase2.pdf" "Waldron-CoreCase2" 1752499530.97332 2
-  "/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase2.tex" 1752499530.16126 227038 3cedd76fc4e614e62cf28d08549f79d4 ""
+["pdflatex"] 1752506875.31399 "/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase2.tex" "Waldron-CoreCase2.pdf" "Waldron-CoreCase2" 1752506875.56942 2
+  "/Users/jeyounson/deepwrite.github.io/special-lectures/2025-07-18_Writing-PaperReading/Waldron-TEX/Waldron-CoreCase2.tex" 1752506874.73006 226851 833f2da14ea990ae8ba6236948fe6fee ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
@@ -17,8 +17,8 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731916346 8221433 b7e86e76b68688b1af45b501dbdda9ad ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Waldron-CoreCase2.aux" 0 -1 0 "pdflatex"
-  "Waldron-CoreCase2.tex" 1752499530.16126 227038 3cedd76fc4e614e62cf28d08549f79d4 ""
+  "Waldron-CoreCase2.aux" 1752506875.31343 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "Waldron-CoreCase2.tex" 1752506874.73006 226851 833f2da14ea990ae8ba6236948fe6fee ""
   (generated)
   "Waldron-CoreCase2.aux"
   "Waldron-CoreCase2.log"
