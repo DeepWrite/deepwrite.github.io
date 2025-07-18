@@ -1,7 +1,7 @@
 ---
 title: 강의자료
 layout: home
-nav_order: 11
+nav_order: 1
 parent: 소논문 강독 특강(2025.7.18)
 permalink: /special-lectures/paper-reading/lecture-partone
 ---
