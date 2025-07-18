@@ -6,6 +6,8 @@ parent: 소논문 강독 특강(2025.7.18)
 permalink: /special-lectures/paper-reading/lecture-partone
 ---
 
+# deepwrite.github.io
+
 # INTRO: “딜레마 찾기와 논증” – Waldron 사례로 배우는 인문학 글쓰기의 설계도
 {: .no_toc }
 
