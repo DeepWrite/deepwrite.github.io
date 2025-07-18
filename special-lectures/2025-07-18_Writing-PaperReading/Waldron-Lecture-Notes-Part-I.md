@@ -1,5 +1,5 @@
 ---
-title: 강의안 - Part I: 논문 읽어보기
+title: 강의안 - Part I 논문 읽어보기
 layout: home
 nav_order: 11
 parent: 소논문 강독 특강(2025.7.18)
