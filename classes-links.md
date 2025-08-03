@@ -11,5 +11,5 @@ permalink: /classes-links/
 
 **법철학 관련 강좌 목록**
 
-- [허버트 하트, *법의 개념* (독서세미나-고전에 길을 묻다) 강좌 홈페이지](https://deepwrite.github.io/Hart-Concept-of-Law/)
+- [허버트 하트, *법의 개념* (독서세미나-고전에 길을 묻다) 강좌 홈페이지](https://deepwrite.github.io/HartConcept/)
   - 개설: 2025년 여름계절학기
