@@ -109,6 +109,19 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
     margin-top: 0;
   }
 
+  .compare-notes .compare-section {
+    margin: 2rem 0 0.9rem;
+    color: #3f2e20;
+    font-size: 1.55rem;
+    line-height: 1.3;
+  }
+
+  .compare-notes .compare-divider {
+    margin: 1.6rem 0 1.2rem;
+    border: 0;
+    border-top: 1px solid var(--compare-line);
+  }
+
   .compare-notes ul {
     margin-bottom: 0;
   }
@@ -122,7 +135,7 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
 
 <div class="compare-notes">
 
-## 편집 원칙
+<h2 class="compare-section">편집 원칙</h2>
 
 <div class="principle-box">
   <h3>편집 원칙</h3>
@@ -134,9 +147,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </ul>
 </div>
 
----
+<hr class="compare-divider">
 
-## 1. 요약문
+<h2 class="compare-section">1. 요약문</h2>
 
 <div class="compare-grid">
   <section class="compare-box source-box">
@@ -181,9 +194,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </ul>
 </section>
 
----
+<hr class="compare-divider">
 
-## 2. 1절 서론
+<h2 class="compare-section">2. 1절 서론</h2>
 
 <div class="compare-grid">
   <section class="compare-box source-box">
@@ -232,9 +245,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </ul>
 </section>
 
----
+<hr class="compare-divider">
 
-## 3. 2절 기본내용
+<h2 class="compare-section">3. 2절 기본내용</h2>
 
 <div class="compare-grid">
   <section class="compare-box source-box">
@@ -288,9 +301,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </ul>
 </section>
 
----
+<hr class="compare-divider">
 
-## 4. 3절 쟁점 분석
+<h2 class="compare-section">4. 3절 쟁점 분석</h2>
 
 <div class="compare-grid">
   <section class="compare-box source-box">
@@ -350,9 +363,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </ul>
 </section>
 
----
+<hr class="compare-divider">
 
-## 5. 4절 개선과제
+<h2 class="compare-section">5. 4절 개선과제</h2>
 
 <div class="compare-grid">
   <section class="compare-box source-box">
@@ -414,9 +427,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </ul>
 </section>
 
----
+<hr class="compare-divider">
 
-## 6. 결론
+<h2 class="compare-section">6. 결론</h2>
 
 <div class="compare-grid">
   <section class="compare-box source-box">
@@ -461,9 +474,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </ul>
 </section>
 
----
+<hr class="compare-divider">
 
-## 각주
+<h2 class="compare-section">각주</h2>
 
 수정안의 각주는 원문의 출처를 유지하였다. 번호와 내용은 원문 재구성본과 동일하게 사용할 수 있다.
 
