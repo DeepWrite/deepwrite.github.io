@@ -1,3 +1,5 @@
+비활성
+
 ---
 title: 학생 제출용 MD 작성기
 layout: default
