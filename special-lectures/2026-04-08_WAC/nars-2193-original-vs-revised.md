@@ -168,18 +168,18 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성) 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <blockquote>
       <p>2021년 8월 정부는 장애인 탈시설 로드맵을 발표하였지만, 탈시설 찬성·반대 측 모두 이를 비판하고 있다. 정부의 탈시설 로드맵은 사업완료 시점에 거주시설 장애인 전체의 87%가 지역사회의 그룹홈·개별주택에 주거하는 것을 목표로 한다. 이와 관련하여, 그룹홈의 시설 여부, 중증발달장애인의 탈시설 여부 등이 쟁점이 되고 있다. 해외 사례를 참고하여, 그룹홈의 시설 요소 최소화, 중증발달장애인 돌봄 강화 및 탈시설 장애인 부모 지원 정책 등을 검토할 필요가 있다.</p>
     </blockquote>
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <blockquote>
       <p>정부의 탈시설 로드맵은 장애인의 지역사회 자립을 확대하겠다는 점에서 진전이지만, 실제 정책 설계는 <span class="keymark">권리 보장</span>과 <span class="keymark">돌봄 공백 방지</span>라는 두 과제를 동시에 충족해야 하는 딜레마에 직면해 있다. 특히 그룹홈을 탈시설의 완성으로 볼 것인지, 중증발달장애인의 지역사회 삶을 어떤 조건 아래 보장할 것인지가 핵심 쟁점이다. 스웨덴 등 해외 사례가 시사하듯, 대규모 시설의 축소 자체보다 중요한 것은 그룹홈의 시설성 최소화, 24시간 지원체계의 실질화, 가족의 돌봄 불안을 줄이는 부모 지원 장치의 구축이다. 따라서 향후 탈시설 정책은 <span class="keymark">시설 축소</span>의 속도보다 <span class="keymark">권리와 돌봄을 함께 보장하는 조건</span>의 정교화에 초점을 맞출 필요가 있다.</p>
     </blockquote>
@@ -215,9 +215,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>로드맵 발표 경과 제시</li>
       <li>찬반 단체의 갈등 소개</li>
@@ -226,9 +226,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>1. 장애인 탈시설 논쟁: 무엇이 진짜 문제인가</h3>
     <p>2021년 8월 정부는 <code>탈시설 장애인 지역사회 자립지원 로드맵</code>을 발표하였다.[^1] 이후 현 정부도 기존 로드맵을 보완하는 방식으로 탈시설 정책을 계속 추진하겠다고 밝혔다. 정책의 방향 자체는 분명하다. 대규모 거주시설 중심의 보호 체계에서 벗어나 장애인이 지역사회 안에서 살아갈 수 있도록 하겠다는 것이다.</p>
     <p>그러나 실제 논쟁은 단순히 <code>탈시설 찬성</code>과 <code>탈시설 반대</code>의 구도로 설명되기 어렵다. 탈시설을 지지하는 단체는 정부안이 <code>시설 소규모화</code>에 머물러 있다고 비판하고,[^2] 반대로 탈시설을 반대하는 단체는 지역사회 지원체계가 미비한 상태에서의 이행이 결국 가족에게 돌봄 부담을 떠넘기는 방식이 될 것이라고 우려한다.[^3]</p>
@@ -266,9 +266,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>로드맵의 일정과 수치 제시</li>
       <li>공동형주거 확대 계획 소개</li>
@@ -277,9 +277,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>2. 탈시설 로드맵은 무엇을 바꾸려 하는가</h3>
     <p>정부의 로드맵은 2022년부터 2024년까지 시범사업과 제도 정비를 진행한 뒤, 2025년부터 본격적으로 거주전환을 추진하여 2041년에 이행을 마무리하는 계획이다. 수치상으로 보면 시설 거주 장애인은 2025년 20,120명에서 2041년 2,193명으로 감소하고,[^6] 반대로 지역사회 주거 장애인은 같은 기간 5,830명에서 15,582명으로 증가하는 것으로 설계되어 있다.</p>
     <p>이 계획에서 특히 중요한 점은, 2041년 시점에도 지역사회 주거의 상당 부분이 개별주택이 아니라 그룹홈 등 공동형주거에 의해 담당된다는 점이다. 즉 정부안은 시설에서 곧바로 독립주거로 이행하는 모델보다는, 다양한 수준의 공동형주거를 중심으로 지역사회 정착을 설계하고 있다.</p>
@@ -322,9 +322,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>그룹홈을 시설로 볼 것인지에 대한 두 입장 제시</li>
       <li>중증발달장애인의 탈시설 가능성에 대한 찬반 입장 제시</li>
@@ -332,9 +332,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>3. 핵심 쟁점: 탈시설은 자립의 진전인가, 준비 없는 방치인가</h3>
     <h4>(1) 그룹홈은 탈시설의 완성인가, 중간단계의 시설인가</h4>
     <p>정부의 로드맵에 따르면 2041년에도 전체의 59%인 10,517명이 그룹홈 등 공동형주거의 지원을 받게 된다. 이 점 때문에 그룹홈의 성격은 탈시설 정책 전체를 평가하는 핵심 쟁점이 된다.[^8]</p>
@@ -383,9 +383,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>스웨덴 사례를 근거로 그룹홈 시설 요소 최소화 제안</li>
       <li>24시간 활동지원과 부모 자조모임 지원 제안</li>
@@ -393,9 +393,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>4. 개선과제: 무엇을 더 해야 하는가</h3>
     <p>앞선 쟁점 분석이 시사하는 바는 분명하다. 탈시설 정책의 성패는 <code>시설 감축의 속도</code>가 아니라, <code>지역사회 삶의 질을 어떻게 보장할 것인가</code>에 달려 있다. 이 점에서 다음 세 가지 보완이 필요하다.</p>
     <h4>(1) 그룹홈은 확대보다 먼저 비시설성의 기준을 분명히 해야 한다</h4>
@@ -447,18 +447,18 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성) 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <blockquote>
       <p>장애인 탈시설은 거스를 수 없는 전 세계적인 흐름이다. 그렇지만 국제사회의 압박에 못 이겨 대규모 시설 거주 장애인의 숫자를 줄이기 급급한 정책을 펼쳐서는 안 될 것이다. 장애인 당사자 단체, 장애인 가족 단체 등의 의견을 경청하고 이를 수렴하기 위해 탈시설을 먼저 실시한 나라들의 사례를 참고할 필요가 있다.</p>
     </blockquote>
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>5. 나가며</h3>
     <p>장애인 탈시설은 더 이상 피할 수 없는 정책 방향이다.[^18] 그러나 이 사실만으로 현재의 정책 설계가 충분하다고 말할 수는 없다. 탈시설 정책이 정당화되기 위해서는 단순히 시설 거주 인원을 줄이는 것이 아니라, 장애인의 자기결정권과 지역사회 통합을 실질적으로 보장하면서도 돌봄 공백을 만들지 않는 조건을 갖추어야 한다.</p>
     <p>따라서 앞으로의 논의는 <code>탈시설을 할 것인가</code>보다 <code>어떤 탈시설이 권리 보장이며, 어떤 탈시설이 방치가 되는가</code>를 중심으로 전개될 필요가 있다. 이 기준에 비추어 볼 때, 그룹홈의 비시설성 강화, 중증발달장애인을 위한 24시간 지원체계 확충, 부모 지원정책의 제도화는 모두 선택사항이 아니라 정책의 정당성을 떠받치는 핵심 조건이다.</p>

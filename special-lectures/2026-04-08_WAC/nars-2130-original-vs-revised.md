@@ -168,18 +168,18 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성) 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <blockquote>
       <p>2022년 두 명의 자립준비청년의 자살에 이어 2023년 또다시 청년들이 스스로 고단했던 생애를 마감하였다. 애도와 비통함만으로는 앞으로의 자살을 예방할 수 없다는 점, 마음·정신건강은 다른 지원제도에 앞서서 마련되어야 하는 선행 지원이어야 한다는 점에서 자립준비청년의 심리·정신건강 지원 대책을 마련할 필요가 있다. 이에 법령의 자립지원 항목 중 건강지원을 추가하고, 마음건강지원사업의 확대, 사망자 현황 파악, 죽음의 사회적 원인 규명이 이루어져야 함을 제안하고자 한다.</p>
     </blockquote>
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <blockquote>
       <p>자립준비청년의 반복된 자살은 현행 자립지원제도가 주거·생계 중심의 지원은 갖추고 있으나, 고립과 불안을 완화할 심리·정신건강 지원에서는 여전히 취약하다는 사실을 보여 준다. 그러나 이 문제는 단순히 <code>지원 확대</code>의 문제가 아니라, 청년의 조기 자립을 촉진하면서도 동시에 정서적 안전망을 어떻게 지속할 것인가라는 딜레마를 포함하고 있다. 따라서 자립지원정책은 건강지원을 법적 자립지원 항목에 포함시키고, 마음건강지원사업의 실질적 이용권을 보장하며, 사망 현황과 사회적 원인을 체계적으로 파악하는 방향으로 재설계될 필요가 있다.</p>
     </blockquote>
@@ -215,9 +215,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>반복된 자살 사건 제시</li>
       <li>현황 파악이 부족하다는 문제 제기</li>
@@ -226,9 +226,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>1. 들어가며: 자립지원은 왜 마음건강 앞에서 멈추는가</h3>
     <p>2022년 두 명의 자립준비청년의 죽음에 이어 2023년에도 청년들이 또다시 스스로 삶을 마감하였다.[^1][^2] 이 사건들은 단지 개별 비극으로만 다루기 어렵다. 보호종료 이후의 삶이 얼마나 고립되고 불안정한지, 그리고 현재의 자립지원제도가 그 불안을 충분히 완화하지 못하고 있음을 보여 주기 때문이다.</p>
     <p>문제는 자립준비청년의 사망 현황조차 제대로 파악되지 않고 있다는 점이다. 즉 우리는 이 죽음들이 얼마나 반복되고 있는지, 어떤 경로를 통해 위험이 심화되는지조차 충분히 알지 못한다. 그럼에도 기존 제도는 주거·생계·교육·취업 지원에 비해 심리·정신건강 지원을 부수적인 영역으로 다루는 경향이 강하다.</p>
@@ -265,9 +265,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>아동복지법의 자립지원 항목 소개</li>
       <li>건강지원이 법률에 명시되어 있지 않음을 지적</li>
@@ -276,9 +276,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>2. 현행 제도는 무엇을 지원하고, 무엇을 놓치고 있는가</h3>
     <p>현행 「아동복지법」 제38조는 자립에 필요한 주거·생활·교육·취업 등의 지원을 규정하고 있지만, 건강지원은 명시적으로 포함하고 있지 않다.[^3] 자립준비청년은 청년마음건강지원사업의 우선 지원 대상이 될 수 있으나,[^4] 이는 법률상 핵심 자립지원 항목이라기보다 별도의 보완 프로그램에 가깝다. 즉 제도의 중심축은 여전히 <code>생활 기반 마련</code>에 있고, <code>정신건강 유지</code>는 주변부에 놓여 있다.</p>
     <p>보호종료 규모와 사후관리 현황을 보면, 이 문제가 결코 소수의 예외적 문제가 아님을 확인할 수 있다. 2022년 보호종료 청소년은 1,740명이며, 자립지원전담인력 1인당 담당 인원은 71명에 이른다. 더구나 사후관리 대상자 중 연락두절 비율은 20.2%에 달한다. 이는 제도가 존재하더라도 실제 접촉과 관계 형성, 위험 발견의 기능이 충분히 작동하지 않을 수 있음을 시사한다.</p>
@@ -321,9 +321,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>부정적 유년기 경험과 정신건강 악화를 연결</li>
       <li>자살생각 경험과 일반청년과의 격차 제시</li>
@@ -332,9 +332,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>3. 왜 정신건강 지원은 선행 지원이어야 하는가</h3>
     <p>보호종료청소년의 높은 정신건강 위험은 단순한 현재의 생활고만으로 설명되지 않는다. 학대, 방임, 가정폭력 목격, 부모 상실, 가족 해체와 같은 부정적 유년기 경험은 생애 전반에 걸쳐 정서적 불안과 낮은 회복탄력성으로 이어질 수 있다.[^6][^7] 따라서 자립준비청년의 어려움은 <code>독립 이후 적응 실패</code>라기보다, 이미 오래 축적된 취약성이 자립 이후 더 뚜렷하게 드러나는 과정으로 이해할 필요가 있다.</p>
     <p>실제 조사 결과는 이 점을 뒷받침한다. 보호종료예정아동과 보호종료아동의 자살생각 경험률은 일반 청년에 비해 현저히 높고,[^8] 특히 여성, 보호종료 3년차 전후 집단에서 더 높은 수치가 관찰된다. 이는 자립지원정책이 초기 정착만을 도와서는 부족하며, 일정 기간이 지난 뒤에 심화되는 고립과 불안을 함께 다뤄야 함을 시사한다.</p>
@@ -370,18 +370,18 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>영국 법률과 서비스, 스코틀랜드 사망 리뷰 소개</li>
     </ul>
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>4. 해외 사례는 무엇을 보여 주는가</h3>
     <p>영국과 스코틀랜드 사례의 핵심은 단순히 <code>상담 서비스를 더 많이 제공한다</code>는 데 있지 않다. 오히려 다음 세 가지 점이 중요하다.</p>
     <p>첫째, 영국의 법제는 보호대상아동과 보호종료청소년의 신체적·정신적 건강과 안녕을 지방정부와 유관기관의 명시적 책임으로 둔다.[^13][^14] 즉 정신건강 지원이 선택적 서비스가 아니라 공적 책임의 일부로 제도화되어 있다.</p>
@@ -420,9 +420,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 기능 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>건강과 안녕을 법률상 자립지원 항목에 포함할 것</li>
       <li>청년마음건강지원사업의 이용권과 예산을 보장할 것</li>
@@ -431,9 +431,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>5. 개선과제: 자립지원제도가 갖추어야 할 것</h3>
     <p>앞선 분석을 종합하면, 자립준비청년 지원정책의 핵심 과제는 단순한 서비스 추가가 아니라 <code>자립지원의 우선순위 재배치</code>에 있다. 즉 심리·정신건강 지원을 주변적 보완수단이 아니라 제도의 중심 전제로 옮겨 놓아야 한다.</p>
     <h4>(1) 건강지원은 법적 자립지원의 핵심 항목으로 포함되어야 한다</h4>
@@ -474,9 +474,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </section>
 </div>
 
-<details>
+<details markdown="1">
   <summary>원문(재구성)의 귀결 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <ul>
       <li>마음·정신건강 지원이 물질 지원보다 앞서야 한다</li>
       <li>관련 법과 제도를 보완해야 한다</li>
@@ -484,9 +484,9 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
   </div>
 </details>
 
-<details open>
+<details open markdown="1">
   <summary>수정안 전문 보기</summary>
-  <div class="detail-body">
+  <div class="detail-body" markdown="1">
     <h3>6. 나가며</h3>
     <p>자립준비청년의 자살 문제는 자립지원제도가 실패했는가의 문제라기보다, <strong>무엇을 자립의 핵심 조건으로 보아 왔는가</strong>를 다시 묻는 문제에 가깝다. 지금까지의 제도는 주거와 생계, 취업 기반 마련에 많은 비중을 두어 왔다. 그러나 반복된 조사와 사건은, 정서적 안전망과 지속적 관계 자원이 부실한 상태에서는 이러한 지원이 충분한 효과를 내기 어렵다는 점을 보여 준다.</p>
     <p>따라서 앞으로의 자립지원정책은 <code>얼마나 빨리 독립시키는가</code>보다 <code>어떻게 안전하게 버티게 하는가</code>를 함께 묻는 방향으로 바뀌어야 한다. 건강지원을 법적 자립지원의 핵심 항목으로 포함시키고, 마음건강지원의 이용권을 실질적으로 보장하며, 사망 현황과 사회적 원인을 체계적으로 파악하는 일은 그 출발점이 될 수 있다.</p>
