@@ -4,7 +4,17 @@ subtitle: "국회입법조사처 이슈와 논점 제2193호"
 author: "김준형"
 date: "2024. 2. 8."
 lang: ko-KR
+layout: home
+parent: "이슈페이퍼 작성_사회복지학 신입생 세미나 강좌 WAC 특강(2026.4.8)"
+nav_order: 1
+permalink: "/special-lectures/2026-04-08/references/nars-2193-original-reconstructed"
 ---
+
+- [강의안으로 돌아가기](/special-lectures/2026-04-08)
+- [원본-수정안 대조판 보기](/special-lectures/2026-04-08/references/nars-2193-original-vs-revised)
+- [원클릭 비교 화면 보기](/special-lectures/2026-04-08/references/nars-2193-compare)
+
+이 문서는 강의안의 사례 분석 1에서 참고하는 원문 재구성본이다. 수업 중에는 비교 화면과 함께 열어 두면 원본의 논점 배열과 수정 방향을 바로 대조할 수 있다.
 
 국회입법조사처 | 2024. 2. 8. | 제2193호
 

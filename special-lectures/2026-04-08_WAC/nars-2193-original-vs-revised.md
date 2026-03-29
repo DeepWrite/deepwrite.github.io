@@ -1,12 +1,18 @@
 ---
 title: "장애인 탈시설 논쟁: 원본-수정안 대조판"
 layout: home
-nav_exclude: true
+parent: "이슈페이퍼 작성_사회복지학 신입생 세미나 강좌 WAC 특강(2026.4.8)"
+nav_order: 2
+permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revised"
 ---
 
 # 장애인 탈시설 논쟁: 원본-수정안 대조판
 
-원본 재구성본: [nars-2193-original-reconstructed.md](/Users/jeyounson/Projects/DeepWrite/2026SPRING/lectures/nars-2193-original-reconstructed.md)
+- [강의안으로 돌아가기](/special-lectures/2026-04-08)
+- [원본 재구성본 보기](/special-lectures/2026-04-08/references/nars-2193-original-reconstructed)
+- [원클릭 비교 화면 보기](/special-lectures/2026-04-08/references/nars-2193-compare)
+
+이 문서는 강의안의 사례 분석 1을 따라가며, 원본의 논점 배치를 강의안의 기준에 맞춰 어떻게 재구성했는지 비교할 수 있도록 정리한 대조판이다.
 
 ## 편집 원칙
 
