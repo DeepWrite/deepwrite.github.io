@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자립준비청년의 자살: 발표용 비교 화면</title>
+  <style>
+    :root {
+      --compare-ink: #2d2a26;
+      --compare-subtle: #5f584f;
+      --compare-line: #d7cabb;
+      --compare-soft: #f7f1e8;
+      --compare-accent: #7c4f2a;
+      --compare-accent-2: #b56a2d;
+      --compare-toolbar-height: 78px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f4eadc 0%, #fffaf5 100%);
+      color: var(--compare-ink);
+      font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    }
+
+    body {
+      display: grid;
+      grid-template-rows: var(--compare-toolbar-height) 1fr;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid var(--compare-line);
+      background: rgba(255, 250, 244, 0.96);
+      backdrop-filter: blur(10px);
+    }
+
+    .toolbar-copy strong {
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 1rem;
+    }
+
+    .toolbar-copy span {
+      color: var(--compare-subtle);
+      font-size: 0.92rem;
+    }
+
+    .toolbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      justify-content: flex-end;
+    }
+
+    .toolbar-links a,
+    .toolbar-links button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0.55rem 0.9rem;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--compare-accent) 0%, var(--compare-accent-2) 100%);
+      color: #fff;
+      font: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      min-height: 0;
+      padding: 1rem;
+    }
+
+    .panel {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: 0;
+      border: 1px solid var(--compare-line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 18px 40px rgba(60, 40, 22, 0.08);
+    }
+
+    .panel-head {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--compare-line);
+      background: var(--compare-soft);
+    }
+
+    .panel-head strong {
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 1rem;
+    }
+
+    .panel-head span {
+      color: var(--compare-subtle);
+      font-size: 0.9rem;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #fff;
+    }
+
+    @media (max-width: 960px) {
+      html,
+      body {
+        overflow: auto;
+      }
+
+      body {
+        grid-template-rows: auto 1fr;
+      }
+
+      .toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .toolbar-links {
+        justify-content: flex-start;
+      }
+
+      .stage {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .panel {
+        min-height: 55vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="toolbar">
+    <div class="toolbar-copy">
+      <strong>자립준비청년의 자살: 발표용 비교 화면</strong>
+      <span>사이드바를 숨기고 원본과 대조판을 화면 가득 배치한 발표 모드</span>
+    </div>
+    <div class="toolbar-links">
+      <a href="/special-lectures/2026-04-08">강의안</a>
+      <a href="/special-lectures/2026-04-08/references/nars-2130-original-reconstructed">원본만 보기</a>
+      <a href="/special-lectures/2026-04-08/references/nars-2130-original-vs-revised">대조판만 보기</a>
+      <button type="button" id="fullscreen-button">전체 화면</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="panel">
+      <div class="panel-head">
+        <strong>원본 재구성본</strong>
+        <span>국회입법조사처 이슈와 논점 제2130호</span>
+      </div>
+      <iframe id="left-frame" src="/special-lectures/2026-04-08/references/nars-2130-original-reconstructed" title="자립준비청년의 자살 원본 재구성본"></iframe>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <strong>원본-수정안 대조판</strong>
+        <span>강의안의 기준에 맞춘 문단별 비교본</span>
+      </div>
+      <iframe id="right-frame" src="/special-lectures/2026-04-08/references/nars-2130-original-vs-revised" title="자립준비청년의 자살 원본 수정안 대조판"></iframe>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const frameIds = ["left-frame", "right-frame"];
+      const styleText = [
+        "html, body { overflow: auto !important; }",
+        "body { padding: 0 !important; margin: 0 !important; }",
+        ".side-bar, .site-header, .main-header, .search, .search-input-wrap, .aux-nav, .site-footer, .page-header { display: none !important; }",
+        ".main { max-width: none !important; margin-left: 0 !important; padding-top: 0 !important; }",
+        ".main-content-wrap { max-width: none !important; margin: 0 !important; padding: 1.2rem 1.5rem 2.5rem !important; }",
+        ".main-content { max-width: none !important; }"
+      ].join("\n");
+
+      function restyleFrame(frame) {
+        try {
+          const doc = frame.contentDocument;
+          if (!doc || !doc.body) return;
+
+          const style = doc.createElement("style");
+          style.setAttribute("data-compare-style", "true");
+          style.textContent = styleText;
+
+          const oldStyle = doc.head.querySelector("style[data-compare-style='true']");
+          if (oldStyle) oldStyle.remove();
+          doc.head.appendChild(style);
+        } catch (error) {
+          console.warn("Unable to restyle compare frame", error);
+        }
+      }
+
+      frameIds.forEach((id) => {
+        const frame = document.getElementById(id);
+        frame.addEventListener("load", function () {
+          restyleFrame(frame);
+          setTimeout(function () {
+            restyleFrame(frame);
+          }, 250);
+        });
+      });
+
+      document.getElementById("fullscreen-button").addEventListener("click", function () {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(function () {});
+          return;
+        }
+        document.exitFullscreen().catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>

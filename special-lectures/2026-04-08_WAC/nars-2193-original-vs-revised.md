@@ -10,7 +10,7 @@ permalink: "/special-lectures/2026-04-08/references/nars-2193-original-vs-revise
 
 - [강의안으로 돌아가기](/special-lectures/2026-04-08)
 - [원본 재구성본 보기](/special-lectures/2026-04-08/references/nars-2193-original-reconstructed)
-- [원클릭 비교 화면 보기](/special-lectures/2026-04-08/references/nars-2193-compare)
+- [원클릭 비교 화면 보기](/special-lectures/2026-04-08_WAC/nars-2193-compare.html)
 
 이 문서는 강의안의 사례 분석 1을 따라가며, 원본의 논점 배치를 강의안의 기준에 맞춰 어떻게 재구성했는지 비교할 수 있도록 정리한 대조판이다.
 

@@ -12,6 +12,7 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-reconstru
 
 - [강의안으로 돌아가기](/special-lectures/2026-04-08)
 - [원본-수정안 대조판 보기](/special-lectures/2026-04-08/references/nars-2130-original-vs-revised)
+- [원클릭 비교 화면 보기](/special-lectures/2026-04-08_WAC/nars-2130-compare.html)
 
 이 문서는 강의안의 사례 분석 2에서 참고하는 원문 재구성본이다. 수업 중에는 이 문서를 원본 축으로 두고, 대조판을 함께 열어 수정 방향을 비교해 볼 수 있다.
 
