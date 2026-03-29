@@ -109,6 +109,19 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
     margin-top: 0;
   }
 
+  .compare-notes .quote-panel {
+    margin: 0;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid #c48651;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #fffaf4 0%, #f7efe3 100%);
+    color: #4a3b2f;
+  }
+
+  .compare-notes .quote-panel p {
+    margin: 0;
+  }
+
   .compare-notes .compare-section {
     margin: 2rem 0 0.9rem;
     color: #3f2e20;
@@ -171,18 +184,14 @@ permalink: "/special-lectures/2026-04-08/references/nars-2130-original-vs-revise
 <details markdown="1">
   <summary>원문(재구성) 전문 보기</summary>
   <div class="detail-body" markdown="1">
-    <blockquote>
-      <p>2022년 두 명의 자립준비청년의 자살에 이어 2023년 또다시 청년들이 스스로 고단했던 생애를 마감하였다. 애도와 비통함만으로는 앞으로의 자살을 예방할 수 없다는 점, 마음·정신건강은 다른 지원제도에 앞서서 마련되어야 하는 선행 지원이어야 한다는 점에서 자립준비청년의 심리·정신건강 지원 대책을 마련할 필요가 있다. 이에 법령의 자립지원 항목 중 건강지원을 추가하고, 마음건강지원사업의 확대, 사망자 현황 파악, 죽음의 사회적 원인 규명이 이루어져야 함을 제안하고자 한다.</p>
-    </blockquote>
+    <div class="quote-panel"><p>2022년 두 명의 자립준비청년의 자살에 이어 2023년 또다시 청년들이 스스로 고단했던 생애를 마감하였다. 애도와 비통함만으로는 앞으로의 자살을 예방할 수 없다는 점, 마음·정신건강은 다른 지원제도에 앞서서 마련되어야 하는 선행 지원이어야 한다는 점에서 자립준비청년의 심리·정신건강 지원 대책을 마련할 필요가 있다. 이에 법령의 자립지원 항목 중 건강지원을 추가하고, 마음건강지원사업의 확대, 사망자 현황 파악, 죽음의 사회적 원인 규명이 이루어져야 함을 제안하고자 한다.</p></div>
   </div>
 </details>
 
 <details open markdown="1">
   <summary>수정안 전문 보기</summary>
   <div class="detail-body" markdown="1">
-    <blockquote>
-      <p>자립준비청년의 반복된 자살은 현행 자립지원제도가 주거·생계 중심의 지원은 갖추고 있으나, 고립과 불안을 완화할 심리·정신건강 지원에서는 여전히 취약하다는 사실을 보여 준다. 그러나 이 문제는 단순히 <code>지원 확대</code>의 문제가 아니라, 청년의 조기 자립을 촉진하면서도 동시에 정서적 안전망을 어떻게 지속할 것인가라는 딜레마를 포함하고 있다. 따라서 자립지원정책은 건강지원을 법적 자립지원 항목에 포함시키고, 마음건강지원사업의 실질적 이용권을 보장하며, 사망 현황과 사회적 원인을 체계적으로 파악하는 방향으로 재설계될 필요가 있다.</p>
-    </blockquote>
+    <div class="quote-panel"><p>자립준비청년의 반복된 자살은 현행 자립지원제도가 주거·생계 중심의 지원은 갖추고 있으나, 고립과 불안을 완화할 심리·정신건강 지원에서는 여전히 취약하다는 사실을 보여 준다. 그러나 이 문제는 단순히 <code>지원 확대</code>의 문제가 아니라, 청년의 조기 자립을 촉진하면서도 동시에 정서적 안전망을 어떻게 지속할 것인가라는 딜레마를 포함하고 있다. 따라서 자립지원정책은 건강지원을 법적 자립지원 항목에 포함시키고, 마음건강지원사업의 실질적 이용권을 보장하며, 사망 현황과 사회적 원인을 체계적으로 파악하는 방향으로 재설계될 필요가 있다.</p></div>
   </div>
 </details>
 
