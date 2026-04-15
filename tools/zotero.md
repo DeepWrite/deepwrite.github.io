@@ -143,7 +143,7 @@ Markdown 문서에서 Zotero Citekey를 사용하려면 **Pandoc**과 **Zotero B
      - `.bib` 파일을 저장 (예: `my_references.bib`)
 3. **Citekey 확인**  
    - 항목을 선택한 후 **"Better BibTeX Citation Key"** 필드 확인  
-   - 예: ``[&#64;scanlonWhatOweEach1998]``
+   - 예: `scanlonWhatOweEach1998`
 
 ---
 
@@ -151,13 +151,13 @@ Markdown 문서에서 Zotero Citekey를 사용하려면 **Pandoc**과 **Zotero B
 Markdown 문서에서 **Pandoc Citations Syntax**를 사용하여 주석을 작성할 수 있습니다.  
 형식:
 ```markdown
-이것은 Scanlon의 논의이다 ``[&#64;scanlonWhatOweEach1998, p. 45]``.
+이것은 Scanlon의 논의이다 `[@scanlonWhatOweEach1998, p. 45]`.
 ```
 예제:
 ```markdown
 # 법철학과 사회정의
 
-법철학에서 인간 존엄성 개념은 다양한 방식으로 논의된다. 예를 들어, Scanlon의 논의를 인용하려면 ``[&#64;scanlonWhatOweEach1998, p. 45]``처럼 적을 수 있다.
+법철학에서 인간 존엄성 개념은 다양한 방식으로 논의된다. 예를 들어, Scanlon의 논의를 인용하려면 `[@scanlonWhatOweEach1998, p. 45]`처럼 적을 수 있다.
 
 ## 참고문헌
 ```
@@ -196,7 +196,7 @@ pandoc document.md --citeproc --bibliography=my_references.bib --csl=chicago.csl
 ---
 
 ## 🔥 결론
-- **Markdown 문서에 Zotero Citekey 사용** → ``[&#64;scanlonWhatOweEach1998]``
+- **Markdown 문서에 Zotero Citekey 사용** → `[@scanlonWhatOweEach1998]`
 - **Pandoc으로 .md → Word 변환** (`.bib` 활용)
 - **CSL 스타일 적용 가능** (APA, Chicago 등)
 
