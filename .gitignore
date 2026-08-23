@@ -16,3 +16,10 @@ vendor/
 
 # macOS
 .DS_Store
+
+# Privacy guard: public teaching repositories must never contain student work.
+**/student_drafts_bundle/
+**/student-submissions/
+**/student_submissions/
+**/student-uploads/
+**/student_uploads/
